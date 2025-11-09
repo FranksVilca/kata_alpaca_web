@@ -1,5 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
+import { FaFacebook } from "react-icons/fa";
+import { FaInstagram } from "react-icons/fa";
 
 const data = {
   link: [
@@ -22,13 +24,13 @@ const Footer: React.FC = () => {
         />
       </div>
       {/* Contenido principal */}
-       <div className="flex flex-wrap justify-end items-center gap-4 text-sm tracking-wide w-full pr-10">
+      <div className="flex flex-wrap justify-end items-center gap-4 text-sm tracking-wide w-full pr-10 underline">
         {/* Enlaces */}
         {data.link.map((link, index) => (
           <div key={index} className="flex items-center">
             <Link
               href={link.href}
-              className="hover:text-[#d4af37] transition-colors duration-300"
+              className="hover:text-[#292929] transition-colors duration-300"
             >
               {link.text}
             </Link>
@@ -43,16 +45,18 @@ const Footer: React.FC = () => {
         <span className="text-[#c0c0c0]">|</span>
 
         {/* Redes sociales */}
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-1">
           <Link
-            href="#"
+            href="https://www.instagram.com/kataalpaca"
             className="hover:text-[#d4af37] transition-colors duration-300"
           >
+            <FaInstagram />
           </Link>
           <Link
-            href="#"
+            href="https://www.facebook.com/kataalpaca/"
             className="hover:text-[#d4af37] transition-colors duration-300"
           >
+            <FaFacebook />
           </Link>
           <span className="text-[#868686] font-medium">/KataAlpaca</span>
         </div>

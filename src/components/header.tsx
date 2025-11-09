@@ -66,7 +66,7 @@ const Header: React.FC = () => {
               className="object-contain"
             />
         </div>
-        <div className="flex justify-center space-x-20 text-gray-400 uppercase tracking-wide w-full">
+        <div className="flex justify-center space-x-20 text-gray-400 uppercase tracking-wide w-full pb-10">
           {Seccion.link.map((link, index) => (
             <div key={index}>
               <Link
