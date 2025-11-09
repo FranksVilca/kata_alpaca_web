@@ -6,7 +6,7 @@ import { FaInstagram } from "react-icons/fa";
 const data = {
   link: [
     { href: "/libro_reclamaciones", text: "LIBRO DE RECLAMACIONES" },
-    { href: "/contactanos", text: "CONTÁCTANOS" },
+    { href: "/contactos", text: "CONTÁCTANOS" },
   ],
 };
 
