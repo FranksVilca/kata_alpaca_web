@@ -28,8 +28,20 @@ export default function BannerNosotros() {
       />
 
       {/* Overlay oscuro */}
-      <div className="absolute inset-0 bg-black/15" />
+      <div className="absolute inset-0 md:bg-black/15 opacity-0 brightness-125   " />
 
+      {/* Overlay fade out claro */}
+      <div className="
+        absolute inset-x-0 
+        bottom-[-10px]  
+        h-[200px]
+        bg-gradient-to-t
+        from-white
+        to-transparent 
+        z-10 
+        md:hidden 
+        "
+        />
       {/* Contenido centrado */}
       <motion.div
         initial={{ opacity: 0, y: 40 }}
@@ -39,10 +51,8 @@ export default function BannerNosotros() {
           relative z-10 text-center text-white px-4
           flex flex-col items-center
           
-          // 🔥 MOBILE: Contenido más arriba (20px adicionales)
-          -translate-y-35 md:translate-y-0
-          
-          // Centra verticalmente en desktop
+          -translate-y-35 
+          md:translate-y-0
           md:justify-center
         "
       >
@@ -50,11 +60,17 @@ export default function BannerNosotros() {
         <h1
           className={`
             ${jura.className}
-            text-4xl sm:text-5xl md:text-8xl lg:text-[8rem] xl:text-[9rem]
-            font-light tracking-[0.1em] md:tracking-[0.05em]
-            mb-2 md:mb-4 
-            drop-shadow-[0_0px_12px_rgba(0,0,0,0.5)]
-          `}
+            text-[2.8rem]
+            sm:text-5xl 
+            md:text-9xl 
+            lg:text-[10rem] 
+            xl:text-[9rem]
+            font-light 
+            mb-3 md:mb-12
+            tracking-[0.01em] md:tracking-[0.05em]
+            drop-shadow-[0_3px_0px_rgba(0,0,0,0.8)]
+            md:drop-shadow-[0_8px_0px_rgba(0,0,0,0.2)]
+            `}
         >
           NOSOTROS
         </h1>
@@ -63,13 +79,15 @@ export default function BannerNosotros() {
         <p
           className={`
             ${aboreto.className}
-            text-[10px] sm:text-sm md:text-base lg:text-lg
-            font-light tracking-[0.15em] md:tracking-[0.2em]
+            text-[15px] sm:text-sm md:text-base lg:text-lg
+            font-light tracking-[0.05em] md:tracking-[0.05em]
             
+
+            font-
             // 🔥 MOBILE: Navegación más pegada al subtítulo
             mb-3 md:mb-12
-            
-            drop-shadow-[0_2px_4px_rgba(0,0,0,0.5)]
+            opacity-90 md:opacity-100
+            drop-shadow-[0_0px_4px_rgba(0,0,0,0.5)]
           `}
         >
           LEGADO TEXTIL, CALIDAD ETERNA
