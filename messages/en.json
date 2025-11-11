@@ -1,5 +1,24 @@
 {
   "Header": {
     "Init": "Init"
+  },
+
+  "usPage": {
+    "banner": {
+      "title": "ABOUT US",
+      "subtitle": "TEXTILE LEGACY, ETERNAL QUALITY",
+      "home": "HOME",
+      "aboutUs": "WHO WE ARE"
+    },
+    "aboutUs": {
+      "title": "WHO WE ARE",
+      "paragraph1": "We are a company from Arequipa with more than 33 years of experience in the alpaca textile sector. We started in 1991 offering services to industry leaders, which allowed us to perfect production techniques and high quality standards.",
+      "paragraph2": "Over time we launched our own brand, working as a team to continuously innovate and improve our processes. Since 2002 we have been exporting to international markets such as the United States, Australia, Germany, United Kingdom, Ireland and France, where our clients recognize us for the excellence and quality of our products."
+    },
+    "history": {
+      "title": "OUR HISTORY",
+      "paragraph1": "It begins in 1991 when Heriberto Muñoz, after working for years in the leading companies in the field, decided to start his own company with the dream of creating different garments that reach various parts of the world.",
+      "paragraph2": "He started by providing manufacturing services for large companies, but his extensive knowledge of knitting led him to venture into the production of complete garments."
+    }
   }
 }
