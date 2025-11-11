@@ -1,29 +1,26 @@
-"use client";
+'use client'
+
 import Image from "next/image";
-import Link from "next/link";
-import { useState } from "react";
+import { Link, usePathname } from "@/i18n/routing";
+import { useTranslations } from "next-intl";
 
-const Seccion = {
-  link: [
-    { href: "/", text: "INICIO" },
-    { href: "/nosotros", text: "NOSOTROS" },
-    { href: "/productos", text: "PRODUCTOS" },
-    { href: "/proceso", text: "PROCESO" },
-    { href: "/noticias", text: "NOTICIAS" },
-    { href: "/contactos", text: "CONTACTOS" },
-  ],
-};
+export default function Header() {
+  const t = useTranslations('Header');
+  const pathname = usePathname();
 
-const Header: React.FC = () => {
-  const [open, setOpen] = useState(false);
+  const Seccion = {
+    link: [
+      { href: "/", text: "INICIO" },
+      { href: "/nosotros", text: "NOSOTROS" },
+      { href: "/productos", text: "PRODUCTOS" },
+      { href: "/proceso", text: "PROCESO" },
+      { href: "/noticias", text: "NOTICIAS" },
+      { href: "/contactos", text: "CONTACTOS" },
+    ],
+  };
 
   return (
     <div className="sticky top-0 z-50">
-      <button
-        onClick={() => setOpen(!open)}
-        className="md:hidden flex flex-col gap-1 m-2 p-2 hover:bg-gray-700 rounded-xl transition-colors duration-300"
-      >
-      </button>
       {/* Navbar Móvil
       {open && (
         <div className="md:hidden flex flex-col bg-[#356c1f] fixed top-0 left-0 w-full h-full z-40">
@@ -58,20 +55,29 @@ const Header: React.FC = () => {
       {/*Navbar en pantalla normal */}
       <div className="hidden md:flex flex-col w-full bg-white">
         <div className="flex justify-center py-12">
-            <Image
-              src="/logo.webp"
-              alt="Descripción del logo"
-              width={200}
-              height={100}
-              className="object-contain"
-            />
+          <Image
+            src="/logo.webp"
+            alt="Descripción del logo"
+            width={200}
+            height={100}
+            className="object-contain"
+          />
+          <div>
+            <Link href={pathname} locale="en">
+              EN
+            </Link>
+            <Link href={pathname} locale="es">
+              ES
+            </Link>
+          </div>
         </div>
         <div className="flex justify-center space-x-20 text-gray-400 uppercase tracking-wide w-full pb-10">
           {Seccion.link.map((link, index) => (
             <div key={index}>
+              <h1> {t("Init")}</h1>
               <Link
-                href={link.href}
                 className="h-full flex items-center justify-center text-sm text-[#292929] hover:text-[#d4af37] transition-all duration-300"
+                href={link.href}
               >
                 {link.text}
               </Link>
@@ -81,6 +87,4 @@ const Header: React.FC = () => {
       </div>
     </div>
   );
-};
-
-export default Header;
+}
