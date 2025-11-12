@@ -51,5 +51,16 @@
       "paragraph2": "Empezó haciendo servicios de confección para grandes empresas pero su amplio conocimiento en tejido de punto lo llevó a incursionar en la producción de prendas completas.",
       "title": "NUESTRA HISTORIA"
     }
+  },
+    
+  "Product": {
+    "jackets": "CASACAS",
+    "accesories": "ACCESORIOS",
+    "sweatersText": "Sweaters de alpaca que combinan suavidad, resistencia y un diseño atemporal, reflejando los más de 30 años de experiencia textil de Kata Alpaca.",      "cardigansText": "Cardigans versátiles elaborados en fibras nobles, pensados para brindar comodidad y elegancia, manteniendo la esencia de la tradición peruana.",
+    "ponchosText": "Ponchos que representan el legado andino, renovados con un diseño moderno para transmitir cultura, identidad y estilo en cada uso",
+    "jacketsText": "Casacas exclusivas confeccionadas con baby alpaca y algodón pima, pensadas para protegerte con distinción mientras resaltan la innovación de la marca.",
+    "accesoriesText": "Accesorios únicos que completan tu estilo, elaborados con fibras naturales que aportan durabilidad, calidez y un sello de autenticidad peruana.",
+    "endText1": "Podemos desarrollar diferentes clases de productos a solicitud de nuestros clientes y con nuestro",
+    "endText2": "haremos realidad todas tus ideas"
   }
 }
