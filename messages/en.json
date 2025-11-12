@@ -51,5 +51,17 @@
       "paragraph2": "He started by providing manufacturing services for large companies, but his extensive knowledge of knitting led him to venture into the production of complete garments.",
       "title": "OUR HISTORY"
     }
+  },
+    
+  "Product": {
+    "jackets": "JACKETS",
+    "accesories": "ACCESORIES",
+    "sweatersText": "Alpaca sweaters that combine softness, durability, and a timeless design, reflecting Kata Alpaca's more than 30 years of textile experience.",
+    "cardigansText": "Versatile cardigans made from noble fibers, designed to provide comfort and elegance, maintaining the essence of Peruvian tradition.",
+    "ponchosText": "Ponchos that represent the Andean legacy, renewed with a modern design to convey culture, identity, and style with every use.",
+    "jacketsText": "Exclusive jackets made with baby alpaca and Pima cotton, designed to protect you with distinction while highlighting the brand's innovation.",
+    "accesoriesText": "Unique accessories that complete your style, made with natural fibers that provide durability, warmth, and a seal of Peruvian authenticity.",
+    "endText1": "We can develop different kinds of products upon our clients' request and with our",
+    "endText2": " we will make all your ideas come true"
   }
 }
