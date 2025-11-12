@@ -1,25 +1,55 @@
 {
   "Header": {
-    "Init": "Inicio"
+    "init": "INICIO",
+    "aboutUs": "NOSOTROS", 
+    "products": "PRODUCTOS", 
+    "process": "PROCESO" ,
+    "news": "NOTICIAS" ,
+    "contact": "CONTACTOS"
+  },
+  
+  "Footer":{
+    "book": "LIBRO DE RECLAMACIONES"
   },
 
+  "Home":{
+    "first":"LA SUAVIDAD DE LA ",
+    "second":"EXCELENCIA DE NUESTRA HISTORIA",
+    "aboutFirst": "QUIENES SOMOS",
+    "aboutText": "En Kata Alpaca transformamos fibras nobles en moda sostenible. Nuestra historia de tres décadas refleja el compromiso con la cultura peruana, la excelencia en cada prenda y el respeto por nuestra comunidad.",
+    "aboutImg": "NUESTRA MARCA",
+    "comSectTitle": "COMPROMISO",
+    "comSectTitleCal": "CALIDAD",
+    "comSectTitleSos": "SOSTENIBILIDAD",
+    "comSectTitleAte": "ATENCIÓN PERSONALIZADA",
+    "comSectTextCal": "Cada prenda pasa por un estricto control para garantizar que supere las expectativas de nuestros clientes.",
+    "comSectTextSos": "Priorizamos materiales reciclables y promovemos procesos responsables con el medio ambiente.",
+    "comSectTextAte": "Trabajamos de la mano con nuestros clientes en el desarrollo de sus colecciones, cuidando cada detalle.",
+    "comOur": "NUESTRO",
+    "comPro": "COMPROMISO",
+    "garmentsTitle": "PRENDAS"
+  },
   "usPage": {
-    "banner": {
-      "title": "NOSOTROS",
-      "subtitle": "LEGADO TEXTIL, CALIDAD ETERNA",
-      "home": "INICIO",
-      "aboutUs": "QUIEN SOMOS"
-    },
     "aboutUs": {
-      "title": "QUIENES SOMOS",
       "paragraph1": "Somos una empresa arequipeña con más de 33 años de experiencia en el sector textil de alpaca. Iniciamos en 1991 ofreciendo servicios a líderes de la industria, lo que nos permitió perfeccionar técnicas de producción y altos estándares de calidad.",
-      "paragraph2": "Con el tiempo lanzamos nuestra propia marca, trabajando en equipo para innovar y mejorar continuamente nuestros procesos. Desde 2002 exportamos a mercados internacionales como Estados Unidos, Australia, Alemania, Reino Unido, Irlanda y Francia, donde nuestros clientes nos reconocen por la excelencia y calidad de nuestros productos."
+      "paragraph2": "Con el tiempo lanzamos nuestra propia marca, trabajando en equipo para innovar y mejorar continuamente nuestros procesos. Desde 2002 exportamos a mercados internacionales como Estados Unidos, Australia, Alemania, Reino Unido, Irlanda y Francia, donde nuestros clientes nos reconocen por la excelencia y calidad de nuestros productos.",
+      "title": "QUIENES SOMOS"
+    },
+    "banner": {
+      "aboutUs": "QUIEN SOMOS",
+      "home": "INICIO",
+      "subtitle": "LEGADO TEXTIL, CALIDAD ETERNA",
+      "title": "NOSOTROS"
+    },
+    "bussiness": {
+      "paragraph1": "Los altos estandares de calidad que aprendio durante sus años de experiencia y las nuevas tecnicas que desarolló lograron que se le reconozca en el mercado local como un productor destacado",
+      "paragraph2": "Es en el año 2002 por primera vez realiza una exportación a EEUU y empieza una larga relacion con su cliente que permanece hasta el dia de hoy. Con los años más y más clientes de diversas partes del mundo pusieron su confianza en Edilberto para sus pedidos y mantuvieron largas relaciones comerciales juntos.",
+      "title": "NUESTRA EMPRESA"
     },
     "history": {
-      "title": "NUESTRA HISTORIA",
       "paragraph1": "Empieza el año 1991 cuando Heriberto Muñoz, después de trabajar por años en las empresas líderes del rubro decide iniciar su propia empresa con el sueño de crear prendas diferentes que lleguen a diversas partes del mundo.",
-      "paragraph2": "Empezó haciendo servicios de confección para grandes empresas pero su amplio conocimiento en tejido de punto lo llevó a incursionar en la producción de prendas completas."
+      "paragraph2": "Empezó haciendo servicios de confección para grandes empresas pero su amplio conocimiento en tejido de punto lo llevó a incursionar en la producción de prendas completas.",
+      "title": "NUESTRA HISTORIA"
     }
   }
-
 }
