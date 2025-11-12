@@ -1,33 +1,32 @@
 {
-  "Header": {
-    "init": "INICIO",
-    "aboutUs": "NOSOTROS", 
-    "products": "PRODUCTOS", 
-    "process": "PROCESO" ,
-    "news": "NOTICIAS" ,
-    "contact": "CONTACTOS"
-  },
-  
-  "Footer":{
+  "Footer": {
     "book": "LIBRO DE RECLAMACIONES"
   },
-
-  "Home":{
-    "first":"LA SUAVIDAD DE LA ",
-    "second":"EXCELENCIA DE NUESTRA HISTORIA",
+  "Header": {
+    "aboutUs": "NOSOTROS",
+    "contact": "CONTACTOS",
+    "init": "INICIO",
+    "Init": "Inicio",
+    "news": "NOTICIAS",
+    "process": "PROCESO",
+    "products": "PRODUCTOS"
+  },
+  "Home": {
     "aboutFirst": "QUIENES SOMOS",
-    "aboutText": "En Kata Alpaca transformamos fibras nobles en moda sostenible. Nuestra historia de tres décadas refleja el compromiso con la cultura peruana, la excelencia en cada prenda y el respeto por nuestra comunidad.",
     "aboutImg": "NUESTRA MARCA",
-    "comSectTitle": "COMPROMISO",
-    "comSectTitleCal": "CALIDAD",
-    "comSectTitleSos": "SOSTENIBILIDAD",
-    "comSectTitleAte": "ATENCIÓN PERSONALIZADA",
-    "comSectTextCal": "Cada prenda pasa por un estricto control para garantizar que supere las expectativas de nuestros clientes.",
-    "comSectTextSos": "Priorizamos materiales reciclables y promovemos procesos responsables con el medio ambiente.",
-    "comSectTextAte": "Trabajamos de la mano con nuestros clientes en el desarrollo de sus colecciones, cuidando cada detalle.",
+    "aboutText": "En Kata Alpaca transformamos fibras nobles en moda sostenible. Nuestra historia de tres décadas refleja el compromiso con la cultura peruana, la excelencia en cada prenda y el respeto por nuestra comunidad.",
     "comOur": "NUESTRO",
     "comPro": "COMPROMISO",
-    "garmentsTitle": "PRENDAS"
+    "comSectTextAte": "Trabajamos de la mano con nuestros clientes en el desarrollo de sus colecciones, cuidando cada detalle.",
+    "comSectTextCal": "Cada prenda pasa por un estricto control para garantizar que supere las expectativas de nuestros clientes.",
+    "comSectTextSos": "Priorizamos materiales reciclables y promovemos procesos responsables con el medio ambiente.",
+    "comSectTitle": "COMPROMISO",
+    "comSectTitleAte": "ATENCIÓN PERSONALIZADA",
+    "comSectTitleCal": "CALIDAD",
+    "comSectTitleSos": "SOSTENIBILIDAD",
+    "first": "LA SUAVIDAD DE LA ",
+    "garmentsTitle": "PRENDAS",
+    "second": "EXCELENCIA DE NUESTRA HISTORIA"
   },
   "usPage": {
     "aboutUs": {
@@ -46,10 +45,29 @@
       "paragraph2": "Es en el año 2002 por primera vez realiza una exportación a EEUU y empieza una larga relacion con su cliente que permanece hasta el dia de hoy. Con los años más y más clientes de diversas partes del mundo pusieron su confianza en Edilberto para sus pedidos y mantuvieron largas relaciones comerciales juntos.",
       "title": "NUESTRA EMPRESA"
     },
+    "commitment": {
+      "paragraph": "El activo más valioso de nuestra empresa es nuestro equipo de trabajo. Cada uno de los trabajadores es importante para la cadena de producción por lo cual nos esforzamos por capacitarlos en las últimas tecnologías textiles, brindarles un ambiente laboral cómodo que les permita crecer como profesionales y tener una buena calidad de vida.",
+      "title": "NUESTRO COMPROMISO"
+    },
     "history": {
       "paragraph1": "Empieza el año 1991 cuando Heriberto Muñoz, después de trabajar por años en las empresas líderes del rubro decide iniciar su propia empresa con el sueño de crear prendas diferentes que lleguen a diversas partes del mundo.",
       "paragraph2": "Empezó haciendo servicios de confección para grandes empresas pero su amplio conocimiento en tejido de punto lo llevó a incursionar en la producción de prendas completas.",
       "title": "NUESTRA HISTORIA"
+    },
+    "mission": {
+      "paragraph": "\"En Kata Alpaca diseñamos, elaboramos y comercializamos\nprendas de vestir de fibra de alpaca, utilizando procesos de confección\nde alta calidad, para brindar productos que ofrezcan confort, estilo y valor cultural. Atendemos mercados nacionales e internacionales, promoviendo el desarrollo sostenible, el empleo digno y el bienestar de nuestra comunidad arequipeña, en armonía con el medio ambiente.\""
+    },
+    "ourPillars": {
+      "title": "NUESTROS PILARES",
+      "p1": "Calidad",
+      "p2": "Valor",
+      "p3": "Tiempo"
+    },
+    "today": {
+      "paragraph": "El día de hoy la empresa es llevada por sus dos hijos: Eddy Mauricio y Patricia Muñoz quienes se encargan del manejo de produccion y ventas de la empresa siempre de la mano y la asesoría de su padre."
+    },
+    "vision": {
+      "paragraph": "\"Consolidarnos al 2030 como una empresa textil arequipeña que\namplía sostenidamente su presencia en el mercado nacional e internacional, ofreciendo prendas de alpaca de alta calidad mediante procesos productivos con tecnología accesible, generando bienestar en\nnuestra comunidad local y promoviendo el valor cultural de nuestras\nraíces. \""
     }
   }
 }
