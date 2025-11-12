@@ -38,7 +38,7 @@ export default function ProductRight({
             </div>
 
             {/* Imagen de la Tela*/}
-            <div className="absolute top-4/6 -translate-y-1/2 left-0 -translate-x-3/4 w-36 h-44 overflow-hidden shadow-lg z-10">
+            <div className="absolute top-4/6 -translate-y-1/2 left-0 -translate-x-3/4 w-36 h-44 overflow-hidden z-10 transition-transform duration-300 ease-out hover:scale-120">
               <Image
                 src={secondImage}
                 alt="producto"
