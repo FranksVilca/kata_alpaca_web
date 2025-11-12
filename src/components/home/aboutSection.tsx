@@ -1,17 +1,18 @@
+import { useTranslations } from "next-intl";
 import Image from "next/image";
 
 const AboutSection: React.FC = () => {
+  const f = useTranslations("Home");
+  
   return (
     <div className="py-12">
       {/* Título y descripción */}
       <div className="text-center mb-8 py-20">
         <h1 className="text-[#BE5103] text-4xl md:text-6xl font-extralight mb-4">
-          QUIENES SOMOS
+          {f("aboutFirst")}
         </h1>
         <p className="text-gray-700 max-w-2xl mx-auto">
-          En Kata Alpaca transformamos fibras nobles en moda sostenible. Nuestra
-          historia de tres décadas refleja el compromiso con la cultura peruana,
-          la excelencia en cada prenda y el respeto por nuestra comunidad.
+          {f("aboutText")}
         </p>
       </div>
 
@@ -50,10 +51,10 @@ const AboutSection: React.FC = () => {
           {/* Texto encima */}
           <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-4">
             <h2 className="text-white text-3xl font-extralight ">
-              ALPAKIRA
+              A L P A K I R A
             </h2>
             <p className="text-lg md:text-2xl underline mt-2 text-[#FFBC8C]">
-              NUESTRA MARCA
+              {f("aboutImg")}
             </p>
           </div>
         </div>

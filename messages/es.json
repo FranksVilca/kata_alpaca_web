@@ -1,5 +1,32 @@
 {
   "Header": {
-    "Init": "Inicio"
+    "init": "INICIO",
+    "aboutUs": "NOSOTROS", 
+    "products": "PRODUCTOS", 
+    "process": "PROCESO" ,
+    "news": "NOTICIAS" ,
+    "contact": "CONTACTOS"
+  },
+  
+  "Footer":{
+    "book": "LIBRO DE RECLAMACIONES"
+  },
+
+  "Home":{
+    "first":"LA SUAVIDAD DE LA ",
+    "second":"EXCELENCIA DE NUESTRA HISTORIA",
+    "aboutFirst": "QUIENES SOMOS",
+    "aboutText": "En Kata Alpaca transformamos fibras nobles en moda sostenible. Nuestra historia de tres décadas refleja el compromiso con la cultura peruana, la excelencia en cada prenda y el respeto por nuestra comunidad.",
+    "aboutImg": "NUESTRA MARCA",
+    "comSectTitle": "COMPROMISO",
+    "comSectTitleCal": "CALIDAD",
+    "comSectTitleSos": "SOSTENIBILIDAD",
+    "comSectTitleAte": "ATENCIÓN PERSONALIZADA",
+    "comSectTextCal": "Cada prenda pasa por un estricto control para garantizar que supere las expectativas de nuestros clientes.",
+    "comSectTextSos": "Priorizamos materiales reciclables y promovemos procesos responsables con el medio ambiente.",
+    "comSectTextAte": "Trabajamos de la mano con nuestros clientes en el desarrollo de sus colecciones, cuidando cada detalle.",
+    "comOur": "NUESTRO",
+    "comPro": "COMPROMISO",
+    "garmentsTitle": "PRENDAS"
   }
 }

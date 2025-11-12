@@ -1,5 +1,32 @@
 {
-  "Header": {
-    "Init": "Init"
+    "Header": {
+    "init": "HOME",
+    "aboutUs": "ABOUT US", 
+    "products": "PRODUCTS", 
+    "process": "PROCESS" ,
+    "news": "NEWS" ,
+    "contact": "CONTACT"
+  },
+  
+  "Footer":{
+    "book": "COMPLAINTS BOOK"
+  },
+
+  "Home":{
+    "first": "THE SOFTNESS OF THE",
+    "second": "EXCELLENCE OF OUR HISTORY",
+    "aboutFirst": "WHO WE ARE",
+    "aboutText": "At Kata Alpaca, we transform noble fibers into sustainable fashion. Our three-decade history reflects a commitment to Peruvian culture, excellence in every garment, and respect for our community.",
+    "aboutImg": "OUR BRAND",
+    "comSectTitle": "COMMITMENT",
+    "comSectTitleCal": "QUALITY",
+    "comSectTitleSos": "SUSTAINABILITY",
+    "comSectTitleAte": "PERSONALIZED ATTENTION",
+    "comSectTextCal": "Every garment goes through strict quality control to ensure it exceeds our customers' expectations.",
+    "comSectTextSos": "We prioritize recyclable materials and promote environmentally responsible processes.",
+    "comSectTextAte": "We work hand-in-hand with our clients in the development of their collections, taking care of every detail.",
+    "comOur": "OUR",
+    "comPro": "COMMITMENT",
+    "garmentsTitle": "GARMENTS"
   }
 }

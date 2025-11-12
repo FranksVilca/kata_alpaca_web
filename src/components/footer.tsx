@@ -2,15 +2,19 @@ import Link from "next/link";
 import Image from "next/image";
 import { FaFacebook } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
-
-const data = {
-  link: [
-    { href: "/libro_reclamaciones", text: "LIBRO DE RECLAMACIONES" },
-    { href: "/contactos", text: "CONTÁCTANOS" },
-  ],
-};
+import { useTranslations } from "next-intl";
 
 const Footer: React.FC = () => {
+  const h = useTranslations("Header");
+  const f = useTranslations("Footer");
+
+  const data = {
+    link: [
+      { href: "/libro_reclamaciones", text: f("book") },
+      { href: "/contactos", text: h("contact") },
+    ],
+  };
+
   return (
     <div className="flex px-10 sm:px-6 md:px-8 md:py-8 bg-[#9D9C9C0D] text-[#868686] w-full border-t-2 border-[#00000040]">
       {/* Imagen */}

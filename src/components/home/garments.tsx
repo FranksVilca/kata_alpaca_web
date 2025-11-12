@@ -1,10 +1,13 @@
+import { useTranslations } from "next-intl";
 import Image from "next/image";
 
 const Garments: React.FC = () => {
+  const f = useTranslations("Home");
+
   return (
     <div className="py-40">
       <div className="text-6xl text-center text-[#BE5103] tracking-[0.3em] mb-8">
-        PRENDAS
+        {f("garmentsTitle")}
       </div>
       <div className="flex justify-center items-center w-full px-4">
         {/* Cardigan - Left */}
@@ -35,7 +38,9 @@ const Garments: React.FC = () => {
             />
             <div className="absolute inset-0 bg-black/50 flex items-center justify-center pb-8">
               <p className="text-white text-xl tracking-[0.3em] text-center font-light leading-tight">
-                PONCHO<br />CALADO COCOS
+                PONCHO
+                <br />
+                CALADO COCOS
               </p>
             </div>
           </div>
