@@ -55,6 +55,7 @@
       "title": "OUR HISTORY"
     },
     "mission": {
+      "title": "MISSION",
       "paragraph": "\"At Kata Alpaca, we design, produce, and market\nalpaca fiber clothing, using high-quality manufacturing processes\nto provide products that offer comfort, style, and cultural value. We serve national and international markets, promoting sustainable development, decent employment, and the well-being of our Arequipa community, in harmony with the environment.\""
     },
     "ourPillars": {
@@ -68,6 +69,7 @@
       "paragraph": "Today the company is run by its two children: Eddy Mauricio and Patricia Muñoz, who are in charge of production and sales management of the company, always with the guidance and advice of their father."
     },
     "vision": {
+      "title": "VISION",
       "paragraph": "\"To establish ourselves by 2030 as a textile company from Arequipa that sustainably expands its presence in the national and international market, offering high-quality alpaca garments through production processes with accessible technology, generating well-being in our local community and promoting the cultural value of our roots.\""
     }
   }
