@@ -55,6 +55,7 @@
       "title": "NUESTRA HISTORIA"
     },
     "mission": {
+      "title": "MISIÓN",
       "paragraph": "\"En Kata Alpaca diseñamos, elaboramos y comercializamos\nprendas de vestir de fibra de alpaca, utilizando procesos de confección\nde alta calidad, para brindar productos que ofrezcan confort, estilo y valor cultural. Atendemos mercados nacionales e internacionales, promoviendo el desarrollo sostenible, el empleo digno y el bienestar de nuestra comunidad arequipeña, en armonía con el medio ambiente.\""
     },
     "ourPillars": {
@@ -67,6 +68,7 @@
       "paragraph": "El día de hoy la empresa es llevada por sus dos hijos: Eddy Mauricio y Patricia Muñoz quienes se encargan del manejo de produccion y ventas de la empresa siempre de la mano y la asesoría de su padre."
     },
     "vision": {
+      "title": "VISIÓN",
       "paragraph": "\"Consolidarnos al 2030 como una empresa textil arequipeña que\namplía sostenidamente su presencia en el mercado nacional e internacional, ofreciendo prendas de alpaca de alta calidad mediante procesos productivos con tecnología accesible, generando bienestar en\nnuestra comunidad local y promoviendo el valor cultural de nuestras\nraíces. \""
     }
   }
