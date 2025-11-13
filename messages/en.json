@@ -68,9 +68,15 @@
     "today": {
       "paragraph": "Today the company is run by its two children: Eddy Mauricio and Patricia Muñoz, who are in charge of production and sales management of the company, always with the guidance and advice of their father."
     },
-    "vision": {
+    "vission": {
       "title": "VISION",
       "paragraph": "\"To establish ourselves by 2030 as a textile company from Arequipa that sustainably expands its presence in the national and international market, offering high-quality alpaca garments through production processes with accessible technology, generating well-being in our local community and promoting the cultural value of our roots.\""
+    },
+    "values": {
+      "title": "VALUES",
+      "v1": "Commitment to our clients and collaborators in carrying out a respectful production with the highest quality standards.",
+      "v2": "Punctuality in our deliveries, always meeting dispatch dates.",
+      "v3": "Teamwork: With the experience and knowledge of our team, we offer the best solutions for your products."
     }
   }
 }

@@ -41,7 +41,7 @@ export default function NuestroCompromiso() {
       {/* Imagen de fondo */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="/nosotros/fibreBackground.jpg"
+          src="/nosotros/compromiso.webp"
           alt="Fondo de fibra de alpaca"
           fill
           className="object-cover object-center"
@@ -63,12 +63,12 @@ export default function NuestroCompromiso() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className="bg-white/90  px-8 py-4 md:px-8 md:py-8  max-w-4xl w-full"
+          className="bg-white/90  px-8 py-4 md:px-8 md:py-8  max-w-7xl w-full"
         >
           <h2
             className={`
               ${aboreto.className}
-              text-2xs md:text-5xl 
+              text-2xl md:text-[3.5vw] 
               font-normal
               tracking-[0.05em] md:tracking-[0.05em]
               text-[#C85A3F]
@@ -83,7 +83,7 @@ export default function NuestroCompromiso() {
           <p 
             className={`
               ${raleway.className} 
-              text-[10px] md:text-base 
+              text-[10px] md:text-[20px] 
               font-light
               leading-relaxed md:leading-tight
               text-gray-800

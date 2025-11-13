@@ -21,7 +21,7 @@ export default function NuestraEmpresa() {
 
   return (
     <section className="w-full py-8 md:py-20 bg-white">
-      <div className="container mx-auto px-4 md:px-20 ">
+      <div className="mx-0 px-4 md:px-0 md:mr-30 ">
         
         {/* MOBILE: Imágenes arriba */}
         <motion.div
@@ -34,7 +34,7 @@ export default function NuestraEmpresa() {
           {/* Imagen 1 - Fibra (arriba derecha) */}
           <div className="absolute top-0 left-0 w-[80%] h-[80%] z-10">
             <Image
-              src="/nosotros/fibra2.jpg"
+              src="/nosotros/fibra2.webp"
               alt="Fibra de alpaca"
               fill
               className="object-cover"
@@ -44,7 +44,7 @@ export default function NuestraEmpresa() {
           {/* Imagen 2 - Manos tejiendo (abajo izquierda) */}
           <div className="absolute bottom-0 right-0 w-[60%] h-[70%] z-20">
             <Image
-              src="/nosotros/modelo1.jpg"
+              src="/nosotros/modelo1.webp"
               alt="Proceso de tejido"
               fill
               className="object-cover"
@@ -66,7 +66,7 @@ export default function NuestraEmpresa() {
             {/* Imagen 1 - Fibra (arriba derecha) */}
             <div className="absolute top-0 left-0 w-[80%] h-[80%] z-10 ">
               <Image
-                src="/nosotros/fibra2.jpg"
+                src="/nosotros/fibra2.webp"
                 alt="Fibra de alpaca"
                 fill
                 className="object-cover"
@@ -76,10 +76,10 @@ export default function NuestraEmpresa() {
             {/* Imagen 2 - Manos tejiendo (abajo izquierda) */}
             <div className="absolute bottom-0 right-0 w-[70%] h-[70%] z-20">
               <Image
-                src="/nosotros/modelo1.jpg"
+                src="/nosotros/modelo1.webp"
                 alt="Proceso de tejido"
                 fill
-                className="object-cover"
+                className="object-cover object-[center_20%]"
               />
             </div>
           </motion.div>
@@ -96,7 +96,7 @@ export default function NuestraEmpresa() {
             <h2
               className={`
                 ${aboreto.className}
-                text-2xl md:text-[4vw] 
+                text-2xl md:text-[3.5vw] 
                 font-thin
                 tracking-[0.05em] md:tracking-[0.01rem]
                 text-[#C85A3F]

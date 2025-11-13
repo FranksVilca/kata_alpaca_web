@@ -25,11 +25,11 @@ export default function QuienesSomos() {
   return (
     <section 
       id="quienes-somos" 
-      className="w-full py-15 md:py-40 bg-white"
+      className="w-full py-15 md:py-40 bg-white "
     >
-      <div className="container mx-auto  px-4 md:px-20 ">
+      <div className="md:w-full  px-4  mx-0 md:mx-0 md:px-40 ">
         {/* Layout Mobile y Desktop */}
-        <div className="flex flex-row md:flex-row gap-4 md:gap-16">
+        <div className="flex flex-row md:flex-row gap-4 md:gap-16 ">
           
           {/* Columna de Imágenes - Izquierda */}
           <motion.div
@@ -81,7 +81,7 @@ export default function QuienesSomos() {
             <h2
               className={`
                 ${aboreto.className}
-                text-xl md:text-[4vw]
+                text-2xl md:text-[3.5vw]
                 font-thin
                 align-middle
                 tracking-[0.001em] md:tracking-[0]

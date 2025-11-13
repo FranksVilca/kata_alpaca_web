@@ -67,9 +67,15 @@
     "today": {
       "paragraph": "El día de hoy la empresa es llevada por sus dos hijos: Eddy Mauricio y Patricia Muñoz quienes se encargan del manejo de produccion y ventas de la empresa siempre de la mano y la asesoría de su padre."
     },
-    "vision": {
+    "vission": {
       "title": "VISIÓN",
       "paragraph": "\"Consolidarnos al 2030 como una empresa textil arequipeña que\namplía sostenidamente su presencia en el mercado nacional e internacional, ofreciendo prendas de alpaca de alta calidad mediante procesos productivos con tecnología accesible, generando bienestar en\nnuestra comunidad local y promoviendo el valor cultural de nuestras\nraíces. \""
+    },
+    "values": {
+      "title": "VALORES",
+      "v1": "Compromiso con nuestros clientes y colaboradores en realizar una producción respetuosa y con los más altos estándares de calidad.",
+      "v2": "Puntualidad en nuestras entregas, cumpliendo siempre las fechas de despacho.",
+      "v3": "Trabajo en equipo: Con la experiencia y el conocimiento de nuestro equipo, ofrecemos las mejores soluciones para sus productos."
     }
   }
 }

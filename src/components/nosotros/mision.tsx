@@ -21,40 +21,40 @@ export default function Mision() {
 
   return (
     <section className="w-full py-12 md:py-20 bg-white">
-      <div className="container ml-20 px-4 md:px-8">
+      <div className="w-full md:pl-20">
         
-        <div className="flex flex-row md:flex-row gap-8 md:gap-12 lg:gap-16">
+        <div className="flex flex-row md:flex-row gap-6 md:gap-12 lg:gap-16">
           
 
-          {/* Columna de Contenido - Abajo en mobile, Izquierda en desktop */}
+
+          {/* Columna de Contenido - Abajo izquierda en mobile */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="w-full mt-20 md:mt-2 md:flex-1 flex flex-col justify-center md:order-1"
+            className="w-[calc(100%-180px-1.5rem+1.5rem+20px)] px-5 md:w-full md:flex-1 flex flex-col justify-center md:order-1 md:px-0 md:ml-0"
           >
-            {/* Título */}
             <h2
               className={`
                 ${aboreto.className}
-                text-4xl md:text-5xl lg:text-6xl
+                text-3xl md:text-[3.5vw] 
                 font-normal
                 tracking-[0.1em]
                 text-[#BE5103]
-                mb-6 md:mb-8
+                drop-shadow-[0_1px_2px_rgba(0,0,0,0.2)]
+                mb-4 md:mb-8
               `}
             >
               {t('title')}
             </h2>
 
-            {/* Texto */}
             <p 
               className={`
                 ${raleway.className} 
-                text-sm md:text-base lg:text-lg
+                text-[0.85rem] md:text-[20px]
                 font-light
-                leading-tight md:leading-loose
+                leading-tight md:leading-tight
                 text-gray-800
                 text-justify
               `}
@@ -63,22 +63,21 @@ export default function Mision() {
             </p>
           </motion.div>
 
-        {/* Columna de Imagen - Arriba en mobile, Derecha en desktop */}
+                    {/* Columna de Imagen - Arriba derecha en mobile */}
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6, delay: 0.2 }}
             viewport={{ once: true }}
-            className="w-full md:flex-1 relative h-[340px] md:h-[400px] md:order-2"
+            className="w-[180px] ml-auto relative h-[280px] md:w-full md:flex-1 md:h-[400px] md:order-2 md:ml-0"
           >
             <Image
-              src="/nosotros/manosAlpaca.jpg"
+              src="/nosotros/mision.webp"
               alt="Manos trabajando con fibra de alpaca"
               fill
               className="object-cover object-top md:object-center"
             />
           </motion.div>
-
           
         </div>
       </div>
