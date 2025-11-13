@@ -30,7 +30,7 @@ export default function NuestraFamilia() {
           {/* Background de fibras - Ocupa todo el ancho */}
           <div className="absolute inset-0 w-full h-30">
             <Image
-              src="/nosotros/fibre.jpg"
+              src="/nosotros/cm.webp"
               alt="Fibras de alpaca"
               fill
               className="object-cover"
@@ -42,7 +42,7 @@ export default function NuestraFamilia() {
             <div className="bg-white p-2 shadow-2xl">
               <div className="relative w-[150px] h-[150px]">
                 <Image
-                  src="/nosotros/ceo.png"
+                  src="/nosotros/ceo1.webp"
                   alt="Eddy Mauricio y Patricia Muñoz"
                   fill
                   className="object-cover"
@@ -87,7 +87,7 @@ export default function NuestraFamilia() {
             className="absolute left-0 top-0 w-full translate-y-1/3 h-[60%] z-0"
           >
             <Image
-              src="/nosotros/fibre.jpg"
+              src="/nosotros/cm.webp"
               alt="Fibras de alpaca"
               fill
               className="object-cover"
@@ -103,7 +103,7 @@ export default function NuestraFamilia() {
             className="absolute left-[8%] top-1/2 -translate-y-1/2 w-[50%] z-10 "
           >
             <div className="bg-white/95 px-8 py-8 lg:py-10 shadow-xl opacity-85">
-              <p className={`${raleway.className} text-sm lg:text-base leading-relaxed text-black text-justify`}>
+              <p className={`${raleway.className} text-sm lg:text-lg leading-relaxed text-black text-justify mr-2`}>
                 {t('paragraph')}
               </p>
             </div>
@@ -119,7 +119,7 @@ export default function NuestraFamilia() {
           >
             <div className="relative w-full h-full">
               <Image
-                src="/nosotros/ceo.png"
+                src="/nosotros/ceo1.webp"
                 alt="Eddy Mauricio y Patricia Muñoz"
                 fill
                 className="object-cover object-center"

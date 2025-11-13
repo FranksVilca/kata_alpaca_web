@@ -8,6 +8,8 @@ import NuestraHistoria from "@/components/nosotros/nuestraHistoria";
 import NuestroCompromiso from "@/components/nosotros/nuestroCompromiso";
 import NuestrosPilares from "@/components/nosotros/NuestrosPilares";
 import QuienesSomos from "@/components/nosotros/quienesSomos";
+import Values from "@/components/nosotros/values";
+import Vission from "@/components/nosotros/vision";
 export default function Home() {
   return (
     <div>
@@ -20,6 +22,8 @@ export default function Home() {
       <NuestraFamilia/>
       <NuestroCompromiso/>
       <Mision/>
+      <Vission/>
+      <Values/>
       
       
       <Footer />

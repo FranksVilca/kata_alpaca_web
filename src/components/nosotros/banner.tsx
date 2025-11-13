@@ -25,7 +25,7 @@ export default function BannerNosotros() {
     <section className="relative w-full h-[90vh] md:h-[75vh] flex items-center justify-center  overflow-hidden">
       {/* Imagen de fondo */}
       <Image
-        src="/nosotros/nosotros.jpg"
+        src="/nosotros/nosotros.webp"
         alt="Paisaje andino con alpacas"
         fill
         priority
