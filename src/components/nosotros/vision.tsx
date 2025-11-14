@@ -23,7 +23,7 @@ export default function Vision() {
     <section className="w-full py-12 md:py-20 bg-white">
       <div className="w-full md:pl-0">
         
-        <div className="flex flex-row md:flex-row gap-6 md:gap-12 lg:gap-16">
+        <div className="flex flex-row md:flex-row gap-6 md:gap-12 lg:gap-16 sm:min-h-[400px]">
           
           {/* Columna de Imagen - Abajo izquierda en mobile */}
           <motion.div
@@ -31,7 +31,7 @@ export default function Vision() {
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6, delay: 0.2 }}
             viewport={{ once: true }}
-            className="w-[180px] mr-auto relative h-[280px] md:w-full md:flex-1 md:h-[400px] md:order-1 md:mr-0"
+            className="w-[180px] mr-auto relative h-[280px] md:w-full md:flex-1 md:h-[400px] md:order-1 md:mr-0 self-center "
           >
             <Image
               src="/nosotros/vision.webp"
@@ -39,6 +39,8 @@ export default function Vision() {
               fill
               className="object-cover object-bottom md:object-center"
             />
+            <div className="absolute inset-0 bg-black/30"></div>
+
           </motion.div>
           {/* Columna de Contenido - Arriba derecha en mobile */}
           <motion.div

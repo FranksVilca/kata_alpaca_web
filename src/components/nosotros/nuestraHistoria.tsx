@@ -39,6 +39,7 @@ export default function NuestraHistoria() {
               fill
               className="object-cover"
             />
+            <div className="absolute inset-0 bg-black/30"></div>
           </div>
           
           {/* Imagen 2 - Manos tejiendo (abajo izquierda) */}
@@ -106,6 +107,8 @@ export default function NuestraHistoria() {
                 fill
                 className="object-cover"
               />
+              <div className="absolute inset-0 bg-black/30"></div>
+
             </div>
             
             {/* Imagen 2 - Manos tejiendo (abajo izquierda) */}

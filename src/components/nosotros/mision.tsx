@@ -23,7 +23,7 @@ export default function Mision() {
     <section className="w-full py-12 md:py-20 bg-white">
       <div className="w-full md:pl-20">
         
-        <div className="flex flex-row md:flex-row gap-6 md:gap-12 lg:gap-16">
+        <div className="flex flex-row md:flex-row gap-6 md:gap-12 lg:gap-16 sm:min-h-[300px]">
           
 
 
@@ -63,13 +63,13 @@ export default function Mision() {
             </p>
           </motion.div>
 
-                    {/* Columna de Imagen - Arriba derecha en mobile */}
+          {/* Columna de Imagen - Arriba derecha en mobile */}
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6, delay: 0.2 }}
             viewport={{ once: true }}
-            className="w-[180px] ml-auto relative h-[280px] md:w-full md:flex-1 md:h-[400px] md:order-2 md:ml-0"
+            className="w-[180px] ml-auto relative h-[280px] md:w-full md:flex-1 md:h-[400px] md:order-2 md:ml-0 self-center"
           >
             <Image
               src="/nosotros/mision.webp"
@@ -77,7 +77,10 @@ export default function Mision() {
               fill
               className="object-cover object-top md:object-center"
             />
+            <div className="absolute inset-0 bg-black/30"></div>
+
           </motion.div>
+
           
         </div>
       </div>

@@ -31,7 +31,7 @@ export default function NuestraEmpresa() {
           viewport={{ once: true }}
           className="md:hidden relative w-full h-[400px] mb-8"
         >
-          {/* Imagen 1 - Fibra (arriba derecha) */}
+          {/* Imagen 1 - Fibra (arriba izq) */}
           <div className="absolute top-0 left-0 w-[80%] h-[80%] z-10">
             <Image
               src="/nosotros/fibra2.webp"
@@ -39,9 +39,11 @@ export default function NuestraEmpresa() {
               fill
               className="object-cover"
             />
+            <div className="absolute inset-0 bg-black/30"></div>
+
           </div>
           
-          {/* Imagen 2 - Manos tejiendo (abajo izquierda) */}
+          {/* Imagen 2 - Modelo (abajo derecha) */}
           <div className="absolute bottom-0 right-0 w-[60%] h-[70%] z-20">
             <Image
               src="/nosotros/modelo1.webp"
@@ -71,6 +73,8 @@ export default function NuestraEmpresa() {
                 fill
                 className="object-cover"
               />
+              <div className="absolute inset-0 bg-black/30"></div>
+
             </div>
             
             {/* Imagen 2 - Manos tejiendo (abajo izquierda) */}
