@@ -1,14 +1,18 @@
+import { useTranslations } from "next-intl";
+
 const Locate: React.FC = () => {
+  const f = useTranslations("Contact");
+
   return (
     <div>
       <div className="flex flex-col md:flex-row px-4 sm:px-8 md:px-12 gap-8 md:gap-8 py-6 md:py-8 text-[#292929]">
         <div className="flex-1">
           <div className="text-base sm:text-lg md:text-xl font-semibold uppercase mb-4">
-            Sede Principal - Arequipa
+            {f("mainOffice")} - Arequipa
           </div>
           <div className="py-3 md:py-4 border-t border-b border-gray-300">
             <div className="text-sm md:text-base px-4 sm:px-0">
-              <span className="font-semibold">Dirección:</span> Av. Tarapacá
+              <span className="font-semibold">{f("address")}</span> Av. Tarapacá
               1013-A Miraflores, Arequipa. Perú
             </div>
           </div>
@@ -23,11 +27,11 @@ const Locate: React.FC = () => {
 
         <div className="flex-1 mt-8 md:mt-0">
           <div className="text-base sm:text-lg md:text-xl font-semibold uppercase mb-4">
-            Sede - Cuzco
+            {f("headquarters")} - Cuzco
           </div>
           <div className="py-3 md:py-4 border-t border-b border-gray-300">
             <div className="text-sm md:text-base px-4 sm:px-0">
-              <span className="font-semibold">Dirección:</span> Calle El Triunfo
+              <span className="font-semibold">{f("address")}</span> Calle El Triunfo
               352 B, cercado, Cuzco. Perú
             </div>
           </div>
@@ -43,7 +47,7 @@ const Locate: React.FC = () => {
       <div className="sm:hidden">
         <div className="flex flex-col items-center text-center w-full">
           <div className="text-base sm:text-lg md:text-xl font-semibold uppercase mb-4">
-            CONTACT
+            {f("title")}
           </div>
           <div className="py-3 md:py-4 border-t border-b border-gray-300 w-3/4">
             <div className="text-sm md:text-base">
@@ -52,7 +56,8 @@ const Locate: React.FC = () => {
           </div>
           <div className="py-3 md:py-4 border-gray-300">
             <div className="text-sm md:text-base">
-              <span className="font-semibold">Email:</span> ventas@kataalpaca.com
+              <span className="font-semibold">Email:</span>{" "}
+              ventas@kataalpaca.com
             </div>
           </div>
         </div>

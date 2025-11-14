@@ -5,7 +5,7 @@ import { IoPersonCircleOutline } from "react-icons/io5";
 import { TbWorld } from "react-icons/tb";
 
 const HeroSection: React.FC = () => {
-  const f = useTranslations("Home");
+  const f = useTranslations("Contact");
 
   return (
     <section className="relative w-full h-[400px] sm:h-[500px] md:h-[600px]">
@@ -20,7 +20,7 @@ const HeroSection: React.FC = () => {
       </div>
       <div className="relative z-10 px-4 sm:px-6 md:px-20 pt-8 sm:pt-16 md:pt-24">
         <div className="text-lg sm:text-base md:text-3xl mb-3 sm:mb-4 drop-shadow-md text-[#BE5103] pb-6">
-          CONTACTANOS
+          {f("title")}
         </div>
         <div className="font-sans flex gap-2 text-xs sm:text-base">
           <FaMapMarkerAlt size={20}/> AV. TARAPACÁ 1013-A MIRAFLORES, AREQUIPA
