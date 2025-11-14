@@ -5,19 +5,40 @@ import { useState } from "react";
 const FormContactos: React.FC = () => {
   const f = useTranslations("Contact");
 
-  const [form, setForm] = useState({
-    name: "",
+  const [formData, setFormData] = useState({
+    enterpriseName: "",
+    names: "",
     email: "",
+    phone: "",
     message: "",
   });
 
-  const handleChange = (e) => {
-    setForm({ ...form, [e.target.name]: e.target.value });
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log("Datos enviados:", form);
+  const handleSubmit = async () => {
+    const res = await fetch("/api/contacto", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(formData),
+    });
+
+    if (res.ok) {
+      alert("Mensaje enviado con éxito");
+      setFormData({
+        enterpriseName: "",
+        names: "",
+        email: "",
+        phone: "",
+        message: "",
+      });
+    } else {
+      alert("Hubo un error al enviar el mensaje");
+    }
   };
 
   return (
@@ -36,6 +57,7 @@ const FormContactos: React.FC = () => {
           </label>
           <input
             name="enterpriseName"
+            value = {formData.enterpriseName}
             type="text"
             className="w-full px-2 border rounded focus:ring-blue-500 my-2"
             placeholder={f("enterpriseName")}
@@ -49,7 +71,8 @@ const FormContactos: React.FC = () => {
             {f("names")}
           </label>
           <input
-            name="name"
+            name="names"
+            value = {formData.names}
             type="text"
             className="w-full px-2 border rounded focus:ring-blue-500 my-2"
             placeholder={f("names")}
@@ -64,6 +87,7 @@ const FormContactos: React.FC = () => {
           </label>
           <input
             name="email"
+            value = {formData.email}
             type="email"
             className="w-full px-2 border rounded focus:ring-blue-500 my-2"
             placeholder={f("email")}
@@ -77,8 +101,9 @@ const FormContactos: React.FC = () => {
             {f("phone")}
           </label>
           <input
-            name="telefono"
-            type="number"
+            name="phone"
+            value = {formData.phone}
+            type="tell"
             className="w-full px-2 border rounded focus:ring-blue-500 my-2"
             placeholder={f("phone")}
             onChange={handleChange}
@@ -88,10 +113,11 @@ const FormContactos: React.FC = () => {
 
         <div className="mb-3 sm:mb-0">
           <label className="block text-xs sm:text-sm mb-1 sm:mb-0">
-            {f("Message")}
+            {f("message")}
           </label>
           <textarea
             name="message"
+            value = {formData.message}
             className="w-full px-2 border rounded focus:ring-blue-500 my-2 resize-none leading-6"
             placeholder={f("Message")}
             rows={1}
@@ -101,6 +127,7 @@ const FormContactos: React.FC = () => {
 
         <button
           type="submit"
+          onClick={handleSubmit}
           className="w-auto bg-[#FF8112] text-white py-1 px-4 rounded hover:bg-[#FF8112]/50 transition"
         >
           {f("button")}
