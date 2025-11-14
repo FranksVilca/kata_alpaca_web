@@ -78,6 +78,8 @@ export default function Values() {
               fill
               className="object-cover object-top md:object-right"
             />
+            <div className="absolute inset-0 bg-black/30"></div>
+
           </motion.div>
         </div>
       </div>

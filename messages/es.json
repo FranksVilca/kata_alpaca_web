@@ -76,6 +76,21 @@
       "v1": "Compromiso con nuestros clientes y colaboradores en realizar una producción respetuosa y con los más altos estándares de calidad.",
       "v2": "Puntualidad en nuestras entregas, cumpliendo siempre las fechas de despacho.",
       "v3": "Trabajo en equipo: Con la experiencia y el conocimiento de nuestro equipo, ofrecemos las mejores soluciones para sus productos."
+    },
+    "world": {
+      "title": "KATA PARA EL MUNDO",
+      "subtitle": "NUESTRA PRESENCIA MUNDIAL",
+      "stat1Label": "Trabajando desde",
+      "stat1Value": "1990",
+      "stat2Label": "Exportando desde",
+      "stat2Value": "2002",
+      "stat3Label": "Países a los que exportamos actualmente",
+      "stat3Value": "8",
+      "stat4Label": "Ferias internacionales",
+      "stat4Value": "7"
+    },
+    "team": {
+      "quote": "\"Hoy nos consolidamos como una empresa que entrega a sus clientes prendas en tejido de punto de excelencia, confeccionadas con las fibras más finas.\""
     }
   }
 }
