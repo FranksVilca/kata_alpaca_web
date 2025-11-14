@@ -25,17 +25,17 @@ export default function NuestrosPilares() {
       {
         id: 1,
         title: t("p1"),
-        src: "/nosotros/alpaca1.jpg", // Asegúrate de tener estas imágenes
+        src: "/nosotros/alpaca1.webp", // Asegúrate de tener estas imágenes
       },
       {
         id: 2,
         title: t("p2"),
-        src: "/nosotros/alpaca2.jpg",
+        src: "/nosotros/alpaca2.webp",
       },
       {
         id: 3,
         title: t("p3"),
-        src: "/nosotros/alpaca3.jpg",
+        src: "/nosotros/alpaca3.webp",
       },
     ];
 
@@ -54,7 +54,7 @@ export default function NuestrosPilares() {
           viewport={{ once: true }}
           className={`
             ${aboreto.className}
-            text-4xl sm:text-5xl md:text-6xl text-center
+            text-2xl sm:text-5xl md:text-[3.5vw] text-center
             text-[#C85A3F]
             mb-10 md:mb-16
             drop-shadow-[0_4px_2px_rgba(0,0,0,0.3)]
