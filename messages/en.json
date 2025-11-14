@@ -70,38 +70,6 @@
     "vission": {
       "title": "VISION",
       "paragraph": "\"To establish ourselves by 2030 as a textile company from Arequipa that sustainably expands its presence in the national and international market, offering high-quality alpaca garments through production processes with accessible technology, generating well-being in our local community and promoting the cultural value of our roots.\""
-    }
-  },
-    
-  "Product": {
-    "jackets": "JACKETS",
-    "accesories": "ACCESORIES",
-    "sweatersText": "Alpaca sweaters that combine softness, durability, and a timeless design, reflecting Kata Alpaca's more than 30 years of textile experience.",
-    "cardigansText": "Versatile cardigans made from noble fibers, designed to provide comfort and elegance, maintaining the essence of Peruvian tradition.",
-    "ponchosText": "Ponchos that represent the Andean legacy, renewed with a modern design to convey culture, identity, and style with every use.",
-    "jacketsText": "Exclusive jackets made with baby alpaca and Pima cotton, designed to protect you with distinction while highlighting the brand's innovation.",
-    "accesoriesText": "Unique accessories that complete your style, made with natural fibers that provide durability, warmth, and a seal of Peruvian authenticity.",
-    "endText1": "We can develop different kinds of products upon our clients' request and with our",
-    "endText2": " we will make all your ideas come true"
-  },
-
-  "Contact": {
-    "title": "CONTACT US",
-    "text": "We are experts in the creation of knitted garments, offering clothing and accessories of the highest quality.",
-    "headquarters": "HEADQUARTERS",
-    "mainOffice": "MAIN OFFICE",
-    "address": "Address:",
-    "form": "CONTACT FORM",
-    "enterpriseName": "Company Name",
-    "names": "Names and Surnames",
-    "email": "Email",
-    "phone": "Phone",
-    "message": "Message",
-    "button": "Send Message",
-    "simpleText": "Required fields"
-  }
-}
-
     },
     "values": {
       "title": "VALUES",
@@ -124,7 +92,31 @@
     "team": {
       "quote": "\"Today we are consolidated as a company that delivers to its clients excellent knitted garments, made with the finest fibers.\""
     }
-
+  },
+  "Product": {
+    "jackets": "JACKETS",
+    "accesories": "ACCESORIES",
+    "sweatersText": "Alpaca sweaters that combine softness, durability, and a timeless design, reflecting Kata Alpaca's more than 30 years of textile experience.",
+    "cardigansText": "Versatile cardigans made from noble fibers, designed to provide comfort and elegance, maintaining the essence of Peruvian tradition.",
+    "ponchosText": "Ponchos that represent the Andean legacy, renewed with a modern design to convey culture, identity, and style with every use.",
+    "jacketsText": "Exclusive jackets made with baby alpaca and Pima cotton, designed to protect you with distinction while highlighting the brand's innovation.",
+    "accesoriesText": "Unique accessories that complete your style, made with natural fibers that provide durability, warmth, and a seal of Peruvian authenticity.",
+    "endText1": "We can develop different kinds of products upon our clients' request and with our",
+    "endText2": " we will make all your ideas come true"
+  },
+  "Contact": {
+    "title": "CONTACT US",
+    "text": "We are experts in the creation of knitted garments, offering clothing and accessories of the highest quality.",
+    "headquarters": "HEADQUARTERS",
+    "mainOffice": "MAIN OFFICE",
+    "address": "Address:",
+    "form": "CONTACT FORM",
+    "enterpriseName": "Company Name",
+    "names": "Names and Surnames",
+    "email": "Email",
+    "phone": "Phone",
+    "message": "Message",
+    "button": "Send Message",
+    "simpleText": "Required fields"
   }
-
 }
