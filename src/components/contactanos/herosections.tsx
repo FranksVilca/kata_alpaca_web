@@ -14,24 +14,24 @@ const HeroSection: React.FC = () => {
           src="/contactanos/firstImage.webp"
           alt="Alpacas en los Andes"
           fill
-          className="object-cover object-center"
+          className="w-full h-full object-cover object-center sm:object-cover"
           priority
         />
       </div>
-      <div className="z-10 px-4 sm:px-6 md:px-20 md:pt-30">
-        <div className="text-base sm:text-lg md:text-3xl mb-3 sm:mb-4 drop-shadow-md text-[#BE5103] pb-6">
+      <div className="relative z-10 px-4 sm:px-6 md:px-20 pt-8 sm:pt-16 md:pt-24">
+        <div className="text-lg sm:text-base md:text-3xl mb-3 sm:mb-4 drop-shadow-md text-[#BE5103] pb-6">
           CONTACTANOS
         </div>
-        <div className="font-sans flex gap-2">
+        <div className="font-sans flex gap-2 text-xs sm:text-base">
           <FaMapMarkerAlt size={20}/> AV. TARAPACÁ 1013-A MIRAFLORES, AREQUIPA
         </div>
-        <div className="py-2 font-sans flex gap-2">
+        <div className="py-2 font-sans flex gap-2 text-xs sm:text-base">
           <IoPersonCircleOutline size={20}/> VENTAS@KATAALPACA.COM
         </div>
-        <div className="font-sans flex gap-2">
+        <div className="font-sans flex gap-2 text-xs sm:text-base">
           <TbWorld size={20}/> WWW.KATAALPACA.COM
         </div>
-        <div className="pt-2 font-sans flex gap-2">
+        <div className="pt-2 font-sans flex gap-2 text-xs sm:text-base">
           <FaPhoneAlt size={18}/> +51 +54 264117
         </div>
       </div>
