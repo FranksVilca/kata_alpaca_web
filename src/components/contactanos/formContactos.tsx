@@ -1,7 +1,10 @@
 "use client";
+import { useTranslations } from "next-intl";
 import { useState } from "react";
 
 const FormContactos: React.FC = () => {
+  const f = useTranslations("Contact");
+
   const [form, setForm] = useState({
     name: "",
     email: "",
@@ -24,18 +27,18 @@ const FormContactos: React.FC = () => {
         className="bg-white rounded-lg w-full max-w-md mx-auto sm:mx-0"
       >
         <h2 className="text-lg text-center sm:text-xl sm:text-left pb-6">
-          FORMULARIO DE CONTACTO
+          {f("form")}
         </h2>
 
         <div className="mb-3 sm:mb-0">
           <label className="block text-xs sm:text-sm mb-1 sm:mb-0">
-            Nombre de empresa
+            {f("enterpriseName")}
           </label>
           <input
             name="enterpriseName"
             type="text"
             className="w-full px-2 border rounded focus:ring-blue-500 my-2"
-            placeholder="Nombre de empresa"
+            placeholder={f("enterpriseName")}
             onChange={handleChange}
             required
           />
@@ -43,13 +46,13 @@ const FormContactos: React.FC = () => {
 
         <div className="mb-3 sm:mb-0">
           <label className="block text-xs sm:text-sm mb-1 sm:mb-0">
-            Nombres y Apellidos
+            {f("names")}
           </label>
           <input
             name="name"
             type="text"
             className="w-full px-2 border rounded focus:ring-blue-500 my-2"
-            placeholder="Nombres y Apellidos"
+            placeholder={f("names")}
             onChange={handleChange}
             required
           />
@@ -57,13 +60,13 @@ const FormContactos: React.FC = () => {
 
         <div className="mb-3 sm:mb-0">
           <label className="block text-xs sm:text-sm mb-1 sm:mb-0">
-            Correo electrónico
+            {f("email")}
           </label>
           <input
             name="email"
             type="email"
             className="w-full px-2 border rounded focus:ring-blue-500 my-2"
-            placeholder="Correo electrónico"
+            placeholder={f("email")}
             onChange={handleChange}
             required
           />
@@ -71,13 +74,13 @@ const FormContactos: React.FC = () => {
 
         <div className="mb-3 sm:mb-0">
           <label className="block text-xs sm:text-sm mb-1 sm:mb-0">
-            Teléfono
+            {f("phone")}
           </label>
           <input
             name="telefono"
             type="number"
             className="w-full px-2 border rounded focus:ring-blue-500 my-2"
-            placeholder="Teléfono"
+            placeholder={f("phone")}
             onChange={handleChange}
             required
           />
@@ -85,12 +88,12 @@ const FormContactos: React.FC = () => {
 
         <div className="mb-3 sm:mb-0">
           <label className="block text-xs sm:text-sm mb-1 sm:mb-0">
-            Mensaje
+            {f("Message")}
           </label>
           <textarea
             name="message"
             className="w-full px-2 border rounded focus:ring-blue-500 my-2 resize-none leading-6"
-            placeholder="Mensaje"
+            placeholder={f("Message")}
             rows={1}
             onChange={handleChange}
           ></textarea>
@@ -100,9 +103,9 @@ const FormContactos: React.FC = () => {
           type="submit"
           className="w-auto bg-[#FF8112] text-white py-1 px-4 rounded hover:bg-[#FF8112]/50 transition"
         >
-          Enviar Mensaje
+          {f("button")}
         </button>
-        <div className="pt-2 pb-20 text-xs sm:text-sm">Campos requeridos</div>
+        <div className="pt-2 pb-20 text-xs sm:text-sm">{f("simpleText")}</div>
       </form>
     </div>
   );

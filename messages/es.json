@@ -80,5 +80,22 @@
     "accesoriesText": "Accesorios únicos que completan tu estilo, elaborados con fibras naturales que aportan durabilidad, calidez y un sello de autenticidad peruana.",
     "endText1": "Podemos desarrollar diferentes clases de productos a solicitud de nuestros clientes y con nuestro",
     "endText2": "haremos realidad todas tus ideas"
+  },
+
+  "Contact": {
+    "title": "CONTACTANOS",
+    "text": "Somos expertos en la creación de prendas de punto, ofreciendo ropa y accesorios con la más alta calidad.",
+    "headquarters": "SEDE",
+    "mainOffice": "SEDE PRINCIPAL",
+    "address": "Dirección:",
+    "form": "FORMULARIO DE CONTACTO",
+    "enterpriseName": "Nombre de empresa",
+    "names": "Nombres y Apellidos",
+    "email": "Correo electrónico",
+    "phone": "Teléfono",
+    "message": "Mensaje",
+    "button": "Enviar Mensaje",
+    "simpleText": "Campos requeridos"
   }
+
 }

@@ -82,5 +82,21 @@
     "accesoriesText": "Unique accessories that complete your style, made with natural fibers that provide durability, warmth, and a seal of Peruvian authenticity.",
     "endText1": "We can develop different kinds of products upon our clients' request and with our",
     "endText2": " we will make all your ideas come true"
+  },
+
+  "Contact": {
+    "title": "CONTACT US",
+    "text": "We are experts in the creation of knitted garments, offering clothing and accessories of the highest quality.",
+    "headquarters": "HEADQUARTERS",
+    "mainOffice": "MAIN OFFICE",
+    "address": "Address:",
+    "form": "CONTACT FORM",
+    "enterpriseName": "Company Name",
+    "names": "Names and Surnames",
+    "email": "Email",
+    "phone": "Phone",
+    "message": "Message",
+    "button": "Send Message",
+    "simpleText": "Required fields"
   }
 }
