@@ -16,7 +16,8 @@ export default function Home() {
         {f("text")}
       </div>
       <Locate />
-      <FormContactos />
+      { /*Comentado teporalmente*/}
+      {/*<FormContactos />*/}
       <Footer />
     </div>
   );
