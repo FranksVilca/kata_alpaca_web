@@ -119,7 +119,7 @@ const FormContactos: React.FC = () => {
             name="message"
             value = {formData.message}
             className="w-full px-2 border rounded focus:ring-blue-500 my-2 resize-none leading-6"
-            placeholder={f("Message")}
+            placeholder={f("message")}
             rows={1}
             onChange={handleChange}
           ></textarea>
