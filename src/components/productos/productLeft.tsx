@@ -1,4 +1,15 @@
 import Image from "next/image";
+import { Aboreto, Raleway } from "next/font/google";
+
+const aboreto = Aboreto({
+  subsets: ["latin"],
+  weight: ["400"],
+});
+
+const raleway = Raleway({
+  subsets: ["latin"],
+  weight: ["300", "400", "500"],
+});
 
 interface SectionProps {
   id: string;
@@ -19,7 +30,7 @@ export default function ProductLeft({
     <div id={id}>
       <div className="flex flex-col md:flex-row px-4 md:px-10">
         {/* Contenedor de Imágenes */}
-        <div className="flex-1 flex items-center justify-center min-h-[50vh] md:min-h-screen py-6 md:py-0 order-1">
+        <div className="flex-1 flex items-center justify-center min-h-[50vh] md:min-h-[85vh] py-6 md:py-0 order-1">
           <div className="relative">
             {/* Imagen de la Modelo*/}
             <div className="relative w-48 h-60 md:w-64 md:h-80 overflow-hidden">
@@ -45,10 +56,10 @@ export default function ProductLeft({
 
         {/* Contenedor de texto */}
         <div className="flex-1 flex flex-col items-center justify-center py-6 md:py-0 order-2">
-          <h2 className="text-3xl md:text-5xl text-[#BE5103] mb-4 md:mb-16 text-center md:pr-12">
+          <h2 className={`text-3xl md:text-5xl text-[#BE5103] mb-4 md:mb-16 text-center md:pr-12 ${aboreto.className}`}>
             {title}
           </h2>
-          <p className="text-sm md:text-base max-w-md mx-2 text-foreground text-center md:text-left px-10 md:px-0">
+          <p className={`text-sm md:text-base max-w-md mx-2 text-foreground text-center md:text-left px-10 md:px-0 ${raleway.className}`}>
             {text}
           </p>
         </div>
