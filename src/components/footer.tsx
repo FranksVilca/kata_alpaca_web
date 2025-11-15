@@ -40,9 +40,8 @@ const Footer: React.FC = () => {
               >
                 {link.text}
               </Link>
-              {/* Separador vertical en mobile, horizontal en desktop */}
               {index < data.link.length - 1 && (
-                <span className="my-2 md:my-0 md:mx-3 text-[#c0c0c0]">
+                <span className="my-2 md:my-0 md:ml-4 text-[#c0c0c0]">
                   <span className="hidden md:inline">|</span>
                 </span>
               )}
