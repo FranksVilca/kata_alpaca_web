@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { Link } from "@/i18n/routing";
 import Image from "next/image";
 import { FaFacebook } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
@@ -10,7 +10,7 @@ const Footer: React.FC = () => {
 
   const data = {
     link: [
-      { href: "/libro_reclamaciones", text: f("book") },
+      { href: "/libroReclamaciones", text: f("book") },
       { href: "/contactos", text: h("contact") },
     ],
   };
@@ -33,7 +33,10 @@ const Footer: React.FC = () => {
         {/* Enlaces - Verticales en mobile con separador */}
         <div className="flex flex-col-reverse border-l-2 py-4 sm:border-l-0 sm:py-0 md:flex-row items-start sm:items-center ml-0 sm:ml-6 gap-3 md:gap-4 text-xs sm:text-sm md:text-base">
           {data.link.map((link, index) => (
-            <div key={index} className="flex flex-col md:flex-row items-center pl-4 sm:pl-0">
+            <div
+              key={index}
+              className="flex flex-col md:flex-row items-center pl-4 sm:pl-0"
+            >
               <Link
                 href={link.href}
                 className="hover:text-[#292929] transition-colors duration-300 underline"

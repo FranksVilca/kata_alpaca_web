@@ -10,7 +10,7 @@ const aboreto = Aboreto({
 
 const jura = Jura({
   subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700"], // Jura tiene estos pesos disponibles
+  weight: ["300", "400", "500", "600", "700"],
 });
 
 const FormContactos: React.FC = () => {
