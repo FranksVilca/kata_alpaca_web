@@ -148,9 +148,10 @@
     "detalle": "Detalle del reclamo",
     "comprobante": "Número de comprobante o pedido",
     "button": "ENVIAR",
-    "producto": "Product",
-    "servicio": "Service",
-    "pasaporte": "PASSPORT"
+    "producto": "Producto",
+    "servicio": "Servicio",
+    "pasaporte": "PASAPORTE",
+    "code": "Códico del País"
   }
 
 }
