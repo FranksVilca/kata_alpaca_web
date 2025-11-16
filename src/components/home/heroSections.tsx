@@ -1,5 +1,11 @@
 import { useTranslations } from "next-intl";
 import Image from "next/image";
+import { Aboreto } from "next/font/google";
+
+const aboreto = Aboreto({
+  subsets: ["latin"],
+  weight: ["400"],
+});
 
 const HeroSections: React.FC = () => {
   const f = useTranslations("Home");
@@ -16,12 +22,12 @@ const HeroSections: React.FC = () => {
         />
         <div className="absolute inset-0 bg-black/70"></div>
       </div>
-      <div className="z-10 text-white px-4 sm:px-6 md:px-8">
-        <div className="text-base sm:text-lg md:text-2xl mb-3 sm:mb-4 drop-shadow-md">
+      <div className={`z-10 text-white px-4 sm:px-6 md:px-8 ${aboreto.className}`}>
+        <div className="text-base sm:text-lg md:text-5xl mb-3 sm:mb-4 drop-shadow-md">
           {f("first")}
           <span className="text-[#DD9D6F]"> ALPACA</span>
         </div>
-        <p className="text-base sm:text-lg md:text-2xl max-w-2xl mx-auto drop-shadow-md">
+        <p className="text-base sm:text-lg md:text-5xl drop-shadow-md">
           {f("second")}
         </p>
       </div>
