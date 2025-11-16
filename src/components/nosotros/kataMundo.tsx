@@ -130,7 +130,7 @@ export default function KataParaElMundo() {
                   text-gray-700
                   text-center
                   mb-2 md:mb-6
-                  flex-grow
+                  grow
                   flex items-center
                   leading-tight
                 `}
