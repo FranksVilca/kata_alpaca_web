@@ -105,7 +105,7 @@
     "endText2": "haremos realidad todas tus ideas"
   },
   "Contact": {
-    "title": "CONTACTANOS",
+    "title": "CONTÁCTANOS",
     "text": "Somos expertos en la creación de prendas de punto, ofreciendo ropa y accesorios con la más alta calidad.",
     "headquarters": "SEDE",
     "mainOffice": "SEDE PRINCIPAL",
@@ -147,5 +147,37 @@
     "w6": {
       "text": "CUIDAMOS CADA DETALLE PARA QUE CADA PRODUCCIÓN SALGA CON LOS MÁS ALTOS ESTÁNDARES DE CALIDAD"
     }
+
+  "Book": {
+    "title": "libro de reclamaciones",
+    "Ley": "LEY",
+    "Razon": "Razón Social:",
+    "address": "Dirección:",
+    "dates": "DATOS DEL CLIENTE",
+    "nombre": "NOMBRE",
+    "apellidoPaterno": "APELLIDO PATERNO",
+    "apellidoMaterno": "APELLIDO MATERNO",
+    "tipoDocumento": "TIPO DE DOCUMENTO ",
+    "numeroDocumento": "NUMERO DE DOCUMENTO",
+    "datosContacto":"DATOS DE CONTACTO",
+    "correo": "CORREO ELECTRONICO",
+    "telefono": "TELÉFONO",
+    "pais": "PAÍS",
+    "direccion": "DIRECCIÓN",
+    "identificacion": "IDENTIFICACION DEL CONSUMIDOR RECLAMANTE",
+    "tipoProducto": "PRODUCTO O SERVICIO",
+    "monto": "MONTO RECLAMADO",
+    "descripcion": "DESCRIPCIÓN (nombre del producto o servicio realizado)",
+    "detalleReclamacion": "DETALLE DE LA RECLAMACION Y PEDIDO DEL CONSUMIDOR",
+    "motivo": "MOTIVO",
+    "reclamo": "RECLAMO",
+    "queja": "QUEJA",
+    "detalle": "Detalle del reclamo",
+    "comprobante": "Número de comprobante o pedido",
+    "button": "ENVIAR",
+    "producto": "Producto",
+    "servicio": "Servicio",
+    "pasaporte": "PASAPORTE",
+    "code": "Código del País"
   }
 }

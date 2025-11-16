@@ -1,5 +1,11 @@
 import { useTranslations } from "next-intl";
 import Image from "next/image";
+import { Aboreto } from "next/font/google";
+
+const aboreto = Aboreto({
+  subsets: ["latin"],
+  weight: ["400"],
+});
 
 const CommitmentOur: React.FC = () => {
   const f = useTranslations("Home");
@@ -17,7 +23,7 @@ const CommitmentOur: React.FC = () => {
         <div className="absolute inset-0 bg-black/60"></div>
       </div>
       <div className="z-10 text-[#FFF2F2] px-4 sm:px-6 md:px-8">
-        <div className="text-xl sm:text-2xl md:text-3xl font-extralight mb-3 sm:mb-4 drop-shadow-md underline p-3 bg-none bg-white/41 sm:bg-none">
+        <div className={`text-xl sm:text-2xl md:text-3xl font-extralight mb-3 sm:mb-4 drop-shadow-md underline p-3 bg-white/41 sm:bg-none ${aboreto.className}`}>
           {f("comOur")}
           <br></br> {f("comPro")}
         </div>

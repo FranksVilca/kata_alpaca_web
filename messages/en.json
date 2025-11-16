@@ -147,5 +147,37 @@
     "w6": {
       "text": "WE TAKE CARE OF EVERY DETAIL SO THAT EACH PRODUCTION MEETS THE HIGHEST QUALITY STANDARDS"
     }
+
+  "Book": {
+    "title": "COMPLAINT BOOK",
+    "Ley": "LAW",
+    "Razon": "Company Name (Legal Name)",
+    "address": "Address:",
+    "dates": "CUSTOMER DETAILS",
+    "nombre": "NAME",
+    "apellidoPaterno": "PATERNAL SURNAME",
+    "apellidoMaterno": "MATERNAL SURNAME",
+    "tipoDocumento": "DOCUMENT TYPE",
+    "numeroDocumento": "DOCUMENT NUMBER",
+    "datosContacto": "CONTACT INFORMATION",
+    "correo": "EMAIL ADDRESS",
+    "telefono": "PHONE",
+    "pais": "COUNTRY",
+    "direccion": "ADDRESS",
+    "identificacion": "IDENTIFICATION OF THE CLAIMING CONSUMER",
+    "tipoProducto": "PRODUCT OR SERVICE",
+    "monto": "CLAIMED AMOUNT",
+    "descripcion": "DESCRIPTION (name of the product or service rendered)",
+    "detalleReclamacion": "DETAIL OF THE CLAIM AND CONSUMER'S REQUEST",
+    "motivo": "REASON",
+    "reclamo": "CLAIM",
+    "queja": "COMPLAINT",
+    "detalle": "Detail of the claim",
+    "comprobante": "Proof or order number",
+    "button": "SUBMIT",
+    "producto": "Product",
+    "servicio": "Service",
+    "pasaporte": "PASSPORT",
+    "code": "Country Code"
   }
 }

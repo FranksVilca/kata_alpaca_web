@@ -1,5 +1,11 @@
 import { useTranslations } from "next-intl";
 import Image from "next/image";
+import { Aboreto } from "next/font/google";
+
+const aboreto = Aboreto({
+  subsets: ["latin"],
+  weight: ["400"],
+});
 
 const Notice: React.FC = () => {
   const f = useTranslations("Header");
@@ -15,8 +21,8 @@ const Notice: React.FC = () => {
           priority
         />
       </div>
-      <div className="z-10 text-white px-4 sm:px-14 md:px-18 bg-black/70 md:py-6 sm:py-4">
-        <div className="text-xl sm:text-2xl md:text-3xl font-extralight mb-3 sm:mb-4 drop-shadow-md underline">
+      <div className={`z-10 text-white px-4 sm:px-14 md:px-18 bg-black/70 md:py-6 sm:py-4 ${aboreto.className}`}>
+        <div className="text-xl sm:text-2xl md:text-3xl font-extralight mb-3 sm:mb-4 drop-shadow-md underline" >
           {f("news")}
         </div>
         <div className="text-base sm:text-lg md:text-xl text-[#FFBC8C87]">KATA ALPACA</div>

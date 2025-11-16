@@ -1,4 +1,15 @@
 import { useTranslations } from "next-intl";
+import { Aboreto, Jura } from "next/font/google";
+
+const aboreto = Aboreto({
+  subsets: ["latin"],
+  weight: ["400"],
+});
+
+const jura = Jura({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700"],
+});
 
 const Locate: React.FC = () => {
   const f = useTranslations("Contact");
@@ -7,8 +18,10 @@ const Locate: React.FC = () => {
     <div>
       <div className="flex flex-col md:flex-row px-4 sm:px-8 md:px-12 gap-8 md:gap-8 py-6 md:py-8 text-[#292929]">
         <div className="flex-1">
-          <div className="text-base sm:text-lg md:text-xl font-semibold uppercase mb-4">
-            {f("mainOffice")} - Arequipa
+          <div className={`${aboreto.className}`}>
+            <div className="text-base sm:text-lg md:text-xl font-semibold uppercase mb-4" >
+              {f("mainOffice")} - Arequipa
+            </div>
           </div>
           <div className="py-3 md:py-4 border-t border-b border-gray-300">
             <div className="text-sm md:text-base px-4 sm:px-0">
@@ -26,13 +39,15 @@ const Locate: React.FC = () => {
         </div>
 
         <div className="flex-1 mt-8 md:mt-0">
-          <div className="text-base sm:text-lg md:text-xl font-semibold uppercase mb-4">
-            {f("headquarters")} - Cuzco
+          <div className={`${aboreto.className}`}>
+            <div className="text-base sm:text-lg md:text-xl font-semibold uppercase mb-4" >
+              {f("headquarters")} - Cuzco
+            </div>
           </div>
           <div className="py-3 md:py-4 border-t border-b border-gray-300">
             <div className="text-sm md:text-base px-4 sm:px-0">
-              <span className="font-semibold">{f("address")}</span> Calle El Triunfo
-              352 B, cercado, Cuzco. Perú
+              <span className="font-semibold">{f("address")}</span> Calle El
+              Triunfo 352 B, cercado, Cuzco. Perú
             </div>
           </div>
           <div className="mt-6 md:mt-8 h-64 sm:h-80 md:h-96">
