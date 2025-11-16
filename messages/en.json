@@ -118,5 +118,34 @@
     "message": "Message",
     "button": "Send Message",
     "simpleText": "Required fields"
+  },
+  "Process": {
+    "banner": {
+      "title": "Learn about our processes and the technology behind each garment"
+    },
+    "w2": {
+      "title": "FROM DESIGN TO GARMENT",
+      "text": "\"We accompany you through every stage of the design.\""
+    },
+    "w3": {
+      "title": "PROGRAMMING",
+      "subtitle": "KNITTING",
+      "paragraph": "Knitting programming consists of configuring computerized machines with digital patterns. This allows defining stitches, gauges, and tensions, achieving precise and varied fabrics in less time, with designs ranging from simple to complex."
+    },
+    "w4": {
+      "title": "YARNS",
+      "paragraph": "We have 5 computerized machines in different gauges, which allows us to produce a wide variety of fabrics. With this technology, we can work on both fine and heavier products, always ensuring quality and precision."
+    },
+    "confection": {
+      "title": "Confection, from our hands to yours"
+    },
+    "w5": {
+      "quote": {
+        "text": "\"EVERY GARMENT IS THE RESULT OF OUR TEAM'S EFFORT, PRECISION, AND COMMITMENT.\""
+      }
+    },
+    "w6": {
+      "text": "WE TAKE CARE OF EVERY DETAIL SO THAT EACH PRODUCTION MEETS THE HIGHEST QUALITY STANDARDS"
+    }
   }
 }
