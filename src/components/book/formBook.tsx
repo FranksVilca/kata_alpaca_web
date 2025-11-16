@@ -16,13 +16,13 @@ const FormBook: React.FC = () => {
     nombre: "",
     apellidoPaterno: "",
     apellidoMaterno: "",
-    tipoDocumento: "",
+    tipoDocumento: "dni",
     numeroDocumento: "",
     correo: "",
     telefono: "",
     pais: "",
     direccion: "",
-    tipoProducto: "",
+    tipoProducto: "producto",
     monto: "",
     descripcion: "",
     motivo: "",
@@ -42,7 +42,7 @@ const FormBook: React.FC = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
-    const res = await fetch("/api/contacto", {
+    const res = await fetch("/api/complaintBook", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(formData),
@@ -54,13 +54,13 @@ const FormBook: React.FC = () => {
         nombre: "",
         apellidoPaterno: "",
         apellidoMaterno: "",
-        tipoDocumento: "",
+        tipoDocumento: "dni",
         numeroDocumento: "",
         correo: "",
         telefono: "",
         pais: "",
         direccion: "",
-        tipoProducto: "",
+        tipoProducto: "producto",
         monto: "",
         descripcion: "",
         motivo: "",
@@ -73,7 +73,7 @@ const FormBook: React.FC = () => {
   };
 
   return (
-    <div className={`md:mx-4 px-1 pt-10 w-full ${jura.className}`}>
+    <div className={`md:mx-4 px-1 pt-10 max-w-full ${jura.className}`}>
       <div className="border-y-2 border-black/10 sm:border-y-0 sm:border-b-2 sm:border-black/50 md:px-8 sm:text-x2 text-lg mx-4 px-2 py-4 sm:py-0 ">
         {f("dates")}
       </div>
@@ -146,7 +146,7 @@ const FormBook: React.FC = () => {
                 name="numeroDocumento"
                 value={formData.numeroDocumento}
                 type="text"
-                className="w-full px-2 bg-[#D9D9D950] my-2 shadow-sm"
+                className="w-3/4 px-2 bg-[#D9D9D950] my-2 shadow-sm"
                 onChange={handleChange}
                 required
               />
@@ -169,6 +169,7 @@ const FormBook: React.FC = () => {
           {/* TELEFONO */}
           <div className="mb-3 flex flex-col items-start">
             <label className="block">{f("telefono")}</label>
+            <div className="text-xs">{f("code")} (51)</div>
             <input
               name="telefono"
               value={formData.telefono}

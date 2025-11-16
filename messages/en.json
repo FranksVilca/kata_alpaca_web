@@ -149,6 +149,7 @@
     "button": "SUBMIT",
     "producto": "Product",
     "servicio": "Service",
-    "pasaporte": "PASSPORT"
+    "pasaporte": "PASSPORT",
+    "code": "Country Code"
   }
 }
