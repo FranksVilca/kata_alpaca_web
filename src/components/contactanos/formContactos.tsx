@@ -58,21 +58,21 @@ const FormContactos: React.FC = () => {
         onSubmit={handleSubmit}
         className="bg-white rounded-lg w-full max-w-md mx-auto sm:mx-0"
       >
-        <h2 className={`text-lg text-center sm:text-x2 sm:text-left pb-6 ${aboreto.className}`}
-        style={{
-                textShadow:
-                  "0.5px 0.5px 0 #000, -0.5px -0.5px 0 #000, 0.5px -0.5px 0 #000, -0.5px 0.5px 0 #000",
-              }}>
-          {f("form")}
-        </h2>
+        <div className={`${aboreto.className}`}>
+          <h2 className="text-lg text-center sm:text-x2 sm:text-left pb-6 font-semibold">
+            {f("form")}
+          </h2>
+        </div>
 
         <div className="mb-3 sm:mb-0">
-          <label className={`block text-xs sm:text-lg mb-1 sm:mb-0 font-bold ${jura.className}`}>
+          <label
+            className={`block text-xs sm:text-lg mb-1 sm:mb-0 font-bold ${jura.className}`}
+          >
             {f("enterpriseName")}
           </label>
           <input
             name="enterpriseName"
-            value = {formData.enterpriseName}
+            value={formData.enterpriseName}
             type="text"
             className="w-full px-2 border rounded focus:ring-blue-500 my-2"
             placeholder={f("enterpriseName")}
@@ -82,12 +82,14 @@ const FormContactos: React.FC = () => {
         </div>
 
         <div className="mb-3 sm:mb-0">
-          <label className={`block text-xs sm:text-lg mb-1 sm:mb-0 font-bold ${jura.className}`}>
+          <label
+            className={`block text-xs sm:text-lg mb-1 sm:mb-0 font-bold ${jura.className}`}
+          >
             {f("names")}
           </label>
           <input
             name="names"
-            value = {formData.names}
+            value={formData.names}
             type="text"
             className="w-full px-2 border rounded focus:ring-blue-500 my-2"
             placeholder={f("names")}
@@ -97,12 +99,14 @@ const FormContactos: React.FC = () => {
         </div>
 
         <div className="mb-3 sm:mb-0">
-          <label className={`block text-xs sm:text-lg mb-1 sm:mb-0 font-bold ${jura.className}`}>
+          <label
+            className={`block text-xs sm:text-lg mb-1 sm:mb-0 font-bold ${jura.className}`}
+          >
             {f("email")}
           </label>
           <input
             name="email"
-            value = {formData.email}
+            value={formData.email}
             type="email"
             className="w-full px-2 border rounded focus:ring-blue-500 my-2"
             placeholder={f("email")}
@@ -112,12 +116,14 @@ const FormContactos: React.FC = () => {
         </div>
 
         <div className="mb-3 sm:mb-0">
-          <label className={`block text-xs sm:text-lg mb-1 sm:mb-0 font-bold ${jura.className}`}>
+          <label
+            className={`block text-xs sm:text-lg mb-1 sm:mb-0 font-bold ${jura.className}`}
+          >
             {f("phone")}
           </label>
           <input
             name="phone"
-            value = {formData.phone}
+            value={formData.phone}
             type="tell"
             className="w-full px-2 border rounded focus:ring-blue-500 my-2"
             placeholder={f("phone")}
@@ -127,12 +133,14 @@ const FormContactos: React.FC = () => {
         </div>
 
         <div className="mb-3 sm:mb-0">
-          <label className={`block text-xs sm:text-lg mb-1 sm:mb-0 font-bold ${jura.className}`}>
+          <label
+            className={`block text-xs sm:text-lg mb-1 sm:mb-0 font-bold ${jura.className}`}
+          >
             {f("message")}
           </label>
           <textarea
             name="message"
-            value = {formData.message}
+            value={formData.message}
             className="w-full px-2 border rounded focus:ring-blue-500 my-2 resize-none leading-6"
             placeholder={f("message")}
             rows={1}
@@ -147,7 +155,11 @@ const FormContactos: React.FC = () => {
         >
           {f("button")}
         </button>
-        <div className={`pt-2 pb-20 text-xs sm:text-sm font-bold ${jura.className}`}>{f("simpleText")}</div>
+        <div
+          className={`pt-2 pb-20 text-xs sm:text-sm font-bold ${jura.className}`}
+        >
+          {f("simpleText")}
+        </div>
       </form>
     </div>
   );
