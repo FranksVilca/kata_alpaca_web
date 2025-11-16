@@ -106,7 +106,7 @@
   },
 
   "Contact": {
-    "title": "CONTACTANOS",
+    "title": "CONTÁCTANOS",
     "text": "Somos expertos en la creación de prendas de punto, ofreciendo ropa y accesorios con la más alta calidad.",
     "headquarters": "SEDE",
     "mainOffice": "SEDE PRINCIPAL",
@@ -151,7 +151,7 @@
     "producto": "Producto",
     "servicio": "Servicio",
     "pasaporte": "PASAPORTE",
-    "code": "Códico del País"
+    "code": "Código del País"
   }
 
 }
