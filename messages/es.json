@@ -93,18 +93,17 @@
       "quote": "\"Hoy nos consolidamos como una empresa que entrega a sus clientes prendas en tejido de punto de excelencia, confeccionadas con las fibras más finas.\""
     }
   },
-    
   "Product": {
     "jackets": "CASACAS",
     "accesories": "ACCESORIOS",
-    "sweatersText": "Sweaters de alpaca que combinan suavidad, resistencia y un diseño atemporal, reflejando los más de 30 años de experiencia textil de Kata Alpaca.",      "cardigansText": "Cardigans versátiles elaborados en fibras nobles, pensados para brindar comodidad y elegancia, manteniendo la esencia de la tradición peruana.",
+    "sweatersText": "Sweaters de alpaca que combinan suavidad, resistencia y un diseño atemporal, reflejando los más de 30 años de experiencia textil de Kata Alpaca.",
+    "cardigansText": "Cardigans versátiles elaborados en fibras nobles, pensados para brindar comodidad y elegancia, manteniendo la esencia de la tradición peruana.",
     "ponchosText": "Ponchos que representan el legado andino, renovados con un diseño moderno para transmitir cultura, identidad y estilo en cada uso",
     "jacketsText": "Casacas exclusivas confeccionadas con baby alpaca y algodón pima, pensadas para protegerte con distinción mientras resaltan la innovación de la marca.",
     "accesoriesText": "Accesorios únicos que completan tu estilo, elaborados con fibras naturales que aportan durabilidad, calidez y un sello de autenticidad peruana.",
     "endText1": "Podemos desarrollar diferentes clases de productos a solicitud de nuestros clientes y con nuestro",
     "endText2": "haremos realidad todas tus ideas"
   },
-
   "Contact": {
     "title": "CONTACTANOS",
     "text": "Somos expertos en la creación de prendas de punto, ofreciendo ropa y accesorios con la más alta calidad.",
@@ -119,6 +118,34 @@
     "message": "Mensaje",
     "button": "Enviar Mensaje",
     "simpleText": "Campos requeridos"
+  },
+  "Process": {
+    "banner": {
+      "title": "Conoce nuestros procesos y la tecnología detrás de cada prenda"
+    },
+    "w2": {
+      "title": "DEL DISEÑO A LA PRENDA",
+      "text": "\"Te acompañamos en cada etapa del diseño.\""
+    },
+    "w3": {
+      "title": "PROGRAMACIÓN",
+      "subtitle": "TEJIDO",
+      "paragraph": "La programación de tejidos consiste en configurar las máquinas computarizadas con patrones digitales. Esto permite definir puntadas, galgas y tensiones, logrando tejidos precisos y variados en menos tiempo, con diseños que van desde lo simple hasta lo complejo."
+    },
+    "w4": {
+      "title": "HILADOS",
+      "paragraph": "Tenemos 5 máquinas computarizadas en diferentes galgas, lo que nos permite producir una amplia variedad de tejidos. Con esta tecnología podemos trabajar tanto productos finos como más gruesos, asegurando siempre calidad y precisión."
+    },
+    "confection": {
+      "title": "Confección, de nuestras manos a las suyas"
+    },
+    "w5": {
+      "quote": {
+        "text": "\"CADA PRENDA ES EL RESULTADO DEL ESFUERZO, LA PRECISIÓN Y EL COMPROMISO DE NUESTRO EQUIPO.\""
+      }
+    },
+    "w6": {
+      "text": "CUIDAMOS CADA DETALLE PARA QUE CADA PRODUCCIÓN SALGA CON LOS MÁS ALTOS ESTÁNDARES DE CALIDAD"
+    }
   }
-
 }
