@@ -93,6 +93,38 @@
       "quote": "\"Hoy nos consolidamos como una empresa que entrega a sus clientes prendas en tejido de punto de excelencia, confeccionadas con las fibras más finas.\""
     }
   },
+  "Book": {
+    "title": "libro de reclamaciones",
+    "Ley": "LEY",
+    "Razon": "Razón Social:",
+    "address": "Dirección:",
+    "dates": "DATOS DEL CLIENTE",
+    "nombre": "NOMBRE",
+    "apellidoPaterno": "APELLIDO PATERNO",
+    "apellidoMaterno": "APELLIDO MATERNO",
+    "tipoDocumento": "TIPO DE DOCUMENTO ",
+    "numeroDocumento": "NUMERO DE DOCUMENTO",
+    "datosContacto": "DATOS DE CONTACTO",
+    "correo": "CORREO ELECTRONICO",
+    "telefono": "TELÉFONO",
+    "pais": "PAÍS",
+    "direccion": "DIRECCIÓN",
+    "identificacion": "IDENTIFICACION DEL CONSUMIDOR RECLAMANTE",
+    "tipoProducto": "PRODUCTO O SERVICIO",
+    "monto": "MONTO RECLAMADO",
+    "descripcion": "DESCRIPCIÓN (nombre del producto o servicio realizado)",
+    "detalleReclamacion": "DETALLE DE LA RECLAMACION Y PEDIDO DEL CONSUMIDOR",
+    "motivo": "MOTIVO",
+    "reclamo": "RECLAMO",
+    "queja": "QUEJA",
+    "detalle": "Detalle del reclamo",
+    "comprobante": "Número de comprobante o pedido",
+    "button": "ENVIAR",
+    "producto": "Producto",
+    "servicio": "Servicio",
+    "pasaporte": "PASAPORTE",
+    "code": "Código del País"
+  },
   "Product": {
     "jackets": "CASACAS",
     "accesories": "ACCESORIOS",
@@ -147,37 +179,5 @@
     "w6": {
       "text": "CUIDAMOS CADA DETALLE PARA QUE CADA PRODUCCIÓN SALGA CON LOS MÁS ALTOS ESTÁNDARES DE CALIDAD"
     }
-
-  "Book": {
-    "title": "libro de reclamaciones",
-    "Ley": "LEY",
-    "Razon": "Razón Social:",
-    "address": "Dirección:",
-    "dates": "DATOS DEL CLIENTE",
-    "nombre": "NOMBRE",
-    "apellidoPaterno": "APELLIDO PATERNO",
-    "apellidoMaterno": "APELLIDO MATERNO",
-    "tipoDocumento": "TIPO DE DOCUMENTO ",
-    "numeroDocumento": "NUMERO DE DOCUMENTO",
-    "datosContacto":"DATOS DE CONTACTO",
-    "correo": "CORREO ELECTRONICO",
-    "telefono": "TELÉFONO",
-    "pais": "PAÍS",
-    "direccion": "DIRECCIÓN",
-    "identificacion": "IDENTIFICACION DEL CONSUMIDOR RECLAMANTE",
-    "tipoProducto": "PRODUCTO O SERVICIO",
-    "monto": "MONTO RECLAMADO",
-    "descripcion": "DESCRIPCIÓN (nombre del producto o servicio realizado)",
-    "detalleReclamacion": "DETALLE DE LA RECLAMACION Y PEDIDO DEL CONSUMIDOR",
-    "motivo": "MOTIVO",
-    "reclamo": "RECLAMO",
-    "queja": "QUEJA",
-    "detalle": "Detalle del reclamo",
-    "comprobante": "Número de comprobante o pedido",
-    "button": "ENVIAR",
-    "producto": "Producto",
-    "servicio": "Servicio",
-    "pasaporte": "PASAPORTE",
-    "code": "Código del País"
   }
 }
