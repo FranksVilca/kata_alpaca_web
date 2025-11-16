@@ -77,7 +77,7 @@ export default function Header() {
       </button>
 
       {/* Menú Desktop - oculto en mobile */}
-      <div className="hidden md:flex justify-center space-x-8 lg:space-x-20 text-gray-400 uppercase tracking-wide w-full pb-10 border-b border-gray-200">
+      <div className="hidden md:flex justify-center space-x-8 lg:space-x-20 text-gray-400 uppercase tracking-wide w-full pb-10 ">
         {Seccion.link.map((link, index) => (
           <Link
             key={index}
