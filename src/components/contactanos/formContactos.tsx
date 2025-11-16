@@ -1,6 +1,17 @@
 "use client";
 import { useTranslations } from "next-intl";
 import { useState } from "react";
+import { Aboreto, Jura } from "next/font/google";
+
+const aboreto = Aboreto({
+  subsets: ["latin"],
+  weight: ["400"],
+});
+
+const jura = Jura({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700"],
+});
 
 const FormContactos: React.FC = () => {
   const f = useTranslations("Contact");
@@ -47,12 +58,16 @@ const FormContactos: React.FC = () => {
         onSubmit={handleSubmit}
         className="bg-white rounded-lg w-full max-w-md mx-auto sm:mx-0"
       >
-        <h2 className="text-lg text-center sm:text-xl sm:text-left pb-6">
+        <h2 className={`text-lg text-center sm:text-x2 sm:text-left pb-6 ${aboreto.className}`}
+        style={{
+                textShadow:
+                  "0.5px 0.5px 0 #000, -0.5px -0.5px 0 #000, 0.5px -0.5px 0 #000, -0.5px 0.5px 0 #000",
+              }}>
           {f("form")}
         </h2>
 
         <div className="mb-3 sm:mb-0">
-          <label className="block text-xs sm:text-sm mb-1 sm:mb-0">
+          <label className={`block text-xs sm:text-lg mb-1 sm:mb-0 font-bold ${jura.className}`}>
             {f("enterpriseName")}
           </label>
           <input
@@ -67,7 +82,7 @@ const FormContactos: React.FC = () => {
         </div>
 
         <div className="mb-3 sm:mb-0">
-          <label className="block text-xs sm:text-sm mb-1 sm:mb-0">
+          <label className={`block text-xs sm:text-lg mb-1 sm:mb-0 font-bold ${jura.className}`}>
             {f("names")}
           </label>
           <input
@@ -82,7 +97,7 @@ const FormContactos: React.FC = () => {
         </div>
 
         <div className="mb-3 sm:mb-0">
-          <label className="block text-xs sm:text-sm mb-1 sm:mb-0">
+          <label className={`block text-xs sm:text-lg mb-1 sm:mb-0 font-bold ${jura.className}`}>
             {f("email")}
           </label>
           <input
@@ -97,7 +112,7 @@ const FormContactos: React.FC = () => {
         </div>
 
         <div className="mb-3 sm:mb-0">
-          <label className="block text-xs sm:text-sm mb-1 sm:mb-0">
+          <label className={`block text-xs sm:text-lg mb-1 sm:mb-0 font-bold ${jura.className}`}>
             {f("phone")}
           </label>
           <input
@@ -112,7 +127,7 @@ const FormContactos: React.FC = () => {
         </div>
 
         <div className="mb-3 sm:mb-0">
-          <label className="block text-xs sm:text-sm mb-1 sm:mb-0">
+          <label className={`block text-xs sm:text-lg mb-1 sm:mb-0 font-bold ${jura.className}`}>
             {f("message")}
           </label>
           <textarea
@@ -128,11 +143,11 @@ const FormContactos: React.FC = () => {
         <button
           type="submit"
           onClick={handleSubmit}
-          className="w-auto bg-[#FF8112] text-white py-1 px-4 rounded hover:bg-[#FF8112]/50 transition"
+          className={`w-auto bg-[#FF8112] text-white py-1 px-4 rounded font-bold hover:bg-[#FF8112]/50 transition ${jura.className}`}
         >
           {f("button")}
         </button>
-        <div className="pt-2 pb-20 text-xs sm:text-sm">{f("simpleText")}</div>
+        <div className={`pt-2 pb-20 text-xs sm:text-sm font-bold ${jura.className}`}>{f("simpleText")}</div>
       </form>
     </div>
   );
