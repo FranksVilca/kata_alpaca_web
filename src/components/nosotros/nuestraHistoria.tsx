@@ -97,7 +97,7 @@ export default function NuestraHistoria() {
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6, delay: 0.2 }}
             viewport={{ once: true }}
-            className="hidden md:block flex-1 relative h-[45rem] "
+            className="hidden md:block flex-1 relative h-180 "
           >
             {/* Imagen 1 - Fibra (arriba derecha) */}
             <div className="absolute top-0 right-0 w-[80%] h-[80%] z-10 ">
