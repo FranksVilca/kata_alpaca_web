@@ -96,11 +96,11 @@ export default function QuienesSomos() {
 
             {/* Texto */}
             <div className="space-y-3 md:space-y-4 text-black leading-relaxed">
-              <p className={`${raleway.className} text-[0.75rem] md:text-base tracking-tighter md:tracking-tight text-justify`}>
+              <p className={`${raleway.className} text-[0.75rem] md:text-base tracking-normal md:tracking-tight text-justify`}>
                 {t('paragraph1')}
               </p>
               
-              <p className={`${raleway.className} text-[0.75rem] md:text-base tracking-tighter md:tracking-tight text-justify`}>
+              <p className={`${raleway.className} text-[0.75rem] md:text-base tracking-normal md:tracking-tight text-justify`}>
                 {t('paragraph2')}
               </p>
             </div>
