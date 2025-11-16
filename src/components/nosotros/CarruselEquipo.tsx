@@ -47,7 +47,7 @@ export default function CarruselEquipo() {
       <div className="max-w-6xl mx-auto px-6 md:px-4">
         
         {/* Contenedor del carrusel */}
-        <div className="relative w-full aspect-[16/10] md:aspect-[16/9] bg-gray-100 rounded-lg overflow-hidden shadow-lg">
+        <div className="relative w-full aspect-16/10 md:aspect-video bg-gray-100 rounded-lg overflow-hidden shadow-lg">
           
           {/* Imágenes */}
           <AnimatePresence mode="wait">
