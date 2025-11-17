@@ -1,3 +1,4 @@
+import { setRequestLocale } from 'next-intl/server';
 import Footer from "@/components/footer";
 import Header from "@/components/header";
 import AboutSection from "@/components/home/aboutSection";
@@ -7,7 +8,23 @@ import Garments from "@/components/home/garments";
 import HeroSections from "@/components/home/heroSections";
 import Notice from "@/components/home/notice";
 
-export default function Home() {
+export function generateStaticParams() {
+  return [
+    { locale: 'en' },
+    { locale: 'es' }
+  ];
+}
+
+export default async function Home({
+  params
+}: {
+  params: Promise<{ locale: string }>  // Promise aquí también
+}) {
+  const { locale } = await params; 
+  
+  // CRÍTICO: Establecer el locale para renderizado estático
+  setRequestLocale(locale);
+  
   return (
     <div>
       <Header />

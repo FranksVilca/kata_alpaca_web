@@ -38,7 +38,7 @@ const FormBook: React.FC = () => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
-
+{/*
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
@@ -71,6 +71,7 @@ const FormBook: React.FC = () => {
       alert("Hubo un error al enviar el mensaje");
     }
   };
+*/}
 
   return (
     <div className={`md:mx-4 px-1 pt-10 max-w-full ${jura.className}`}>
@@ -80,7 +81,7 @@ const FormBook: React.FC = () => {
 
      <div className="px-4 sm:px-14 pt-10">
         <form
-          onSubmit={handleSubmit}
+          //onSubmit={handleSubmit}
           className="bg-white w-full mx-auto sm:mx-0"
         >
           {/* NOMBRE */}

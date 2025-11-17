@@ -5,10 +5,26 @@ import HeroSections from "@/components/productos/heroSections";
 import Navbar from "@/components/productos/navbar";
 import ProductLeft from "@/components/productos/productLeft";
 import ProductRight from "@/components/productos/productRight";
-import { useTranslations } from "next-intl";
+import { setRequestLocale } from 'next-intl/server';
+import { getTranslations } from 'next-intl/server'; 
 
-export default function Home() {
-  const f = useTranslations("Product");
+export function generateStaticParams() {
+  return [
+    { locale: 'en' },
+    { locale: 'es' }
+  ];
+}
+
+export default async function ProductosPage({
+  params
+}: {
+  params: Promise<{ locale: string }>
+}) {
+  const { locale } = await params;
+  
+  setRequestLocale(locale);
+  
+  const f = await getTranslations("Product");
 
   return (
     <div>

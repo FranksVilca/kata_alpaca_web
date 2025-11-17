@@ -24,13 +24,14 @@ const FormContactos: React.FC = () => {
     message: "",
   });
 
+
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
-
+{/*
   const handleSubmit = async () => {
     const res = await fetch("/api/contacto", {
       method: "POST",
@@ -50,12 +51,12 @@ const FormContactos: React.FC = () => {
     } else {
       alert("Hubo un error al enviar el mensaje");
     }
-  };
+  }; */}
 
   return (
     <div className="py-6 sm:px-4 sm:py-10 sm:pl-14 text-[#292929] px-15">
       <form
-        onSubmit={handleSubmit}
+        //onSubmit={handleSubmit}
         className="bg-white rounded-lg w-full max-w-md mx-auto sm:mx-0"
       >
         <div className={`${aboreto.className}`}>
@@ -150,7 +151,7 @@ const FormContactos: React.FC = () => {
 
         <button
           type="submit"
-          onClick={handleSubmit}
+          // onClick={handleSubmit}
           className={`w-auto bg-[#FF8112] text-white py-1 px-4 rounded font-bold hover:bg-[#FF8112]/50 transition ${jura.className}`}
         >
           {f("button")}
