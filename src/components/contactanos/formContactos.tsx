@@ -31,24 +31,39 @@ const FormContactos: React.FC = () => {
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = async () => {
-    const res = await fetch("/api/contacto", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(formData),
-    });
-
-    if (res.ok) {
-      alert("Mensaje enviado con éxito");
-      setFormData({
-        enterpriseName: "",
-        names: "",
-        email: "",
-        phone: "",
-        message: "",
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    
+    try {
+      const res = await fetch("/api/contacto", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
       });
-    } else {
-      alert("Hubo un error al enviar el mensaje");
+
+      const data = await res.json();
+
+      if (res.ok) {
+        alert("✅ Mensaje enviado con éxito");
+        setFormData({
+          enterpriseName: "",
+          names: "",
+          email: "",
+          phone: "",
+          message: "",
+        });
+      } else {
+        // Mostrar error detallado
+        const errorMsg = data.details 
+          ? `❌ Error: ${data.details.message}\nCódigo: ${data.details.code || 'N/A'}\nRespuesta: ${data.details.response || 'N/A'}`
+          : `❌ Error: ${data.error}`;
+        
+        alert(errorMsg);
+        console.error("Error completo:", data);
+      }
+    } catch (err) {
+      alert("❌ Error de red al enviar el mensaje");
+      console.error("Error de red:", err);
     }
   };
 
@@ -124,7 +139,7 @@ const FormContactos: React.FC = () => {
           <input
             name="phone"
             value={formData.phone}
-            type="tell"
+            type="tel"
             className="w-full px-2 border rounded focus:ring-blue-500 my-2"
             placeholder={f("phone")}
             onChange={handleChange}
@@ -150,7 +165,6 @@ const FormContactos: React.FC = () => {
 
         <button
           type="submit"
-          onClick={handleSubmit}
           className={`w-auto bg-[#FF8112] text-white py-1 px-4 rounded font-bold hover:bg-[#FF8112]/50 transition ${jura.className}`}
         >
           {f("button")}

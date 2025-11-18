@@ -1,8 +1,20 @@
-import { NextApiRequest, NextApiResponse } from 'next';
-import nodemailer from 'nodemailer';
+import { NextApiRequest, NextApiResponse } from "next";
+import nodemailer from "nodemailer";
 
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'POST') return res.status(405).end();
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
+  if (req.method !== "POST") return res.status(405).end();
+
+  console.log(
+    "🔍 EMAIL_USER:",
+    process.env.EMAIL_USER ? "CONFIGURADO ✅" : "FALTA ❌"
+  );
+  console.log(
+    "🔍 EMAIL_PASS:",
+    process.env.EMAIL_PASS ? "CONFIGURADO ✅" : "FALTA ❌"
+  );
 
   const {
     nombre,
@@ -23,7 +35,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   } = req.body;
 
   const transporter = nodemailer.createTransport({
-    service: 'Gmail',
+    service: "Gmail",
     auth: {
       user: process.env.EMAIL_USER_BOOK,
       pass: process.env.EMAIL_PASS_BOOK,
@@ -31,11 +43,13 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   });
 
   try {
-    await transporter.sendMail({
+    const info = await transporter.sendMail({
       from: process.env.EMAIL_USER,
       replyTo: correo,
       to: process.env.EMAIL_USER,
-      subject: `📋 ${motivo === 'reclamo' ? 'RECLAMO' : 'QUEJA'} - ${nombre} ${apellidoPaterno}`,
+      subject: `📋 ${
+        motivo === "reclamo" ? "RECLAMO" : "QUEJA"
+      } - ${nombre} ${apellidoPaterno}`,
       html: `
         <!DOCTYPE html>
         <html>
@@ -56,7 +70,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
               .message-box { background: white; padding: 20px; border-radius: 8px; margin-top: 15px; border: 2px solid #575151; }
               .footer { text-align: center; padding: 20px; background: #333; color: white; }
               .footer a { color: #FAF5E8; text-decoration: none; }
-              .badge { display: inline-block; background: ${motivo === 'reclamo' ? '#dc3545' : '#ffc107'}; color: white; padding: 5px 15px; border-radius: 20px; font-size: 12px; margin-top: 10px; font-weight: bold; }
+              .badge { display: inline-block; background: ${
+                motivo === "reclamo" ? "#dc3545" : "#ffc107"
+              }; color: white; padding: 5px 15px; border-radius: 20px; font-size: 12px; margin-top: 10px; font-weight: bold; }
               .alert-box { background: #fff3cd; border-left: 4px solid #ffc107; padding: 15px; margin: 15px 0; border-radius: 5px; }
             </style>
           </head>
@@ -68,7 +84,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
               
               <div class="header">
                 <h1>📋 Libro de Reclamaciones</h1>
-                <div class="badge">${motivo === 'reclamo' ? 'RECLAMO' : 'QUEJA'}</div>
+                <div class="badge">${
+                  motivo === "reclamo" ? "RECLAMO" : "QUEJA"
+                }</div>
               </div>
               
               <div class="content">
@@ -110,7 +128,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
                 
                 <div class="field">
                   <div class="field-label">Tipo</div>
-                  <div class="field-value">${tipoProducto === 'producto' ? 'Producto' : 'Servicio'}</div>
+                  <div class="field-value">${
+                    tipoProducto === "producto" ? "Producto" : "Servicio"
+                  }</div>
                 </div>
                 
                 <div class="field">
@@ -120,16 +140,24 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
                 
                 <div class="message-box">
                   <div class="field-label">📝 Descripción del Producto/Servicio</div>
-                  <div class="field-value" style="margin-top: 10px; white-space: pre-wrap;">${descripcion || 'No proporcionada'}</div>
+                  <div class="field-value" style="margin-top: 10px; white-space: pre-wrap;">${
+                    descripcion || "No proporcionada"
+                  }</div>
                 </div>
 
-                <div class="section-title">⚠️ DETALLE DEL ${motivo === 'reclamo' ? 'RECLAMO' : 'QUEJA'}</div>
+                <div class="section-title">⚠️ DETALLE DEL ${
+                  motivo === "reclamo" ? "RECLAMO" : "QUEJA"
+                }</div>
                 
                 <div class="alert-box">
-                  <strong>${motivo === 'reclamo' ? '🔴 RECLAMO' : '🟡 QUEJA'}:</strong>
-                  ${motivo === 'reclamo' 
-                    ? 'Disconformidad relacionada a los productos o servicios' 
-                    : 'Disconformidad no relacionada a los productos o servicios; o, malestar o descontento respecto a la atención al público'}
+                  <strong>${
+                    motivo === "reclamo" ? "🔴 RECLAMO" : "🟡 QUEJA"
+                  }:</strong>
+                  ${
+                    motivo === "reclamo"
+                      ? "Disconformidad relacionada a los productos o servicios"
+                      : "Disconformidad no relacionada a los productos o servicios; o, malestar o descontento respecto a la atención al público"
+                  }
                 </div>
                 
                 <div class="message-box">
@@ -143,7 +171,10 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
                 </div>
                 
                 <div style="text-align: center; margin-top: 20px; padding: 15px; background: white; border-radius: 8px;">
-                  <p style="color: #666; font-size: 12px; margin: 5px 0;">Recibido el ${new Date().toLocaleString('es-PE', { dateStyle: 'full', timeStyle: 'short' })}</p>
+                  <p style="color: #666; font-size: 12px; margin: 5px 0;">Recibido el ${new Date().toLocaleString(
+                    "es-PE",
+                    { dateStyle: "full", timeStyle: "short" }
+                  )}</p>
                   <p style="color: #999; font-size: 11px; margin: 5px 0;">La empresa dará respuesta en un plazo máximo de 30 días calendario</p>
                 </div>
               </div>
@@ -152,7 +183,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
                 <p style="margin: 5px 0;"><strong>KATA ALPACA</strong></p>
                 <p style="margin: 5px 0; font-size: 12px;">Libro de Reclamaciones</p>
                 <p style="margin: 5px 0; font-size: 12px;">
-                  <a href="mailto:${process.env.EMAIL_USER}">${process.env.EMAIL_USER}</a>
+                  <a href="mailto:${process.env.EMAIL_USER}">${
+        process.env.EMAIL_USER
+      }</a>
                 </p>
               </div>
             </div>
@@ -161,7 +194,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       `,
       text: `
         KATA ALPACA - LIBRO DE RECLAMACIONES
-        ${motivo === 'reclamo' ? 'RECLAMO' : 'QUEJA'}
+        ${motivo === "reclamo" ? "RECLAMO" : "QUEJA"}
         
         === DATOS DEL CONSUMIDOR ===
         Nombre: ${nombre} ${apellidoPaterno} ${apellidoMaterno}
@@ -174,22 +207,38 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         Dirección: ${direccion}
         
         === IDENTIFICACIÓN DEL PRODUCTO/SERVICIO ===
-        Tipo: ${tipoProducto === 'producto' ? 'Producto' : 'Servicio'}
+        Tipo: ${tipoProducto === "producto" ? "Producto" : "Servicio"}
         Monto: ${monto}
-        Descripción: ${descripcion || 'No proporcionada'}
+        Descripción: ${descripcion || "No proporcionada"}
         
-        === DETALLE DEL ${motivo === 'reclamo' ? 'RECLAMO' : 'QUEJA'} ===
+        === DETALLE DEL ${motivo === "reclamo" ? "RECLAMO" : "QUEJA"} ===
         ${detalle}
         
         Comprobante: ${comprobante}
         
-        Recibido el ${new Date().toLocaleString('es-PE')}
+        Recibido el ${new Date().toLocaleString("es-PE")}
       `,
     });
 
-    return res.status(200).json({ success: true });
-  } catch (err) {
-    console.error('Error al enviar correo:', err);
-    return res.status(500).json({ error: 'Error al enviar el correo' });
+    console.log("✅ Correo enviado exitosamente:", info.messageId);
+    return res.status(200).json({
+      success: true,
+      messageId: info.messageId,
+      debug: "Correo enviado correctamente",
+    });
+  } catch (err: any) {
+    console.error("❌ Error al enviar correo:", err);
+
+    // Retornar detalles del error al cliente para debugging
+    return res.status(500).json({
+      error: "Error al enviar el correo",
+      details: {
+        message: err.message,
+        code: err.code,
+        command: err.command,
+        response: err.response,
+        responseCode: err.responseCode,
+      },
+    });
   }
 }
