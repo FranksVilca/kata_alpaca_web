@@ -3,17 +3,12 @@
 "use client";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { Jura, Raleway } from "next/font/google";
+import { Jura } from "next/font/google";
 import { useTranslations } from "next-intl";
 
 const jura = Jura({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
-});
-
-const raleway = Raleway({
-  subsets: ["latin"],
-  weight: ["300", "400", "500"],
 });
 
 export default function NuestroEquipo() {

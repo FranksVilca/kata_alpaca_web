@@ -1,4 +1,3 @@
-// src/components/NuestraHistoria.tsx
 
 "use client";
 import Image from "next/image";
@@ -16,7 +15,7 @@ const raleway = Raleway({
   weight: ["300", "400", "500"],
 });
 
-export default function programming() {
+export default function Programming() {
   const t = useTranslations('Process.w3');
 
   return (

@@ -3,13 +3,9 @@
 "use client";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { Aboreto, Jura, Raleway } from "next/font/google";
+import { Aboreto, Raleway } from "next/font/google";
 import { useTranslations } from "next-intl";
 
-const jura = Jura({
-  subsets: ["latin"],
-  weight: ["300", "400", "500"],
-});
 const aboreto = Aboreto({
     subsets: ["latin"],
     weight: ["400"],

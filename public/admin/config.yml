@@ -1,0 +1,21 @@
+backend:
+  name: github
+  repo: TU_USUARIO/TU_REPOSITORIO
+  branch: main
+
+media_folder: "public/images/uploads"      # Carpeta donde se guardan las imágenes dentro del repositorio
+public_folder: "/images/uploads"           # Ruta pública accesible desde tu web
+
+site_url: "https://gmail.kataalpaca.com/"          # Cambia esto por tu dominio real
+
+collections:
+  - name: "posts"
+    label: "Posts"
+    folder: "content/posts"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Título", name: "title", widget: "string" }
+      - { label: "Fecha", name: "date", widget: "datetime" }
+      - { label: "Contenido", name: "body", widget: "markdown" }
+      - { label: "Imagen principal", name: "image", widget: "image", required: false }

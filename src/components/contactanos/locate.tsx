@@ -1,14 +1,9 @@
 import { useTranslations } from "next-intl";
-import { Aboreto, Jura } from "next/font/google";
+import { Aboreto } from "next/font/google";
 
 const aboreto = Aboreto({
   subsets: ["latin"],
   weight: ["400"],
-});
-
-const jura = Jura({
-  subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700"],
 });
 
 const Locate: React.FC = () => {

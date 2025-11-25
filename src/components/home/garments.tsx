@@ -2,7 +2,7 @@
 
 import { useTranslations } from "next-intl";
 import Image from "next/image";
-import { useEffect, useState, useRef } from "react";
+import { useLayoutEffect, useState, useRef } from "react";
 import { Aboreto } from "next/font/google";
 
 const aboreto = Aboreto({
@@ -16,7 +16,7 @@ const Garments: React.FC = () => {
   const [isClient, setIsClient] = useState(false);
   const centerImageRef = useRef<HTMLDivElement>(null);
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     // Confirmar que estamos en el cliente
     setIsClient(true);
 

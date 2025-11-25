@@ -3,7 +3,7 @@ import Image from "next/image";
 import { FaMapMarkerAlt, FaPhoneAlt } from "react-icons/fa";
 import { IoPersonCircleOutline } from "react-icons/io5";
 import { TbWorld } from "react-icons/tb";
-import { Aboreto, Raleway } from "next/font/google";
+import { Aboreto } from "next/font/google";
 
 const aboreto = Aboreto({
   subsets: ["latin"],
