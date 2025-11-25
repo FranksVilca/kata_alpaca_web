@@ -1,7 +1,10 @@
 backend:
   name: github
-  repo: TU_USUARIO/TU_REPOSITORIO
-  branch: main
+  repo: FranksVilca/kata_alpaca_web
+  branch: newcms
+
+media_folder: "public/images/uploads"
+public_folder: "/images/uploads"
 
 media_folder: "public/images/uploads"      # Carpeta donde se guardan las imágenes dentro del repositorio
 public_folder: "/images/uploads"           # Ruta pública accesible desde tu web
