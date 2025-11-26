@@ -33,7 +33,7 @@ export default function ProductLeft({
         <div className="flex-1 flex items-center justify-center min-h-[50vh] md:min-h-[85vh] py-6 md:py-0 order-1">
           <div className="relative">
             {/* Imagen de la Modelo*/}
-            <div className="relative w-48 h-60 md:w-64 md:h-80 overflow-hidden">
+            <div className="relative w-56 h-72 md:w-80 md:h-96 overflow-hidden">
               <Image
                 src={firstImage}
                 alt="Modelo"
@@ -43,7 +43,7 @@ export default function ProductLeft({
             </div>
 
             {/* Imagen de la Tela*/}
-            <div className="absolute top-4/6 -translate-y-1/2 right-0 translate-x-3/4 w-20 h-28 md:w-28 md:h-36 overflow-hidden z-10 transition-transform duration-300 ease-out hover:scale-120">
+            <div className="absolute top-4/6 -translate-y-1/2 right-0 translate-x-3/4 w-24 h-32 md:w-32 md:h-44 overflow-hidden z-10 transition-transform duration-300 ease-out hover:scale-120">
               <Image
                 src={secondImage}
                 alt="producto"

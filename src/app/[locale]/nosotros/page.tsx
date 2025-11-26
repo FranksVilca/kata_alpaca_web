@@ -17,21 +17,19 @@ export default function Home() {
   return (
     <div>
       <Header />
-      <BannerNosotros/>
-      <QuienesSomos/>
-      <NuestraHistoria/>
-      <NuestraEmpresa/>
-      <NuestrosPilares/>
-      <NuestraFamilia/>
-      <NuestroCompromiso/>
-      <Mision/>
-      <Vission/>
-      <Values/>
-      <KataParaElMundo/>
-      <NuestroEquipo/>
-      <CarruselEquipo/>
-      
-      
+      <BannerNosotros />
+      <QuienesSomos />
+      <NuestraHistoria />
+      <NuestraEmpresa />
+      <NuestrosPilares />
+      <NuestraFamilia />
+      <NuestroCompromiso />
+      <Mision />
+      <Vission />
+      <Values />
+      <KataParaElMundo />
+      <NuestroEquipo />
+      <CarruselEquipo />
       <Footer />
     </div>
   );

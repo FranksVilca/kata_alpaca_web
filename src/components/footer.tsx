@@ -39,7 +39,7 @@ const Footer: React.FC = () => {
             >
               <Link
                 href={link.href}
-                className="hover:text-[#292929] transition-colors duration-300 underline"
+                className="hover:text-[#BE5103] transition-colors duration-300 underline"
               >
                 {link.text}
               </Link>
@@ -59,13 +59,13 @@ const Footer: React.FC = () => {
         <div className="flex items-center gap-1 mt-3 md:mt-0 justify-end md:justify-start w-full md:w-auto">
           <Link
             href="https://www.instagram.com/kataalpaca"
-            className="hover:text-[#d4af37] transition-colors duration-300"
+            className="hover:text-[#BE5103] transition-colors duration-300"
           >
             <FaInstagram className="w-4 h-4 md:w-5 md:h-5" />
           </Link>
           <Link
             href="https://www.facebook.com/kataalpaca/"
-            className="hover:text-[#d4af37] transition-colors duration-300"
+            className="hover:text-[#BE5103] transition-colors duration-300"
           >
             <FaFacebook className="w-4 h-4 md:w-5 md:h-5" />
           </Link>
