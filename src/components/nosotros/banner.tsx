@@ -19,9 +19,14 @@ const aboreto = Aboreto({
 
 export default function BannerNosotros() {
   const t = useTranslations('usPage.banner');
+  const scrollToSection = (id: string) => {
+    const section = document.getElementById(id);
+    section?.scrollIntoView({ behavior: "smooth" });
+  };
+
 
   return (
-    
+
     <section className="relative w-full h-[90vh] md:h-[75vh] flex items-center justify-center  overflow-hidden">
       {/* Imagen de fondo */}
       <Image
@@ -46,7 +51,7 @@ export default function BannerNosotros() {
         z-10 
         md:hidden 
         "
-        />
+      />
       {/* Contenido centrado */}
       <motion.div
         initial={{ opacity: 0, y: 40 }}
@@ -121,7 +126,7 @@ export default function BannerNosotros() {
           <span className="text-white/80">/</span>
 
           <motion.a
-            href="/nosotros"
+            onClick={() => scrollToSection("quienes-somos")}
             whileHover={{ scale: 1.05 }}
             className={`
               ${aboreto.className}
