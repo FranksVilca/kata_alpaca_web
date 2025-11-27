@@ -27,6 +27,10 @@ async function hygraphRequest(
         query,
         variables,
       }),
+      next: {
+        tags: ["noticias"],
+        revalidate: 86400, // Revalidar cada 24 horas (igual que tu página)
+      },
     });
 
     const text = await response.text();

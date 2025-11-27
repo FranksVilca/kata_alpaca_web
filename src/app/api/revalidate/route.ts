@@ -1,5 +1,5 @@
 // src/app/api/revalidate/route.ts
-import { revalidatePath } from "next/cache";
+import { revalidatePath, revalidateTag } from "next/cache";
 import { NextRequest, NextResponse } from "next/server";
 
 export async function POST(request: NextRequest) {
@@ -15,8 +15,9 @@ export async function POST(request: NextRequest) {
     console.log("✅ Webhook received from Hygraph");
 
     // Revalidar la ruta de noticias
-    revalidatePath("/[locale]/noticias", "layout");
-    revalidatePath("/[locale]/noticias/[slug]", "page");
+    revalidateTag("noticias", "default"); // Invalida el cache de fetch con tag "noticias"
+    revalidatePath("/[locale]/noticias");
+    revalidatePath("/[locale]/noticias/[slug]");
 
     console.log("✅ Cache revalidated for noticias");
 

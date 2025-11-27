@@ -11,26 +11,26 @@ const jura = Jura({
   weight: ["300", "400", "500"],
 });
 const aboreto = Aboreto({
-    subsets: ["latin"],
-    weight: ["400"],
-  });
+  subsets: ["latin"],
+  weight: ["400"],
+});
 const raleway = Raleway({
-    subsets: ["latin"],
-    weight: ["300", "400", "500"],
-  });
+  subsets: ["latin"],
+  weight: ["300", "400", "500"],
+});
 
 export default function QuienesSomos() {
   const t = useTranslations('usPage.aboutUs');
 
   return (
-    <section 
-      id="quienes-somos" 
+    <section
+      id="quienes-somos"
       className="w-full py-15 md:py-40 bg-white "
     >
       <div className="md:w-full  px-4  mx-0 md:mx-0 md:px-40 ">
         {/* Layout Mobile y Desktop */}
         <div className="flex flex-row md:flex-row gap-4 md:gap-16 ">
-          
+
           {/* Columna de Imágenes - Izquierda */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
@@ -42,7 +42,7 @@ export default function QuienesSomos() {
             {/* Mobile y Desktop: 3 imágenes */}
             <div className="w-1/3 h-[65%] md:h-2/3">
               <Image
-                src="/nosotros/textura-alpaca-1.jpg"
+                src="/nosotros/img2.jpg"
                 alt="Textura de alpaca gris"
                 width={100}
                 height={300}
@@ -51,7 +51,7 @@ export default function QuienesSomos() {
             </div>
             <div className="w-1/3 h-[80%] md:h-11/12">
               <Image
-                src="/nosotros/textura-alpaca-2.jpg"
+                src="/nosotros/img3.jpg"
                 alt="Textura de alpaca beige"
                 width={100}
                 height={400}
@@ -60,7 +60,7 @@ export default function QuienesSomos() {
             </div>
             <div className="w-1/3 h-[65%] md:h-2/3">
               <Image
-                src="/nosotros/textura-alpaca-3.jpg"
+                src="/nosotros/img4.jpg"
                 alt="Textura de alpaca marrón"
                 width={100}
                 height={300}
@@ -99,7 +99,7 @@ export default function QuienesSomos() {
               <p className={`${raleway.className} text-[0.75rem] md:text-base tracking-normal md:tracking-tight text-justify`}>
                 {t('paragraph1')}
               </p>
-              
+
               <p className={`${raleway.className} text-[0.75rem] md:text-base tracking-normal md:tracking-tight text-justify`}>
                 {t('paragraph2')}
               </p>

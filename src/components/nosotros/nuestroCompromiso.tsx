@@ -34,14 +34,14 @@ export default function NuestroCompromiso() {
   } as React.CSSProperties;
 
   return (
-    <section 
+    <section
       className="relative w-full h-[300px] md:h-[400px] overflow-hidden mb-8 md:mb-20"
       style={styleVars}
     >
       {/* Imagen de fondo */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="/nosotros/compromiso.webp"
+          src="/nosotros/img10.webp"
           alt="Fondo de fibra de alpaca"
           fill
           className="object-cover object-center"
@@ -80,7 +80,7 @@ export default function NuestroCompromiso() {
             {t('title')}
           </h2>
 
-          <p 
+          <p
             className={`
               ${raleway.className} 
               text-[10px] md:text-[20px] 

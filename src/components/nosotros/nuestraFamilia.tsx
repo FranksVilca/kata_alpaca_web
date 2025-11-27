@@ -16,9 +16,9 @@ export default function NuestraFamilia() {
 
   return (
     <section className="w-full py-8 md:py-16 bg-white overflow-hidden">
-      
-        {/* VISTA MOBILE */}
-        <div className="md:hidden">
+
+      {/* VISTA MOBILE */}
+      <div className="md:hidden">
         {/* Contenedor de imagen con frame - Mobile */}
         <motion.div
           initial={{ opacity: 0, scale: 0.95 }}
@@ -30,7 +30,7 @@ export default function NuestraFamilia() {
           {/* Background de fibras - Ocupa todo el ancho */}
           <div className="absolute inset-0 w-full h-30">
             <Image
-              src="/nosotros/cm.webp"
+              src="/nosotros/img9.webp"
               alt="Fibras de alpaca"
               fill
               className="object-cover"
@@ -48,7 +48,7 @@ export default function NuestraFamilia() {
                   className="object-cover"
                 />
                 {/* Efecto de noise */}
-                <div 
+                <div
                   className="absolute inset-0 pointer-events-none opacity-[0.15]"
                   style={{
                     backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E")`,
@@ -77,7 +77,7 @@ export default function NuestraFamilia() {
       {/* VISTA DESKTOP */}
       <div className="hidden md:block">
         <div className="relative w-full h-[500px] lg:h-[600px]">
-          
+
           {/* Imagen de fibras - Fondo izquierda (debajo de todo) */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
@@ -87,7 +87,7 @@ export default function NuestraFamilia() {
             className="absolute left-0 top-0 w-full translate-y-1/3 h-[60%] z-0"
           >
             <Image
-              src="/nosotros/cm.webp"
+              src="/nosotros/img9.webp"
               alt="Fibras de alpaca"
               fill
               className="object-cover"
@@ -125,7 +125,7 @@ export default function NuestraFamilia() {
                 className="object-cover object-center"
               />
               {/* Efecto de noise */}
-              <div 
+              <div
                 className="absolute inset-0 pointer-events-none opacity-[0.12]"
                 style={{
                   backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E")`,
