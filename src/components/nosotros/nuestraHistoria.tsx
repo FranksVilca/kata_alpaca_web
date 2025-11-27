@@ -22,7 +22,7 @@ export default function NuestraHistoria() {
   return (
     <section className="w-full py-8 md:py-20 bg-white">
       <div className="mx-0 px-4 md:px-0 md:ml-30 ">
-        
+
         {/* MOBILE: Imágenes arriba */}
         <motion.div
           initial={{ opacity: 0, scale: 0.95 }}
@@ -34,18 +34,18 @@ export default function NuestraHistoria() {
           {/* Imagen 1 - Fibra (arriba derecha) */}
           <div className="absolute top-0 right-0 w-[80%] h-[80%] z-10">
             <Image
-              src="/nosotros/fibra.webp"
+              src="/nosotros/img5.webp"
               alt="Fibra de alpaca"
               fill
               className="object-cover"
             />
             <div className="absolute inset-0 bg-black/30"></div>
           </div>
-          
+
           {/* Imagen 2 - Manos tejiendo (abajo izquierda) */}
           <div className="absolute bottom-0 left-0 w-[60%] h-[70%] z-20">
             <Image
-              src="/nosotros/fabricacionManos.webp"
+              src="/nosotros/img6.webp"
               alt="Proceso de tejido"
               fill
               className="object-cover"
@@ -55,7 +55,7 @@ export default function NuestraHistoria() {
 
         {/* Layout Principal */}
         <div className="flex flex-col md:flex-row gap-8 md:gap-15 ">
-          
+
           {/* Columna de Contenido - Izquierda en Desktop */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
@@ -84,7 +84,7 @@ export default function NuestraHistoria() {
               <p className={`${raleway.className} text-[0.85rem] md:text-base lg:text-lg tracking-tight text-justify`}>
                 {t('paragraph1')}
               </p>
-              
+
               <p className={`${raleway.className} text-[0.85rem] md:text-base lg:text-lg tracking-tight text-justify`}>
                 {t('paragraph2')}
               </p>
@@ -102,7 +102,7 @@ export default function NuestraHistoria() {
             {/* Imagen 1 - Fibra (arriba derecha) */}
             <div className="absolute top-0 right-0 w-[80%] h-[80%] z-10 ">
               <Image
-                src="/nosotros/fibra.webp"
+                src="/nosotros/img5.webp"
                 alt="Fibra de alpaca"
                 fill
                 className="object-cover"
@@ -110,11 +110,11 @@ export default function NuestraHistoria() {
               <div className="absolute inset-0 bg-black/30"></div>
 
             </div>
-            
+
             {/* Imagen 2 - Manos tejiendo (abajo izquierda) */}
             <div className="absolute bottom-0 left-0 w-[70%] h-[70%] z-20">
               <Image
-                src="/nosotros/fabricacionManos.webp"
+                src="/nosotros/img6.webp"
                 alt="Proceso de tejido"
                 fill
                 className="object-cover"
