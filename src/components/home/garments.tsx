@@ -61,7 +61,7 @@ const Garments: React.FC = () => {
       >
         {/* Cardigan */}
         <div className="relative flex-1 h-[280px] sm:h-[350px] md:h-120 overflow-visible group">
-          <div className="relative w-full h-full overflow-hidden transition-transform duration-500 group-hover:scale-120 group-hover:z-20">
+          <div className="relative w-full h-full overflow-hidden transition-transform duration-500 group-hover:scale-105 group-hover:z-20">
             <Image
               src="/home/6Image.webp"
               alt="Cardigan"
@@ -87,7 +87,7 @@ const Garments: React.FC = () => {
               : undefined
           }
         >
-          <div className="relative w-full h-full overflow-hidden transition-transform duration-500 group-hover:scale-120 group-hover:z-20">
+          <div className="relative w-full h-full overflow-hidden transition-transform duration-500 group-hover:scale-110 group-hover:z-20">
             <Image
               src="/home/7Image.webp"
               alt="Poncho Calado Cocos"
@@ -107,7 +107,7 @@ const Garments: React.FC = () => {
 
         {/* Sweter */}
         <div className="relative flex-1 h-[280px] sm:h-[350px] md:h-120 overflow-visible group">
-          <div className="relative w-full h-full overflow-hidden transition-transform duration-500 group-hover:scale-120 group-hover:z-20">
+          <div className="relative w-full h-full overflow-hidden transition-transform duration-500 group-hover:scale-105 group-hover:z-20">
             <Image
               src="/home/8Image.webp"
               alt="Sweter"

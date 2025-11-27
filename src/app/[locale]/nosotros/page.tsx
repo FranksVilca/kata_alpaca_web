@@ -15,7 +15,7 @@ import Values from "@/components/nosotros/values";
 import Vission from "@/components/nosotros/vision";
 export default function Home() {
   return (
-    <div className="bg-white">
+    <div>
       <Header />
       <BannerNosotros />
       <QuienesSomos />
