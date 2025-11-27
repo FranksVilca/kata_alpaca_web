@@ -98,10 +98,10 @@ export default function programming() {
         </div>
 
         {/*  VISTA MOBILE (MOBILE ONLY)      */}
-        <div className="md:hidden">
+        <div className="md:hidden w-full" >
 
           {/* Título con líneas decorativas */}
-          <div className="flex items-center gap-4 mb-15 px-0">
+          <div className="flex items-center gap-4 mb-15">
             <div className="flex-1 h-px bg-gray-300"></div>
             <h2
               className={`
@@ -131,7 +131,7 @@ export default function programming() {
 
 
           {/* Contenedor con fondo */}
-          <div className="relative w-full h-[408px] flex flex-col items-center justify-center px-14">
+          <div className="relative w-full h-[408px] flex flex-col items-center justify-center px-6">
 
             {/* Imagen de fondo */}
             <div className="absolute inset-0 z-0">

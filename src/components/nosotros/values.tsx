@@ -22,16 +22,16 @@ export default function Values() {
   return (
     <section className="w-full py-12 md:py-20 bg-white">
       <div className="w-full md:pl-20">
-        
+
         <div className="flex flex-row md:flex-row gap-6 md:gap-12 lg:gap-16">
-          
+
 
           {/* Columna de Contenido - Abajo izquierda en mobile */}
           <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+            // initial={{ opacity: 0, x: -30 }}
+            // whileInView={{ opacity: 1, x: 0 }}
+            // transition={{ duration: 0.6 }}
+            // viewport={{ once: true }}
             className="w-[calc(100%-180px-1.5rem+1.5rem+20px)] px-5 md:w-full md:flex-1 flex flex-col justify-center md:order-1 md:px-0 md:ml-0"
           >
             <h2
@@ -66,10 +66,10 @@ export default function Values() {
           </motion.div>
           {/* Columna de Imagen - Arriba derecha en mobile */}
           <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            viewport={{ once: true }}
+            // initial={{ opacity: 0, scale: 0.95 }}
+            // whileInView={{ opacity: 1, scale: 1 }}
+            // transition={{ duration: 0.6, delay: 0.2 }}
+            // viewport={{ once: true }}
             className="w-[180px] ml-auto relative h-[280px] md:w-full md:flex-1 md:h-[400px] md:order-2 md:mr-0"
           >
             <Image

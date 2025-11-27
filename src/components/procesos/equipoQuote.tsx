@@ -12,38 +12,57 @@ const aboreto = Aboreto({
 });
 
 export default function EquipoQuote() {
-  const t = useTranslations('Process.w6');
+  const t = useTranslations('Process.w5.quote');
 
   return (
     <section className="relative w-full overflow-hidden">
-      
+
       {/* 3 Imágenes sin gaps */}
       <div className="grid grid-cols-3 md:gap-0 gap-0 w-full ">
+        <div className="absolute inset-0 bg-black/100"></div>
 
-        <div className="relative w-[100%] h-[190px] md:h-[670px]">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0 }}
+          viewport={{ once: true }}
+          className="relative w-[100%] h-[190px] md:h-[670px]"
+        >
           <Image
             src="/procesos/9img.webp"
             alt="Equipo trabajando 1"
             fill
             className="object-cover"
           />
-        </div>
-        <div className="relative w-full h-[190px] md:h-[670px]">
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          viewport={{ once: true }}
+          className="relative w-full h-[190px] md:h-[670px]"
+        >
           <Image
             src="/procesos/10img.webp"
             alt="Equipo trabajando 2"
             fill
             className="object-cover"
           />
-        </div>
-        <div className="relative w-full h-[190px] md:h-[670px]">
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.4 }}
+          viewport={{ once: true }}
+          className="relative w-full h-[190px] md:h-[670px]"
+        >
           <Image
             src="/procesos/11img.webp"
             alt="Equipo trabajando 3"
             fill
             className="object-cover"
           />
-        </div>
+        </motion.div>
         <div className="absolute inset-0 bg-black/60"></div>
 
 
@@ -53,6 +72,10 @@ export default function EquipoQuote() {
 
       {/* Texto centrado */}
       <motion.div
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, delay: 0.6 }}
+        viewport={{ once: true }}
         className="absolute inset-0 z-20 flex items-end justify-center px-2 md:px-30 py-4 md:py-10 opacity-80"
       >
         <p
