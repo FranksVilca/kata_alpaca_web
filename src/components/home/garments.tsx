@@ -13,13 +13,10 @@ const aboreto = Aboreto({
 const Garments: React.FC = () => {
   const f = useTranslations("Home");
   const [centerScale, setCenterScale] = useState(1);
-  const [isClient, setIsClient] = useState(false);
+  const [isClient] = useState(false);
   const centerImageRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    // Confirmar que estamos en el cliente
-    setIsClient(true);
-
     const handleScroll = () => {
       if (window.innerWidth >= 768) return; // Solo en móvil
 

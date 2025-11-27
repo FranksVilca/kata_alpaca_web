@@ -15,7 +15,7 @@ export async function POST(request: NextRequest) {
     console.log("✅ Webhook received from Hygraph");
 
     // Revalidar la ruta de noticias
-    revalidateTag("noticias", "default"); // Invalida el cache de fetch con tag "noticias"
+    revalidateTag("noticias"); // Invalida el cache de fetch con tag "noticias"
     revalidatePath("/[locale]/noticias");
     revalidatePath("/[locale]/noticias/[slug]");
 
