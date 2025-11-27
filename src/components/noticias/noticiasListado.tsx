@@ -34,19 +34,9 @@ interface NoticiasListadoProps {
 }
 
 export default function NoticiasListado({ noticias, locale }: NoticiasListadoProps) {
-    const t = useTranslations("Header");
 
     return (
         <div>
-            {/* Hero Banner */}
-            <section className="relative w-full">
-                <div className="absolute inset-0 flex items-center justify-center">
-                    <h1 className={`text-white text-4xl md:text-6xl text-center ${aboreto.className}`}>
-                        {t("news")}
-                    </h1>
-                </div>
-            </section>
-
             {/* Grid de Noticias */}
             <section className="bg-white w-full">
                 {noticias.length > 0 ? (

@@ -16,7 +16,7 @@ const Locate: React.FC = () => {
 
   return (
     <div>
-      <div className="flex flex-col md:flex-row px-4 sm:px-8 md:px-12 gap-8 md:gap-8 py-6 md:py-8 text-[#292929]">
+      <div className="bg-white flex flex-col md:flex-row px-4 sm:px-8 md:px-12 gap-8 md:gap-8 py-6 md:py-8 text-[#292929]">
         <div className="flex-1">
           <div className={`${aboreto.className}`}>
             <div className="text-base sm:text-lg md:text-xl font-semibold uppercase mb-4" >

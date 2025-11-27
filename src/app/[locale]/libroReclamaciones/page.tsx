@@ -5,7 +5,7 @@ import Header from "@/components/header";
 
 export default function Home() {
   return (
-    <div>
+    <div className="bg-white">
       <Header />
       <Data />
       <FormBook />

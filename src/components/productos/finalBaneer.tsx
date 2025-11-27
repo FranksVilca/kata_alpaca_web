@@ -11,7 +11,7 @@ const FinalBanner: React.FC = () => {
   const f = useTranslations("Product");
 
   return (
-    <div className="hidden md:flex relative w-full h-[600px] items-center justify-center text-center mb-40 mt-20">
+    <div className="hidden md:flex relative w-full h-[600px] items-center justify-center text-center">
       <div className="absolute inset-0 -z-10">
         <Image
           src="/productos/reservaAuquenidos.webp"

@@ -151,6 +151,9 @@
     "button": "Enviar Mensaje",
     "simpleText": "Campos requeridos"
   },
+  "Notice": {
+    "title": "NOTICIAS"
+  },
   "Process": {
     "banner": {
       "title": "Conoce nuestros procesos y la tecnología detrás de cada prenda"

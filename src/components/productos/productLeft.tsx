@@ -27,7 +27,7 @@ export default function ProductLeft({
   secondImage,
 }: SectionProps) {
   return (
-    <div id={id}>
+    <div id={id} className="bg-white">
       <div className="flex flex-col md:flex-row px-4 md:px-10">
         {/* Contenedor de Imágenes */}
         <div className="flex-1 flex items-center justify-center min-h-[50vh] md:min-h-[85vh] py-6 md:py-0 order-1">
@@ -59,7 +59,7 @@ export default function ProductLeft({
           <h2 className={`text-3xl md:text-5xl text-[#BE5103] mb-4 md:mb-16 text-center md:pr-12 ${aboreto.className}`}>
             {title}
           </h2>
-          <p className={`text-sm md:text-base max-w-md mx-2 text-foreground text-center md:text-left px-10 md:px-0 ${raleway.className}`}>
+          <p className={`text-sm text-[#000] md:text-base max-w-md mx-2 text-center md:text-left px-10 md:px-0 ${raleway.className}`}>
             {text}
           </p>
         </div>

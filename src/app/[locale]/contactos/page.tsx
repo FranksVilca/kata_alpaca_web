@@ -20,7 +20,7 @@ export default function Home() {
       <HeroSection />
       <div className={`${aboreto.className}`}>
         <div
-          className="font-semibold py-6 sm:py-8 text-sm sm:text-lg md:text-xl lg:text-2xl text-[#BE5103] px-4 sm:px-8 md:px-20 lg:px-40 xl:px-60 text-center uppercase"
+          className="bg-white font-semibold py-6 sm:py-8 text-sm sm:text-lg md:text-xl lg:text-2xl text-[#BE5103] px-4 sm:px-8 md:px-20 lg:px-40 xl:px-60 text-center uppercase"
         >
           {f("text")}
         </div>

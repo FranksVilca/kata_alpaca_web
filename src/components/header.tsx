@@ -22,7 +22,7 @@ export default function Header() {
   };
 
   return (
-    <div className="relative">
+    <div className="relative bg-white">
       {/* Selector de idioma - visible en todas las pantallas */}
       <div className="flex w-full justify-end px-6 md:pr-50 pt-6 md:pt-10 text-[#292929] space-x-2 text-sm sm:text-normal">
         <Link

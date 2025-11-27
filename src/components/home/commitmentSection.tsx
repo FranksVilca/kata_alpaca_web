@@ -17,9 +17,9 @@ const CommitmentSection: React.FC = () => {
 
   return (
     <div>
-      <div className="relative py-16 sm:py-20 md:py-30">
+      <div className="relative py-16 sm:py-20 md:py-24">
         {/* Imagen de fondo */}
-        <div className="absolute inset-0 -z-10 h-full md:h-[700px] w-full">
+        <div className="absolute inset-0 -z-10 h-full w-full">
           <Image
             src="/home/4Image.webp"
             alt="Alpacas en los Andes"
@@ -34,7 +34,7 @@ const CommitmentSection: React.FC = () => {
           {f("comSectTitle")}
         </h2>
         {/* Tarjetas */}
-        <div className="z-10 flex flex-col-reverse md:flex-row px-4 sm:px-6 md:px-10 text-center gap-4 sm:gap-6 md:gap-4 max-w-6xl mx-auto py-8 sm:py-12 md:py-50">
+        <div className="z-10 flex flex-col-reverse md:flex-row px-4 sm:px-6 md:px-10 text-center gap-4 sm:gap-6 md:gap-4 max-w-6xl mx-auto py-8 sm:py-12 md:py-16">
           <div className="flex-1 border p-4 sm:p-5 md:p-6 bg-[#FFFDFDF2] border-[#00000040] w-3/4 sm:w-full mx-auto">
             <div className={`${aboreto.className}`}>
               <h3 className="text-[#BE5103] pb-2 pt-2 text-base sm:text-lg md:text-xl font-bold">
@@ -42,7 +42,7 @@ const CommitmentSection: React.FC = () => {
               </h3>
             </div>
             <p
-              className={`text-xs sm:text-sm md:text-base ${raleway.className}`}
+              className={`text-xs sm:text-sm md:text-base text-[#000] ${raleway.className}`}
             >
               {f("comSectTextCal")}
             </p>
@@ -54,7 +54,7 @@ const CommitmentSection: React.FC = () => {
               </h3>
             </div>
             <p
-              className={`text-xs sm:text-sm md:text-base ${raleway.className}`}
+              className={`text-xs sm:text-sm md:text-base text-[#000] ${raleway.className}`}
             >
               {f("comSectTextSos")}
             </p>
@@ -66,13 +66,14 @@ const CommitmentSection: React.FC = () => {
               </h3>
             </div>
             <p
-              className={`text-xs sm:text-sm md:text-base ${raleway.className}`}
+              className={`text-xs sm:text-sm md:text-base text-[#000] ${raleway.className}`}
             >
               {f("comSectTextAte")}
             </p>
           </div>
         </div>
       </div>
+      <div className="bg-white md:h-60 h-20"></div>
     </div>
   );
 };

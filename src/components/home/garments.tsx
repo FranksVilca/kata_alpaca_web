@@ -46,7 +46,7 @@ const Garments: React.FC = () => {
   }, []);
 
   return (
-    <div className="py-16 sm:py-24 md:py-40">
+    <div className="py-16 sm:py-24 md:py-40 bg-white">
       <div className="relative mb-6 sm:mb-8 px-4">
         <div
           className={`text-3xl sm:text-4xl md:text-6xl text-center text-[#BE5103] tracking-[0.2em] sm:tracking-[0.3em] relative z-10 ${aboreto.className}`}

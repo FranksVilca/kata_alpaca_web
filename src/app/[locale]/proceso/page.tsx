@@ -9,15 +9,15 @@ import EquipoQuote from "@/components/procesos/equipoQuote";
 import CloseBanner from "@/components/procesos/closeBanner";
 export default function Home() {
   return (
-    <div>
+    <div className="bg-white">
       <Header />
       <ProcesosBanner />
       <DelDisenoALaPrenda />
       <Programmin />
       <Yarn />
       <ConfeccionBanner />
-      <EquipoQuote/>
-      <CloseBanner/>
+      <EquipoQuote />
+      <CloseBanner />
 
       <Footer />
     </div>

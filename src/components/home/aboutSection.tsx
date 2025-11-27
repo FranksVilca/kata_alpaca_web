@@ -16,21 +16,21 @@ const AboutSection: React.FC = () => {
   const f = useTranslations("Home");
 
   return (
-    <div className="py-8 sm:py-12">
+    <div className="py-8 sm:py-12 bg-white">
       {/* Título y descripción */}
-      <div className="text-center mb-6 sm:mb-8 py-10 sm:py-16 md:py-20 px-4">
+      < div className="text-center mb-6 sm:mb-8 py-10 sm:py-16 md:py-20 px-4" >
         <h1 className={`text-[#BE5103] text-3xl sm:text-4xl md:text-7xl mb-3 sm:mb-4 ${aboreto.className}`}>
           {f("aboutFirst")}
         </h1>
         <p className={`text-black text-sm sm:text-base max-w-2xl mx-auto px-4 ${raleway.className}`}>
           {f("aboutText")}
         </p>
-      </div>
+      </div >
 
       {/* Imágenes */}
-      <div className={`flex flex-row gap-0 ${aboreto.className}`}>
+      < div className={`flex flex-row gap-0 ${aboreto.className}`}>
         {/* Primera imagen con texto encima */}
-        <div className="relative flex-1 h-[300px] sm:h-[400px] md:h-[500px] lg:h-150">
+        < div className="relative flex-1 h-[300px] sm:h-[400px] md:h-[500px] lg:h-150" >
           <Image
             src="/home/2Image.webp"
             alt="Tela"
@@ -47,10 +47,10 @@ const AboutSection: React.FC = () => {
               KATA ALPACA
             </h2>
           </div>
-        </div>
+        </div >
 
         {/* Segunda imagen con texto encima */}
-        <div className="relative flex-1 h-[300px] sm:h-[400px] md:h-[500px] lg:h-150">
+        < div className="relative flex-1 h-[300px] sm:h-[400px] md:h-[500px] lg:h-150" >
           <Image
             src="/home/3Image.webp"
             alt="Chompa Azul"
@@ -70,9 +70,9 @@ const AboutSection: React.FC = () => {
               {f("aboutImg")}
             </p>
           </div>
-        </div>
-      </div>
-    </div>
+        </div >
+      </div >
+    </div >
   );
 };
 

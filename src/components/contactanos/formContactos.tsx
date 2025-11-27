@@ -24,6 +24,8 @@ const FormContactos: React.FC = () => {
     message: "",
   });
 
+  const [isLoading, setIsLoading] = useState(false);
+
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
@@ -33,7 +35,8 @@ const FormContactos: React.FC = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    
+    setIsLoading(true);
+
     try {
       const res = await fetch("/api/contacto", {
         method: "POST",
@@ -53,22 +56,19 @@ const FormContactos: React.FC = () => {
           message: "",
         });
       } else {
-        // Mostrar error detallado
-        const errorMsg = data.details 
-          ? `❌ Error: ${data.details.message}\nCódigo: ${data.details.code || 'N/A'}\nRespuesta: ${data.details.response || 'N/A'}`
-          : `❌ Error: ${data.error}`;
-        
-        alert(errorMsg);
+        alert(`❌ Error: ${data.error || 'Error desconocido'}`);
         console.error("Error completo:", data);
       }
     } catch (err) {
       alert("❌ Error de red al enviar el mensaje");
       console.error("Error de red:", err);
+    } finally {
+      setIsLoading(false);
     }
   };
 
   return (
-    <div className="py-6 sm:px-4 sm:py-10 sm:pl-14 text-[#292929] px-15">
+    <div className="py-6 sm:px-4 sm:py-10 sm:pl-14 text-[#292929] px-15 bg-white">
       <form
         onSubmit={handleSubmit}
         className="bg-white rounded-lg w-full max-w-md mx-auto sm:mx-0"
@@ -93,6 +93,7 @@ const FormContactos: React.FC = () => {
             placeholder={f("enterpriseName")}
             onChange={handleChange}
             required
+            disabled={isLoading}
           />
         </div>
 
@@ -110,6 +111,7 @@ const FormContactos: React.FC = () => {
             placeholder={f("names")}
             onChange={handleChange}
             required
+            disabled={isLoading}
           />
         </div>
 
@@ -127,6 +129,7 @@ const FormContactos: React.FC = () => {
             placeholder={f("email")}
             onChange={handleChange}
             required
+            disabled={isLoading}
           />
         </div>
 
@@ -144,6 +147,7 @@ const FormContactos: React.FC = () => {
             placeholder={f("phone")}
             onChange={handleChange}
             required
+            disabled={isLoading}
           />
         </div>
 
@@ -158,16 +162,18 @@ const FormContactos: React.FC = () => {
             value={formData.message}
             className="w-full px-2 border rounded focus:ring-blue-500 my-2 resize-none leading-6"
             placeholder={f("message")}
-            rows={1}
+            rows={4}
             onChange={handleChange}
+            disabled={isLoading}
           ></textarea>
         </div>
 
         <button
           type="submit"
-          className={`w-auto bg-[#FF8112] text-white py-1 px-4 rounded font-bold hover:bg-[#FF8112]/50 transition ${jura.className}`}
+          disabled={isLoading}
+          className={`w-auto bg-[#FF8112] text-white py-1 px-4 rounded font-bold hover:bg-[#FF8112]/50 transition disabled:opacity-50 disabled:cursor-not-allowed ${jura.className}`}
         >
-          {f("button")}
+          {isLoading ? "Enviando..." : f("button")}
         </button>
         <div
           className={`pt-2 pb-20 text-xs sm:text-sm font-bold ${jura.className}`}

@@ -11,7 +11,7 @@ const CommitmentOur: React.FC = () => {
   const f = useTranslations("Home");
 
   return (
-    <div className="relative w-full h-[400px] sm:h-[500px] md:h-[600px] flex items-center justify-center text-center mt-10 md:mt-20">
+    <div className="relative w-full h-[400px] sm:h-[500px] md:h-[600px] flex items-center justify-center text-center">
       <div className="absolute inset-0 -z-10">
         <Image
           src="/home/5Image.webp"

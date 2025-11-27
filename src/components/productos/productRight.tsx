@@ -27,14 +27,14 @@ export default function ProductRight({
   secondImage,
 }: SectionProps) {
   return (
-    <div id={id}>
+    <div id={id} className="bg-white">
       <div className="flex flex-col md:flex-row px-4 md:px-10">
         {/* Contenedor de texto */}
         <div className="flex-1 flex flex-col items-center justify-center py-6 md:py-0 order-2 md:order-1">
           <h2 className={`text-3xl md:text-5xl text-[#BE5103] mb-4 md:mb-16 text-center md:pr-12 ${aboreto.className}`}>
             {title}
           </h2>
-          <p className={`text-sm md:text-base max-w-md text-foreground text-center md:text-left px-10 md:px-0 ${raleway.className}`}>
+          <p className={`text-sm text-[#000] md:text-base max-w-md text-center md:text-left px-10 md:px-0 ${raleway.className}`}>
             {text}
           </p>
         </div>
