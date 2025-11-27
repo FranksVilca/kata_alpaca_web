@@ -22,21 +22,21 @@ export default function Header() {
   };
 
   return (
-    <div className="relative">
+    <div className="relative bg-white">
       {/* Selector de idioma - visible en todas las pantallas */}
       <div className="flex w-full justify-end px-6 md:pr-50 pt-6 md:pt-10 text-[#292929] space-x-2 text-sm sm:text-normal">
-        <Link 
-          href={pathname} 
-          locale="es" 
-          className="hover:text-[#d4af37] transition-all duration-300"
+        <Link
+          href={pathname}
+          locale="es"
+          className="hover:text-[#BE5103] transition-all duration-300"
         >
-          ES 
+          ES
         </Link>
         <p> // </p>
-        <Link 
-          href={pathname} 
-          locale="en" 
-          className="hover:text-[#d4af37] transition-all duration-300"
+        <Link
+          href={pathname}
+          locale="en"
+          className="hover:text-[#BE5103] transition-all duration-300"
         >
           EN
         </Link>
@@ -59,20 +59,17 @@ export default function Header() {
         className="md:hidden absolute top-6 left-6 z-50 flex flex-col space-y-1.5 p-2"
         aria-label="Menu"
       >
-        <span 
-          className={`block w-6 h-0.5 bg-[#292929] transition-transform duration-300 ${
-            isMenuOpen ? 'rotate-45 translate-y-2' : ''
-          }`}
+        <span
+          className={`block w-6 h-0.5 bg-[#292929] transition-transform duration-300 ${isMenuOpen ? 'rotate-45 translate-y-2' : ''
+            }`}
         ></span>
-        <span 
-          className={`block w-6 h-0.5 bg-[#292929] transition-opacity duration-300 ${
-            isMenuOpen ? 'opacity-0' : ''
-          }`}
+        <span
+          className={`block w-6 h-0.5 bg-[#292929] transition-opacity duration-300 ${isMenuOpen ? 'opacity-0' : ''
+            }`}
         ></span>
-        <span 
-          className={`block w-6 h-0.5 bg-[#292929] transition-transform duration-300 ${
-            isMenuOpen ? '-rotate-45 -translate-y-2' : ''
-          }`}
+        <span
+          className={`block w-6 h-0.5 bg-[#292929] transition-transform duration-300 ${isMenuOpen ? '-rotate-45 -translate-y-2' : ''
+            }`}
         ></span>
       </button>
 
@@ -81,7 +78,7 @@ export default function Header() {
         {Seccion.link.map((link, index) => (
           <Link
             key={index}
-            className="h-full flex items-center justify-center text-sm text-[#292929] hover:text-[#d4af37] transition-all duration-300"
+            className="h-full flex items-center justify-center text-sm text-[#292929] hover:text-[#BE5103] transition-all duration-300"
             href={link.href}
           >
             {link.text}
@@ -90,16 +87,15 @@ export default function Header() {
       </div>
 
       {/* Menú Mobile - solo visible cuando isMenuOpen es true */}
-      <div 
-        className={`md:hidden fixed top-0 left-0 h-screen w-64 bg-white shadow-2xl z-40 transform transition-transform duration-300 ease-in-out ${
-          isMenuOpen ? 'translate-x-0' : '-translate-x-full'
-        }`}
+      <div
+        className={`md:hidden fixed top-0 left-0 h-screen w-64 bg-white shadow-2xl z-40 transform transition-transform duration-300 ease-in-out ${isMenuOpen ? 'translate-x-0' : '-translate-x-full'
+          }`}
       >
         <nav className="flex flex-col pt-24 px-6 space-y-6">
           {Seccion.link.map((link, index) => (
             <Link
               key={index}
-              className="text-base text-[#292929] hover:text-[#d4af37] transition-all duration-300 uppercase tracking-wide py-2 border-b border-gray-100"
+              className="text-base text-[#292929] hover:text-[#BE5103] transition-all duration-300 uppercase tracking-wide py-2 border-b border-gray-100"
               href={link.href}
               onClick={() => setIsMenuOpen(false)}
             >
@@ -111,7 +107,7 @@ export default function Header() {
 
       {/* Overlay - cierra el menú al hacer click fuera */}
       {isMenuOpen && (
-        <div 
+        <div
           className="md:hidden fixed inset-0 bg-black bg-opacity-30 z-30"
           onClick={() => setIsMenuOpen(false)}
         ></div>

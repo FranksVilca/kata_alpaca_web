@@ -16,7 +16,7 @@ const Footer: React.FC = () => {
   };
 
   return (
-    <div className="flex flex-row justify-evenly md:flex-row px-4 gap-0 sm:gap-10  sm:px-6 md:px-8 lg:px-10 py-6 md:py-8 bg-[#9D9C9C0D] text-[#868686] w-full border-t-2 border-[#00000040]">
+    <div className="bg-white flex flex-row justify-evenly md:flex-row px-4 gap-0 sm:gap-10  sm:px-6 md:px-8 lg:px-10 py-6 md:py-8 bg-[#9D9C9C0D] text-[#868686] w-full border-t-2 border-[#00000040]">
       {/* Imagen - Centrada en mobile, izquierda en desktop */}
       <div className="flex justify-center items-center md:justify-start md:pl-20 mb-12 md:mb-0">
         <Image
@@ -39,7 +39,7 @@ const Footer: React.FC = () => {
             >
               <Link
                 href={link.href}
-                className="hover:text-[#292929] transition-colors duration-300 underline"
+                className="hover:text-[#BE5103] transition-colors duration-300 underline"
               >
                 {link.text}
               </Link>
@@ -59,13 +59,13 @@ const Footer: React.FC = () => {
         <div className="flex items-center gap-1 mt-3 md:mt-0 justify-end md:justify-start w-full md:w-auto">
           <Link
             href="https://www.instagram.com/kataalpaca"
-            className="hover:text-[#d4af37] transition-colors duration-300"
+            className="hover:text-[#BE5103] transition-colors duration-300"
           >
             <FaInstagram className="w-4 h-4 md:w-5 md:h-5" />
           </Link>
           <Link
             href="https://www.facebook.com/kataalpaca/"
-            className="hover:text-[#d4af37] transition-colors duration-300"
+            className="hover:text-[#BE5103] transition-colors duration-300"
           >
             <FaFacebook className="w-4 h-4 md:w-5 md:h-5" />
           </Link>

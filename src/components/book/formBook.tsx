@@ -25,10 +25,12 @@ const FormBook: React.FC = () => {
     tipoProducto: "producto",
     monto: "",
     descripcion: "",
-    motivo: "",
+    motivo: "reclamo",
     detalle: "",
     comprobante: "",
   });
+
+  const [isLoading, setIsLoading] = useState(false);
 
   const handleChange = (
     e: React.ChangeEvent<
@@ -41,34 +43,45 @@ const FormBook: React.FC = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    setIsLoading(true);
 
-    const res = await fetch("/api/complaintBook", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(formData),
-    });
-
-    if (res.ok) {
-      alert("Mensaje enviado con éxito");
-      setFormData({
-        nombre: "",
-        apellidoPaterno: "",
-        apellidoMaterno: "",
-        tipoDocumento: "dni",
-        numeroDocumento: "",
-        correo: "",
-        telefono: "",
-        pais: "",
-        direccion: "",
-        tipoProducto: "producto",
-        monto: "",
-        descripcion: "",
-        motivo: "",
-        detalle: "",
-        comprobante: "",
+    try {
+      const res = await fetch("/api/complaintBook", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
       });
-    } else {
-      alert("Hubo un error al enviar el mensaje");
+
+      const data = await res.json();
+
+      if (res.ok) {
+        alert("✅ " + (formData.motivo === "reclamo" ? "Reclamo" : "Queja") + " enviado con éxito");
+        setFormData({
+          nombre: "",
+          apellidoPaterno: "",
+          apellidoMaterno: "",
+          tipoDocumento: "dni",
+          numeroDocumento: "",
+          correo: "",
+          telefono: "",
+          pais: "",
+          direccion: "",
+          tipoProducto: "producto",
+          monto: "",
+          descripcion: "",
+          motivo: "reclamo",
+          detalle: "",
+          comprobante: "",
+        });
+      } else {
+        alert(`❌ Error: ${data.error || 'Error desconocido'}`);
+        console.error("Error completo:", data);
+      }
+    } catch (err) {
+      alert("❌ Error de red al enviar el mensaje");
+      console.error("Error de red:", err);
+    } finally {
+      setIsLoading(false);
     }
   };
 
@@ -78,7 +91,7 @@ const FormBook: React.FC = () => {
         {f("dates")}
       </div>
 
-     <div className="px-4 sm:px-14 pt-10">
+      <div className="px-4 sm:px-14 pt-10">
         <form
           onSubmit={handleSubmit}
           className="bg-white w-full mx-auto sm:mx-0"
@@ -92,6 +105,7 @@ const FormBook: React.FC = () => {
               type="text"
               className="w-full sm:w-3/8 px-2 bg-[#D9D9D950] my-2 shadow-sm"
               onChange={handleChange}
+              disabled={isLoading}
               required
             />
           </div>
@@ -105,6 +119,7 @@ const FormBook: React.FC = () => {
               type="text"
               className="w-full sm:w-3/8 px-2 bg-[#D9D9D950] my-2 shadow-sm"
               onChange={handleChange}
+              disabled={isLoading}
               required
             />
           </div>
@@ -118,7 +133,7 @@ const FormBook: React.FC = () => {
               type="text"
               className="w-full sm:w-3/8 px-2 bg-[#D9D9D950] my-2 shadow-sm"
               onChange={handleChange}
-              required
+              disabled={isLoading}
             />
           </div>
 
@@ -131,6 +146,7 @@ const FormBook: React.FC = () => {
                 value={formData.tipoDocumento}
                 className="w-full sm:w-3/8 px-2 bg-[#D9D9D950] py-1 mt-1 shadow-sm mb-30 sm:mb-0"
                 onChange={handleChange}
+                disabled={isLoading}
                 required
               >
                 <option value="dni">DNI</option>
@@ -148,11 +164,13 @@ const FormBook: React.FC = () => {
                 type="text"
                 className="w-3/4 px-2 bg-[#D9D9D950] my-2 shadow-sm"
                 onChange={handleChange}
+                disabled={isLoading}
                 required
               />
             </div>
           </div>
           <div className="md:-mx-8 sm:text-x2 text-lg mb-8 border-b pb-4 pt-6 sm:pt-0 sm:pb-0 sm:border-none border-black/10">{f("datosContacto")}</div>
+
           {/* CORREO */}
           <div className="mb-3 flex flex-col items-start">
             <label className="block">{f("correo")}</label>
@@ -162,6 +180,7 @@ const FormBook: React.FC = () => {
               type="email"
               className="w-full sm:w-5/8 px-2 bg-[#D9D9D950] my-2 shadow-sm"
               onChange={handleChange}
+              disabled={isLoading}
               required
             />
           </div>
@@ -176,6 +195,7 @@ const FormBook: React.FC = () => {
               type="text"
               className="w-full sm:w-5/8 px-2 bg-[#D9D9D950] my-2 shadow-sm"
               onChange={handleChange}
+              disabled={isLoading}
               required
             />
           </div>
@@ -189,6 +209,7 @@ const FormBook: React.FC = () => {
               type="text"
               className="w-full sm:w-5/8 px-2 bg-[#D9D9D950] my-2 shadow-sm"
               onChange={handleChange}
+              disabled={isLoading}
               required
             />
           </div>
@@ -202,12 +223,14 @@ const FormBook: React.FC = () => {
               type="text"
               className="w-full sm:w-5/8 px-2 bg-[#D9D9D950] my-2 shadow-sm"
               onChange={handleChange}
+              disabled={isLoading}
               required
             />
           </div>
           <div className="sm:-mx-8 sm:text-x2 text-lg pb-8">
             {f("identificacion")}
           </div>
+
           {/* PRODUCTO SERVICIO */}
           <div className="mb-18 flex flex-col items-start">
             <label className="block">{f("tipoProducto")}</label>
@@ -216,6 +239,7 @@ const FormBook: React.FC = () => {
               value={formData.tipoProducto}
               className="w-full sm:w-2/8 px-2 bg-[#D9D9D950] py-1 mt-1 shadow-sm"
               onChange={handleChange}
+              disabled={isLoading}
               required
             >
               <option value="producto">{f("producto")}</option>
@@ -232,6 +256,7 @@ const FormBook: React.FC = () => {
               type="text"
               className="w-full sm:w-5/8 px-2 bg-[#D9D9D950] my-2 shadow-sm"
               onChange={handleChange}
+              disabled={isLoading}
               required
             />
           </div>
@@ -242,14 +267,16 @@ const FormBook: React.FC = () => {
               {f("descripcion")}
             </label>
             <textarea
-              name="motivo"
-              value={formData.motivo}
+              name="descripcion"
+              value={formData.descripcion}
               className="w-full sm:w-5/8 px-2 bg-[#D9D9D950] my-2 resize-none shadow-sm"
               rows={4}
               onChange={handleChange}
+              disabled={isLoading}
             ></textarea>
           </div>
           <div className="md:-mx-8 sm:text-x2 text-lg mb-8 border-b pb-4 pt-6 sm:pt-0 sm:pb-0 sm:border-none border-black/10">{f("detalleReclamacion")}</div>
+
           {/* MOTIVO */}
           <div className="mb-3">
             <label className="block">{f("motivo")}</label>
@@ -257,10 +284,12 @@ const FormBook: React.FC = () => {
               <label className="flex items-center">
                 <input
                   type="radio"
-                  name="phone"
-                  value="opcion1"
+                  name="motivo"
+                  value="reclamo"
+                  checked={formData.motivo === "reclamo"}
                   onChange={handleChange}
                   className="mr-1"
+                  disabled={isLoading}
                   required
                 />
                 {f("reclamo")}
@@ -268,10 +297,12 @@ const FormBook: React.FC = () => {
               <label className="flex items-center">
                 <input
                   type="radio"
-                  name="phone"
-                  value="opcion2"
+                  name="motivo"
+                  value="queja"
+                  checked={formData.motivo === "queja"}
                   onChange={handleChange}
                   className="mr-1"
+                  disabled={isLoading}
                 />
                 {f("queja")}
               </label>
@@ -287,6 +318,8 @@ const FormBook: React.FC = () => {
               className="w-full sm:w-5/8 px-2 bg-[#D9D9D950] my-2 resize-none shadow-sm"
               rows={4}
               onChange={handleChange}
+              disabled={isLoading}
+              required
             ></textarea>
           </div>
 
@@ -299,6 +332,7 @@ const FormBook: React.FC = () => {
               type="text"
               className="w-full sm:w-5/8 px-2 bg-[#D9D9D950] my-2 shadow-sm"
               onChange={handleChange}
+              disabled={isLoading}
               required
             />
           </div>
@@ -306,9 +340,10 @@ const FormBook: React.FC = () => {
           <div className="flex justify-center sm:justify-start">
             <button
               type="submit"
-              className="w-auto font-bold bg-[#EE9C61] text-black py-2 px-16 hover:bg-[#FF8112]/50 transition mb-30 mt-10 shadow-[4px_4px_0px_rgba(0,0,0,0.4)]"
+              disabled={isLoading}
+              className="w-auto font-bold bg-[#EE9C61] text-black py-2 px-16 hover:bg-[#FF8112]/50 transition mb-30 mt-10 shadow-[4px_4px_0px_rgba(0,0,0,0.4)] disabled:opacity-50 disabled:cursor-not-allowed"
             >
-              {f("button")}
+              {isLoading ? "Enviando..." : f("button")}
             </button>
           </div>
         </form>

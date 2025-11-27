@@ -30,10 +30,10 @@ export default function CarruselEquipo() {
   // Autoplay cada 3 segundos
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentIndex((prevIndex) => 
+      setCurrentIndex((prevIndex) =>
         prevIndex === images.length - 1 ? 0 : prevIndex + 1
       );
-    }, 5000);
+    }, 3000);
 
     return () => clearInterval(interval);
   }, []);
@@ -45,10 +45,10 @@ export default function CarruselEquipo() {
   return (
     <section className="w-full py-12 md:py-20 bg-white">
       <div className="max-w-6xl mx-auto px-6 md:px-4">
-        
+
         {/* Contenedor del carrusel */}
         <div className="relative w-full aspect-16/10 md:aspect-video bg-gray-100 rounded-lg overflow-hidden shadow-lg">
-          
+
           {/* Imágenes */}
           <AnimatePresence mode="wait">
             <motion.div
@@ -77,8 +77,8 @@ export default function CarruselEquipo() {
                 onClick={() => goToSlide(index)}
                 className={`
                   w-2.5 h-2.5 rounded-full transition-all
-                  ${currentIndex === index 
-                    ? 'bg-white w-8' 
+                  ${currentIndex === index
+                    ? 'bg-white w-8'
                     : 'bg-white/50 hover:bg-white/75'
                   }
                 `}

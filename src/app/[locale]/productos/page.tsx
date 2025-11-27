@@ -51,7 +51,9 @@ export default function Home() {
         secondImage="/productos/accesoriosTela.webp"
       />
       <div className="pb-40 sm:pb-0"></div>
+      <div className="h-20 bg-white"></div>
       <FinalBanner />
+      <div className="h-40 bg-white"></div>
       <Footer />
     </div>
   );

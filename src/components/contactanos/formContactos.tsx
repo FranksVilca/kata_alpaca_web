@@ -2,6 +2,7 @@
 import { useTranslations } from "next-intl";
 import { useState } from "react";
 import { Aboreto, Jura } from "next/font/google";
+import { motion } from 'framer-motion';
 
 const aboreto = Aboreto({
   subsets: ["latin"],
@@ -24,6 +25,8 @@ const FormContactos: React.FC = () => {
     message: "",
   });
 
+  const [isLoading, setIsLoading] = useState(false);
+
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
@@ -31,40 +34,69 @@ const FormContactos: React.FC = () => {
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = async () => {
-    const res = await fetch("/api/contacto", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(formData),
-    });
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsLoading(true);
 
-    if (res.ok) {
-      alert("Mensaje enviado con éxito");
-      setFormData({
-        enterpriseName: "",
-        names: "",
-        email: "",
-        phone: "",
-        message: "",
+    try {
+      const res = await fetch("/api/contacto", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
       });
-    } else {
-      alert("Hubo un error al enviar el mensaje");
+
+      const data = await res.json();
+
+      if (res.ok) {
+        alert("✅ Mensaje enviado con éxito");
+        setFormData({
+          enterpriseName: "",
+          names: "",
+          email: "",
+          phone: "",
+          message: "",
+        });
+      } else {
+        alert(`❌ Error: ${data.error || 'Error desconocido'}`);
+        console.error("Error completo:", data);
+      }
+    } catch (err) {
+      alert("❌ Error de red al enviar el mensaje");
+      console.error("Error de red:", err);
+    } finally {
+      setIsLoading(false);
     }
   };
 
   return (
-    <div className="py-6 sm:px-4 sm:py-10 sm:pl-14 text-[#292929] px-15">
-      <form
+    <div className="py-6 sm:px-4 sm:py-10 sm:pl-14 text-[#292929] px-15 bg-white">
+      <motion.form
         onSubmit={handleSubmit}
         className="bg-white rounded-lg w-full max-w-md mx-auto sm:mx-0"
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.2 }}
+        transition={{ duration: 0.8 }}
       >
-        <div className={`${aboreto.className}`}>
+        <motion.div
+          className={`${aboreto.className}`}
+          initial={{ opacity: 0, y: -20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+        >
           <h2 className="text-lg text-center sm:text-x2 sm:text-left pb-6 font-semibold">
             {f("form")}
           </h2>
-        </div>
+        </motion.div>
 
-        <div className="mb-3 sm:mb-0">
+        <motion.div
+          className="mb-3 sm:mb-0"
+          initial={{ opacity: 0, x: -20 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.3 }}
+        >
           <label
             className={`block text-xs sm:text-lg mb-1 sm:mb-0 font-bold ${jura.className}`}
           >
@@ -78,10 +110,17 @@ const FormContactos: React.FC = () => {
             placeholder={f("enterpriseName")}
             onChange={handleChange}
             required
+            disabled={isLoading}
           />
-        </div>
+        </motion.div>
 
-        <div className="mb-3 sm:mb-0">
+        <motion.div
+          className="mb-3 sm:mb-0"
+          initial={{ opacity: 0, x: -20 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.4 }}
+        >
           <label
             className={`block text-xs sm:text-lg mb-1 sm:mb-0 font-bold ${jura.className}`}
           >
@@ -95,10 +134,17 @@ const FormContactos: React.FC = () => {
             placeholder={f("names")}
             onChange={handleChange}
             required
+            disabled={isLoading}
           />
-        </div>
+        </motion.div>
 
-        <div className="mb-3 sm:mb-0">
+        <motion.div
+          className="mb-3 sm:mb-0"
+          initial={{ opacity: 0, x: -20 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.5 }}
+        >
           <label
             className={`block text-xs sm:text-lg mb-1 sm:mb-0 font-bold ${jura.className}`}
           >
@@ -112,10 +158,17 @@ const FormContactos: React.FC = () => {
             placeholder={f("email")}
             onChange={handleChange}
             required
+            disabled={isLoading}
           />
-        </div>
+        </motion.div>
 
-        <div className="mb-3 sm:mb-0">
+        <motion.div
+          className="mb-3 sm:mb-0"
+          initial={{ opacity: 0, x: -20 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.6 }}
+        >
           <label
             className={`block text-xs sm:text-lg mb-1 sm:mb-0 font-bold ${jura.className}`}
           >
@@ -124,15 +177,22 @@ const FormContactos: React.FC = () => {
           <input
             name="phone"
             value={formData.phone}
-            type="tell"
+            type="tel"
             className="w-full px-2 border rounded focus:ring-blue-500 my-2"
             placeholder={f("phone")}
             onChange={handleChange}
             required
+            disabled={isLoading}
           />
-        </div>
+        </motion.div>
 
-        <div className="mb-3 sm:mb-0">
+        <motion.div
+          className="mb-3 sm:mb-0"
+          initial={{ opacity: 0, x: -20 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.7 }}
+        >
           <label
             className={`block text-xs sm:text-lg mb-1 sm:mb-0 font-bold ${jura.className}`}
           >
@@ -143,24 +203,35 @@ const FormContactos: React.FC = () => {
             value={formData.message}
             className="w-full px-2 border rounded focus:ring-blue-500 my-2 resize-none leading-6"
             placeholder={f("message")}
-            rows={1}
+            rows={4}
             onChange={handleChange}
+            disabled={isLoading}
           ></textarea>
-        </div>
+        </motion.div>
 
-        <button
+        <motion.button
           type="submit"
-          onClick={handleSubmit}
-          className={`w-auto bg-[#FF8112] text-white py-1 px-4 rounded font-bold hover:bg-[#FF8112]/50 transition ${jura.className}`}
+          disabled={isLoading}
+          className={`w-auto bg-[#FF8112] text-white py-1 px-4 rounded font-bold hover:bg-[#FF8112]/50 transition disabled:opacity-50 disabled:cursor-not-allowed ${jura.className}`}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.8 }}
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
         >
-          {f("button")}
-        </button>
-        <div
+          {isLoading ? "Enviando..." : f("button")}
+        </motion.button>
+        <motion.div
           className={`pt-2 pb-20 text-xs sm:text-sm font-bold ${jura.className}`}
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.9 }}
         >
           {f("simpleText")}
-        </div>
-      </form>
+        </motion.div>
+      </motion.form>
     </div>
   );
 };

@@ -45,3 +45,10 @@ next-env.d.ts
 .qodo
 
 trash
+
+.next
+
+# Ignorar todos los archivos comprimidos
+*.zip
+*.rar
+*.7z

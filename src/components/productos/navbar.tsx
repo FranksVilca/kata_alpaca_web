@@ -18,8 +18,8 @@ export default function Navbar() {
 
   return (
     <nav className="w-full bg-white pt-25">
-      <div className="max-w-full mx-auto flex items-center justify-center pt-10 pb-10 border-t border-b md:border-b-0 px-2 md:px-4">
-        <div className={`flex space-x-4 md:space-x-8 lg:space-x-30 text-[10px] md:text-sm lg:text-base ${raleway.className}`}>
+      <div className="max-w-full mx-auto flex items-center justify-center pt-10 pb-10 border-t border-b md:border-b-0 px-2 md:px-4 border-[#000]">
+        <div className={`flex space-x-4 text-[#000] md:space-x-8 lg:space-x-30 text-[10px] md:text-sm lg:text-base ${raleway.className}`}>
           <button
             onClick={() => scrollToSection("sweter")}
             className="hover:text-[#BE5103] whitespace-nowrap"

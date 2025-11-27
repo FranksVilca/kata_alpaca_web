@@ -139,7 +139,7 @@
   "Contact": {
     "title": "CONTÁCTANOS",
     "text": "Somos expertos en la creación de prendas de punto, ofreciendo ropa y accesorios con la más alta calidad.",
-    "headquarters": "SEDE",
+    "headquarters": "TIENDA",
     "mainOffice": "SEDE PRINCIPAL",
     "address": "Dirección:",
     "form": "FORMULARIO DE CONTACTO",
@@ -150,6 +150,9 @@
     "message": "Mensaje",
     "button": "Enviar Mensaje",
     "simpleText": "Campos requeridos"
+  },
+  "Notice": {
+    "title": "NOTICIAS"
   },
   "Process": {
     "banner": {

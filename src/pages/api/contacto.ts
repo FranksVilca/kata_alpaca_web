@@ -1,21 +1,34 @@
-import { NextApiRequest, NextApiResponse } from 'next';
-import nodemailer from 'nodemailer';
+import { NextApiRequest, NextApiResponse } from "next";
+import nodemailer from "nodemailer";
 
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'POST') return res.status(405).end();
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
+  if (req.method !== "POST") return res.status(405).end();
+
+  // DEBUG: Verificar variables de entorno
+  console.log(
+    "🔍 EMAIL_USER:",
+    process.env.EMAIL_USER ? "CONFIGURADO ✅" : "FALTA ❌"
+  );
+  console.log(
+    "🔍 EMAIL_PASS:",
+    process.env.EMAIL_PASS ? "CONFIGURADO ✅" : "FALTA ❌"
+  );
 
   const { enterpriseName, names, email, phone, message } = req.body;
 
   const transporter = nodemailer.createTransport({
-    service: 'Gmail',
+    service: "Gmail",
     auth: {
-      user: process.env.EMAIL_USER, // tu correo Gmail
-      pass: process.env.EMAIL_PASS, // tu contraseña o App Password
+      user: process.env.EMAIL_USER,
+      pass: process.env.EMAIL_PASS,
     },
   });
 
   try {
-    await transporter.sendMail({
+    const info = await transporter.sendMail({
       from: process.env.EMAIL_USER,
       replyTo: email,
       to: process.env.EMAIL_USER,
@@ -80,7 +93,10 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
                 </div>
                 
                 <div style="text-align: center; margin-top: 20px; padding: 15px; background: white; border-radius: 8px;">
-                  <p style="color: #666; font-size: 12px; margin: 5px 0;">Recibido el ${new Date().toLocaleString('es-PE', { dateStyle: 'full', timeStyle: 'short' })}</p>
+                  <p style="color: #666; font-size: 12px; margin: 5px 0;">Recibido el ${new Date().toLocaleString(
+                    "es-PE",
+                    { dateStyle: "full", timeStyle: "short" }
+                  )}</p>
                 </div>
               </div>
               
@@ -88,7 +104,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
                 <p style="margin: 5px 0;"><strong>KATA ALPACA</strong></p>
                 <p style="margin: 5px 0; font-size: 12px;">Este mensaje fue enviado desde el formulario de contacto</p>
                 <p style="margin: 5px 0; font-size: 12px;">
-                  <a href="mailto:${process.env.EMAIL_USER}">${process.env.EMAIL_USER}</a>
+                  <a href="mailto:${process.env.EMAIL_USER}">${
+        process.env.EMAIL_USER
+      }</a>
                 </p>
               </div>
             </div>
@@ -106,13 +124,29 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         Mensaje:
         ${message}
         
-        Recibido el ${new Date().toLocaleString('es-PE')}
+        Recibido el ${new Date().toLocaleString("es-PE")}
       `,
     });
 
-    return res.status(200).json({ success: true });
-  } catch (err) {
-    console.error('Error al enviar correo:', err);
-    return res.status(500).json({ error: 'Error al enviar el correo' });
+    console.log("✅ Correo enviado exitosamente:", info.messageId);
+    return res.status(200).json({
+      success: true,
+      messageId: info.messageId,
+      debug: "Correo enviado correctamente",
+    });
+  } catch (err: any) {
+    console.error("❌ Error al enviar correo:", err);
+
+    // Retornar detalles del error al cliente para debugging
+    return res.status(500).json({
+      error: "Error al enviar el correo",
+      details: {
+        message: err.message,
+        code: err.code,
+        command: err.command,
+        response: err.response,
+        responseCode: err.responseCode,
+      },
+    });
   }
 }
