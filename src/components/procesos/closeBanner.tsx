@@ -15,15 +15,17 @@ export default function CloseBanner() {
   const t = useTranslations('Process.w6');
 
   return (
-    <section className="w-full overflow-hidden bg-white">
+    <section className="w-full overflow-hidden bg-white px-4 md:px-0">
 
       {/* VISTA MOBILE */}
       <div className="md:hidden mt-10 mb-10 relative flex flex-row w-full h-[180px]">
 
         {/* Texto */}
         <motion.div
-          className="flex-1 ml-2 flex justify-center items-center shadow-[-20px_0px_10px_rgba(0,0,0,0.2)] ]
- "
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="flex-1 ml-0 flex justify-center items-center shadow-[-20px_0px_10px_rgba(0,0,0,0.2)] "
         >
           <p
             className={`
@@ -60,6 +62,9 @@ export default function CloseBanner() {
 
         {/* Texto a la izquierda */}
         <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
           className="flex-1 flex items-center justify-start pl-25"
         >
           <p

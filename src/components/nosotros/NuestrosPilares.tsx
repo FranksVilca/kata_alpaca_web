@@ -19,39 +19,39 @@ const raleway = Raleway({
 
 
 export default function NuestrosPilares() {
-    const t = useTranslations('usPage.ourPillars');
-    // Definimos los datos de los pilares para un código más limpio y modular
-    const pilaresData = [
-      {
-        id: 1,
-        title: t("p1"),
-        src: "/nosotros/alpaca1.webp", // Asegúrate de tener estas imágenes
-      },
-      {
-        id: 2,
-        title: t("p2"),
-        src: "/nosotros/alpaca2.webp",
-      },
-      {
-        id: 3,
-        title: t("p3"),
-        src: "/nosotros/alpaca3.webp",
-      },
-    ];
+  const t = useTranslations('usPage.ourPillars');
+  // Definimos los datos de los pilares para un código más limpio y modular
+  const pilaresData = [
+    {
+      id: 1,
+      title: t("p1"),
+      src: "/nosotros/alpaca1.webp", // Asegúrate de tener estas imágenes
+    },
+    {
+      id: 2,
+      title: t("p2"),
+      src: "/nosotros/alpaca2.webp",
+    },
+    {
+      id: 3,
+      title: t("p3"),
+      src: "/nosotros/alpaca3.webp",
+    },
+  ];
 
   return (
-    <section 
-      id="nuestros-pilares" 
+    <section
+      id="nuestros-pilares"
       className="w-full py-16 md:py-20 bg-white"
     >
       <div className="container mx-auto px-10 md:mx-auto ">
-        
+
         {/* Título Principal - Centrado */}
         <motion.h2
-          initial={{ opacity: 0, y: -20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          viewport={{ once: true }}
+          // initial={{ opacity: 0, y: -20 }}
+          // whileInView={{ opacity: 1, y: 0 }}
+          // transition={{ duration: 0.5 }}
+          // viewport={{ once: true }}
           className={`
             ${aboreto.className}
             text-2xl sm:text-5xl md:text-[3.5vw] text-center
@@ -64,15 +64,15 @@ export default function NuestrosPilares() {
         </motion.h2>
 
         {/* Contenedor de Pilares */}
-        <div className="flex justify-center items-start gap-2 md:gap-20 "> 
+        <div className="flex justify-center items-start gap-2 md:gap-20 ">
           {pilaresData.map((pilar, index) => (
             <motion.div
               key={pilar.id}
               className="flex flex-col items-center text-center w-1/3 max-w-[200px]"
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.15 }}
-              viewport={{ once: true }}
+            // initial={{ opacity: 0, y: 50 }}
+            // whileInView={{ opacity: 1, y: 0 }}
+            // transition={{ duration: 0.5, delay: index * 0.15 }}
+            // viewport={{ once: true }}
             >
               {/* Imagen Circular */}
               <div className="w-12 h-12 md:w-25 md:h-25 overflow-hidden rounded-full shadow-lg mb-4">

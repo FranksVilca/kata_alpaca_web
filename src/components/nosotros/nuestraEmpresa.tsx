@@ -25,10 +25,10 @@ export default function NuestraEmpresa() {
 
         {/* MOBILE: Imágenes arriba */}
         <motion.div
-          initial={{ opacity: 0, scale: 0.95 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
+          // initial={{ opacity: 0, scale: 0.95 }}
+          // whileInView={{ opacity: 1, scale: 1 }}
+          // transition={{ duration: 0.6 }}
+          // viewport={{ once: true }}
           className="md:hidden relative w-full h-[400px] mb-8"
         >
           {/* Imagen 1 - Fibra (arriba izq) */}
@@ -59,10 +59,10 @@ export default function NuestraEmpresa() {
 
           {/* Columna de Imágenes - Derecha en Desktop */}
           <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            viewport={{ once: true }}
+            // initial={{ opacity: 0, scale: 0.95 }}
+            // whileInView={{ opacity: 1, scale: 1 }}
+            // transition={{ duration: 0.6, delay: 0.2 }}
+            // viewport={{ once: true }}
             className="hidden md:block flex-1 relative h-[45rem] "
           >
             {/* Imagen 1 - Fibra (arriba derecha) */}
@@ -90,10 +90,10 @@ export default function NuestraEmpresa() {
 
           {/* Columna de Contenido - Izquierda en Desktop */}
           <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+            // initial={{ opacity: 0, x: -30 }}
+            // whileInView={{ opacity: 1, x: 0 }}
+            // transition={{ duration: 0.6 }}
+            // viewport={{ once: true }}
             className="flex-1 flex flex-col justify-center"
           >
             {/* Título */}

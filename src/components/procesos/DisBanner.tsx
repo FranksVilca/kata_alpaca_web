@@ -21,12 +21,14 @@ export default function DelDisenoALaPrenda() {
 
   return (
     <section className="w-full py-6 md:py-20 bg-white">
-      <div className="w-full px-0">
+      <div className="w-full px-0 md:px-0">
 
         {/* Título con líneas (solo mobile) */}
         <motion.div
-
-          className="flex items-center gap-4 mb-4 px-0 md:hidden"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="flex items-center gap-4 mb-4 md:hidden"
         >
           <div className="flex-1 h-px bg-gray-300"></div>
           <h2
@@ -48,6 +50,9 @@ export default function DelDisenoALaPrenda() {
 
         {/* Título Desktop */}
         <motion.h2
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
           className={`
             ${aboreto.className}
             hidden md:block
@@ -95,16 +100,16 @@ export default function DelDisenoALaPrenda() {
 
           {/* Imagen 1 */}
           <motion.div
-            // initial={{ opacity: 0, y: 30 }}
-            // whileInView={{ opacity: 1, y: 0 }}
-            // transition={{ duration: 0.6, delay: 0.3 }}
-            // viewport={{ once: true }}
+            initial={{ opacity: 0, x: 10 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+            viewport={{ once: true }}
             className="
               absolute 
               left-0 
               w-[70%] h-[150px] 
               z-10 
-               md:mt-0
+              md:mt-0
               md:relative md:w-[78%] md:h-[300px]
             "
           >
@@ -119,6 +124,10 @@ export default function DelDisenoALaPrenda() {
 
           {/* Imagen 2 */}
           <motion.div
+            initial={{ opacity: 0, x: -10 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+            viewport={{ once: true }}
             className="
               absolute 
               bottom-0 right-0 

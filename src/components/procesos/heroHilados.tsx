@@ -21,7 +21,7 @@ export default function Yarn() {
 
   return (
     <section className="w-full py-4 md:py-20 bg-white">
-      <div className="mx-0 px-0">
+      <div className="mx-0 px-0 md:px-0">
 
         {/*  VISTA WEB (DESKTOP ONLY)        */}
         <div className="hidden md:block md:px-0 md:ml-[80px] md:h-[658px]">
@@ -84,7 +84,7 @@ export default function Yarn() {
 
         {/*  VISTA MOBILE (MOBILE ONLY)      */}
         <div className="md:hidden">
-          
+
           {/* Línea decorativa */}
           <div className="w-full h-px bg-gray-300 mb-6 "></div>
 

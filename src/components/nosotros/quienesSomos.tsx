@@ -33,10 +33,10 @@ export default function QuienesSomos() {
 
           {/* Columna de Imágenes - Izquierda */}
           <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
+            // initial={{ opacity: 0, x: -30 }}
+            // whileInView={{ opacity: 1, x: 0 }}
+            // transition={{ duration: 0.6 }}
+            // viewport={{ once: true }}
             className="w-[25%] md:w-6/12 flex gap-1 md:gap-7 items-center justify-center"
           >
             {/* Mobile y Desktop: 3 imágenes */}
@@ -71,10 +71,10 @@ export default function QuienesSomos() {
 
           {/* Columna de Contenido - Derecha */}
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            viewport={{ once: true }}
+            // initial={{ opacity: 0, y: 20 }}
+            // whileInView={{ opacity: 1, y: 0 }}
+            // transition={{ duration: 0.6, delay: 0.2 }}
+            // viewport={{ once: true }}
             className="flex-1 flex flex-col justify-center"
           >
             {/* Título */}
