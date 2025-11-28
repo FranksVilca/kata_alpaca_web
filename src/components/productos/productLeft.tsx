@@ -33,7 +33,7 @@ export default function ProductLeft({
         <div className="flex-1 flex items-center justify-center min-h-[50vh] md:min-h-[85vh] py-6 md:py-0 order-1">
           <div className="relative">
             {/* Imagen de la Modelo*/}
-            <div className="relative w-56 h-72 md:w-80 md:h-96 overflow-hidden">
+            <div className="relative w-56 h-72 md:w-[384px] md:h-[461px] overflow-hidden">
               <Image
                 src={firstImage}
                 alt="Modelo"
@@ -43,7 +43,7 @@ export default function ProductLeft({
             </div>
 
             {/* Imagen de la Tela*/}
-            <div className="absolute top-4/6 -translate-y-1/2 right-0 translate-x-3/4 w-24 h-32 md:w-32 md:h-44 overflow-hidden z-10 transition-transform duration-300 ease-out hover:scale-120">
+            <div className="absolute top-4/6 -translate-y-1/2 right-0 translate-x-3/4 w-24 h-32 md:w-[154px] md:h-[211px] overflow-hidden z-10 transition-transform duration-300 ease-out hover:scale-120">
               <Image
                 src={secondImage}
                 alt="producto"
@@ -56,10 +56,10 @@ export default function ProductLeft({
 
         {/* Contenedor de texto */}
         <div className="flex-1 flex flex-col items-center justify-center py-6 md:py-0 order-2">
-          <h2 className={`text-3xl md:text-5xl text-[#BE5103] mb-4 md:mb-16 text-center md:pr-12 ${aboreto.className}`}>
+          <h2 className={`text-3xl md:text-6xl text-[#BE5103] mb-4 md:mb-16 text-center md:pr-12 ${aboreto.className}`}>
             {title}
           </h2>
-          <p className={`text-sm text-[#000] md:text-base max-w-md mx-2 text-center md:text-left px-10 md:px-0 ${raleway.className}`}>
+          <p className={`text-sm text-[#000] md:text-lg max-w-md mx-2 text-center md:text-left px-10 md:px-0 ${raleway.className}`}>
             {text}
           </p>
         </div>
