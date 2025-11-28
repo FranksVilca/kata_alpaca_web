@@ -1,4 +1,4 @@
-// src/components/process/heroHilados.tsx
+// src/components/procesos/heroHilados.tsx
 
 "use client";
 import Image from "next/image";
@@ -21,31 +21,44 @@ export default function Yarn() {
 
   return (
     <section className="w-full py-4 md:py-20 bg-white">
-      <div className="mx-0 px-0 md:px-0">
+      <div className="mx-0 px-[1px] md:px-0 md:ml-[60px]">
 
         {/*  VISTA WEB (DESKTOP ONLY)        */}
-        <div className="hidden md:block md:px-0 md:ml-[80px] md:h-[658px]">
+        <div className="hidden md:block">
 
-          {/* Desktop: Imágenes y contenido lado a lado */}
-          <div className="flex flex-row gap-20">
+          {/* Desktop: Texto e imágenes lado a lado */}
+          <div className="flex flex-row gap-40 md:h-[645px]">
 
-            {/* Texto (derecha) */}
+            {/* Texto (izquierda) */}
             <motion.div
-              className="w-full md:w-[605px] flex flex-col justify-start mt-20"
+              className="flex-1 flex flex-col justify-start mt-30 md:w-[625px] "
             >
               <h2
                 className={`
                   ${aboreto.className}
                   text-[60px] font-thin
-                  leading-10
+                  leading-15
                   tracking-[0.01rem]
                   text-[#C85A3F]
-                  mb-20
-                  drop-shadow-[0_3px_1px_rgba(0,0,0,0.3)]
+                  mb-0
+                  drop-shadow-[0_6px_2px_rgba(0,0,0,0.3)]
                 `}
               >
                 {t("title")}
               </h2>
+
+              <h3
+                className={`
+                  ${aboreto.className}
+                  text-[36px] font-extrabold
+                  tracking-[0.01rem]
+                  text-[#000000]
+                  mb-20
+                  drop-shadow-[0_3px_1px_rgba(0,0,0,0.3)]
+                `}
+              >
+                {/* Aquí puedes agregar un subtítulo si lo necesitas */}
+              </h3>
 
               <div className="space-y-4 text-black leading-relaxed">
                 <p className={`${raleway.className} text-[26px] tracking-normal text-justify leading-7`}>
@@ -56,9 +69,10 @@ export default function Yarn() {
 
             {/* Imágenes (derecha) */}
             <motion.div
-              className="flex-1 relative h-[655px]"
+              className="flex-1 relative md:w-[645px]"
             >
-              <div className="absolute top-0 right-0 w-[392px] h-[488px] z-10">
+              {/* Imagen superior-derecha (z-index: 20) */}
+              <div className="absolute top-0 right-0 w-[392px] h-[493px] z-10">
                 <Image
                   src="/procesos/7img.webp"
                   alt="Fibra"
@@ -68,6 +82,7 @@ export default function Yarn() {
                 <div className="absolute inset-0 bg-black/30"></div>
               </div>
 
+              {/* Imagen inferior-izquierda (z-index: 10) */}
               <div className="absolute bottom-0 left-0 w-[421px] h-[510px] z-20">
                 <Image
                   src="/procesos/6img.webp"

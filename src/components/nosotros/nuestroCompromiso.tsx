@@ -34,73 +34,71 @@ export default function NuestroCompromiso() {
   } as React.CSSProperties;
 
   return (
-    <section
-      className="relative w-full h-[300px] md:h-[400px] overflow-hidden mb-8 md:mb-20"
-      style={styleVars}
-    >
-      {/* Imagen de fondo */}
-      <div className="absolute inset-0 z-0">
-        <Image
-          src="/nosotros/img10.webp"
-          alt="Fondo de fibra de alpaca"
-          fill
-          className="object-cover object-center"
-          priority
-        />
-      </div>
+    <div className="bg-white pb-8 md:pb-20">
+      <section
+        className="relative w-full h-[300px] md:h-[400px] overflow-hidden"
+        style={styleVars}
+      >
+        {/* Imagen de fondo */}
+        <div className="absolute inset-0 z-0">
+          <Image
+            src="/nosotros/img10.webp"
+            alt="Fondo de fibra de alpaca"
+            fill
+            className="object-cover object-center"
+            priority
+          />
+        </div>
 
-      {/* Cuadrados superiores */}
-      <div className="absolute top-0 left-0 right-0 z-10 flex justify-between px-[var(--Mpadding-lateral)] md:px-[var(--padding-lateral)]">
-        <DecoSquare />
-        <DecoSquare />
-        <DecoSquare />
-      </div>
+        {/* Cuadrados superiores */}
+        <div className="absolute top-0 left-0 right-0 z-10 flex justify-between px-[var(--Mpadding-lateral)] md:px-[var(--padding-lateral)]">
+          <DecoSquare />
+          <DecoSquare />
+          <DecoSquare />
+        </div>
 
-      {/* Contenedor central */}
-      <div className="absolute inset-0 z-20 flex items-center justify-center px-4 md:px-4">
-        <motion.div
-          // initial={{ opacity: 0, y: 20 }}
-          // whileInView={{ opacity: 1, y: 0 }}
-          // transition={{ duration: 0.8 }}
-          // viewport={{ once: true }}
-          className="bg-white/90  px-8 py-4 md:px-8 md:py-8  max-w-7xl w-full"
-        >
-          <h2
-            className={`
-              ${aboreto.className}
-              text-2xl md:text-[3.5vw] 
-              font-normal
-              tracking-[0.05em] md:tracking-[0.05em]
-              text-[#C85A3F]
-              mb-1 md:mb-5
-              text-center
-              drop-shadow-[0_3px_1px_rgba(0,0,0,0.3)]
-            `}
+        {/* Contenedor central */}
+        <div className="absolute inset-0 z-20 flex items-center justify-center px-4 md:px-4">
+          <motion.div
+            className="bg-white/90 px-8 py-4 md:px-8 md:py-8 max-w-7xl w-full"
           >
-            {t('title')}
-          </h2>
+            <h2
+              className={`
+                ${aboreto.className}
+                text-2xl md:text-[3.5vw] 
+                font-normal
+                tracking-[0.05em] md:tracking-[0.05em]
+                text-[#C85A3F]
+                mb-1 md:mb-5
+                text-center
+                drop-shadow-[0_3px_1px_rgba(0,0,0,0.3)]
+              `}
+            >
+              {t('title')}
+            </h2>
 
-          <p
-            className={`
-              ${raleway.className} 
-              text-[10px] md:text-[20px] 
-              font-light
-              leading-relaxed md:leading-tight
-              text-gray-800
-              text-center
-            `}
-          >
-            {t('paragraph')}
-          </p>
-        </motion.div>
-      </div>
+            <p
+              className={`
+                ${raleway.className} 
+                text-[10px] md:text-[20px] 
+                font-light
+                leading-relaxed md:leading-tight
+                text-gray-800
+                text-center
+              `}
+            >
+              {t('paragraph')}
+            </p>
+          </motion.div>
+        </div>
 
-      {/* Cuadrados inferiores */}
-      <div className="absolute bottom-0 left-0 right-0 z-10 flex justify-between px-[var(--Mpadding-lateral)] md:px-[var(--padding-lateral)]">
-        <DecoSquare />
-        <DecoSquare />
-        <DecoSquare />
-      </div>
-    </section>
+        {/* Cuadrados inferiores */}
+        <div className="absolute bottom-0 left-0 right-0 z-10 flex justify-between px-[var(--Mpadding-lateral)] md:px-[var(--padding-lateral)]">
+          <DecoSquare />
+          <DecoSquare />
+          <DecoSquare />
+        </div>
+      </section>
+    </div>
   );
 }

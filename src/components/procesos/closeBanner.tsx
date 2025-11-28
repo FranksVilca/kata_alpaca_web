@@ -15,7 +15,7 @@ export default function CloseBanner() {
   const t = useTranslations('Process.w6');
 
   return (
-    <section className="w-full overflow-hidden bg-white px-4 md:px-0">
+    <section className="w-full overflow-hidden bg-white px-0 md:px-[1px]">
 
       {/* VISTA MOBILE */}
       <div className="md:hidden mt-10 mb-10 relative flex flex-row w-full h-[180px]">
@@ -25,7 +25,7 @@ export default function CloseBanner() {
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="flex-1 ml-0 flex justify-center items-center shadow-[-20px_0px_10px_rgba(0,0,0,0.2)] "
+          className="flex-1 ml-0 flex justify-center items-center shadow-[0px_0px_10px_rgba(0,0,0,0.2)]"
         >
           <p
             className={`

@@ -21,7 +21,7 @@ export default function DelDisenoALaPrenda() {
 
   return (
     <section className="w-full py-6 md:py-20 bg-white">
-      <div className="w-full px-0 md:px-0">
+      <div className="w-full px-[1px] md:px-0">
 
         {/* Título con líneas (solo mobile) */}
         <motion.div

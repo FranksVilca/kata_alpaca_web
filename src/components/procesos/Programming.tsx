@@ -1,4 +1,4 @@
-// src/components/NuestraHistoria.tsx
+// src/components/Programming.tsx
 
 "use client";
 import Image from "next/image";
@@ -21,7 +21,7 @@ export default function Programming() {
 
   return (
     <section className="w-full py-4 md:py-20 bg-white">
-      <div className="mx-0 px-0 md:px-0 md:mr-[60px] ">
+      <div className="mx-0 px-[1px] md:px-0 md:mr-[60px] ">
 
         {/*  VISTA WEB (DESKTOP ONLY)        */}
         <div className="hidden md:block">
@@ -87,7 +87,7 @@ export default function Programming() {
               </h3>
 
               <div className="space-y-4 text-black leading-relaxed">
-                <p className={`${raleway.className} text-[26px] tracking-normal text-justify leading-7`}>
+                <p className={`${raleway.className} text-[26px] tracking-normal text-justify leading-7 ml-20`}>
                   {t("paragraph")}
                 </p>
               </div>
