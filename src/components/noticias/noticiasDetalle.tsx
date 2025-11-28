@@ -54,7 +54,7 @@ export default function NoticiasDetalle({ noticia, locale }: NoticiasDetalleProp
 
 function Layout2({ noticia, locale }: NoticiasDetalleProps) {
     return (
-        <div className="w-full">
+        <div className="w-full bg-white text-black">
             <div className="mb-8 space-y-2 flex justify-center">
                 <div className={`${aboreto.className} py-4 px-6 md:px-0 w-full md:w-fit text-center`}>
                     <p className="text-xl md:text-2xl text-black uppercase text-right">
@@ -70,7 +70,7 @@ function Layout2({ noticia, locale }: NoticiasDetalleProps) {
             </div>
 
             {/* LAYOUT MOBILE */}
-            <div className="block md:hidden px-4 space-y-4 mb-12">
+            <div className="block md:hidden px-4 space-y-4">
                 {/* Imagen principal */}
                 <div className="relative w-full h-52 overflow-hidden rounded">
                     <Image
@@ -113,9 +113,15 @@ function Layout2({ noticia, locale }: NoticiasDetalleProps) {
                         />
                     </div>
                 </div>
+
+                {/* Párrafo 3 - Mobile */}
+                <p className={`text-xs text-justify leading-relaxed pt-2 ${raleway.className}`}>
+                    {noticia.parrafo3}
+                </p>
+                <div className="bg-white h-4"></div>
             </div>
 
-            {/* LAYOUT DESKTOP - SIN CAMBIOS */}
+            {/* LAYOUT DESKTOP */}
             <div className="hidden md:block">
                 <div className="px-20">
                     <div className="flex justify-center relative h-60 md:h-130 overflow-hidden">
@@ -151,7 +157,7 @@ function Layout2({ noticia, locale }: NoticiasDetalleProps) {
                     </div>
                 </div>
 
-                <div className="relative w-4/6 h-64 md:h-80 pt-8 mb-20">
+                <div className="relative w-4/6 h-64 md:h-80 pt-8">
                     <Image
                         src={noticia.imagen3.url}
                         alt="Imagen 3"
@@ -159,7 +165,7 @@ function Layout2({ noticia, locale }: NoticiasDetalleProps) {
                         className="object-cover"
                     />
                 </div>
-                <div className="flex items-end pl-40 pr-30 text-start">
+                <div className="space-y-6 max-w-4xl mx-auto px-4 md:px-8 py-6 md:py-12">
                     <p className={`text-base md:text-lg text-justify leading-relaxed whitespace-pre-wrap ${raleway.className}`}>
                         {noticia.parrafo3}
                     </p>
