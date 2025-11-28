@@ -23,6 +23,7 @@ interface Noticia {
     resumen: string;
     parrafo1: string;
     parrafo2: string;
+    parrafo3: string;
     imagenPrincipal: {
         url: string;
     };
@@ -157,6 +158,11 @@ function Layout2({ noticia, locale }: NoticiasDetalleProps) {
                         fill
                         className="object-cover"
                     />
+                </div>
+                <div className="flex items-end pl-40 pr-30 text-start">
+                    <p className={`text-base md:text-lg text-justify leading-relaxed whitespace-pre-wrap ${raleway.className}`}>
+                        {noticia.parrafo3}
+                    </p>
                 </div>
             </div>
         </div>

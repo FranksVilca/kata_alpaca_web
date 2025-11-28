@@ -51,6 +51,7 @@ export const GET_NOTICIA_DETALLE_LOCALIZED = `
       resumen
       parrafo1
       parrafo2
+      parrafo3
     }
   }
 `;
