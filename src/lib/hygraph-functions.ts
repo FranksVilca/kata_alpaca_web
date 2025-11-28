@@ -28,7 +28,6 @@ async function hygraphRequest(
         variables,
       }),
       next: {
-        tags: ["noticias"],
         revalidate: 86400, // Revalidar cada 24 horas (igual que tu página)
       },
     });
