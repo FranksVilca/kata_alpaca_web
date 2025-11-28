@@ -4,11 +4,11 @@ import { motion } from 'framer-motion';
 
 const HeroSections: React.FC = () => {
   return (
-    <div>
-      <div className="flex w-full h-[300px] md:h-[500px]">
+    <div className="overflow-hidden">
+      <div className="flex w-full h-[300px] md:h-[500px] overflow-hidden">
         <motion.div
           className="flex-1 relative overflow-hidden"
-          initial={{ opacity: 0, x: -50 }}
+          initial={{ opacity: 0, x: -30 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
@@ -22,7 +22,7 @@ const HeroSections: React.FC = () => {
         </motion.div>
         <motion.div
           className="flex-1 relative overflow-hidden"
-          initial={{ opacity: 0, y: 50 }}
+          initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
         >
@@ -36,7 +36,7 @@ const HeroSections: React.FC = () => {
         </motion.div>
         <motion.div
           className="flex-1 relative overflow-hidden"
-          initial={{ opacity: 0, x: 50 }}
+          initial={{ opacity: 0, x: 30 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, delay: 0.6 }}
         >

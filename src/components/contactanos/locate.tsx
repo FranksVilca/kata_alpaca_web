@@ -60,8 +60,8 @@ const Locate: React.FC = () => {
         </div>
       </div>
       <div className="sm:hidden">
-        <div className="flex flex-col items-center text-center w-full">
-          <div className="text-base sm:text-lg md:text-xl font-semibold uppercase mb-4">
+        <div className="flex flex-col items-center bg-white text-black/80 text-center w-full">
+          <div className="text-base sm:text-lg md:text-xl font-semibold uppercase my-4 ">
             {f("title")}
           </div>
           <div className="py-3 md:py-4 border-t border-b border-gray-300 w-3/4">

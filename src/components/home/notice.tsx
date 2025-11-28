@@ -13,11 +13,11 @@ const Notice: React.FC = () => {
   const f = useTranslations("Header");
 
   return (
-    <div>
-      <div className="relative w-full h-[400px] sm:h-[500px] md:h-[600px] flex items-center justify-center text-center">
+    <div className="overflow-hidden">
+      <div className="relative w-full h-[400px] sm:h-[500px] md:h-[600px] flex items-center justify-center text-center overflow-hidden">
         <motion.div
           className="absolute inset-0 -z-10"
-          initial={{ scale: 1.1, opacity: 0 }}
+          initial={{ scale: 1.05, opacity: 0 }}
           whileInView={{ scale: 1, opacity: 1 }}
           viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 1.2, ease: "easeOut" }}
@@ -32,7 +32,7 @@ const Notice: React.FC = () => {
         </motion.div>
         <motion.div
           className={`z-10 text-white px-4 sm:px-14 md:px-18 bg-black/70 md:py-6 sm:py-4 ${aboreto.className}`}
-          initial={{ y: 30, opacity: 0 }}
+          initial={{ y: 20, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.8, delay: 0.3 }}
