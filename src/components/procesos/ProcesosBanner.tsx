@@ -26,7 +26,7 @@ export default function ProcesosBanner() {
           unoptimized
         />
         {/* Overlay negro 80% */}
-        <div className="absolute inset-0 bg-black/80"></div>
+        <div className="absolute inset-0 bg-black/65"></div>
       </div>
 
       {/* Contenido */}
