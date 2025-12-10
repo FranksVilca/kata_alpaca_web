@@ -1,7 +1,7 @@
 // src/components/noticias/noticiasDetalle.tsx
 "use client";
 
-import Image from "next/image";
+import SafeImage from "../common/SafeImage";
 import { Aboreto, Raleway } from "next/font/google";
 
 const aboreto = Aboreto({
@@ -24,15 +24,15 @@ interface Noticia {
     parrafo1: string;
     parrafo2: string;
     parrafo3: string;
-    imagenPrincipal: {
+    imagenPrincipal?: {
         url: string;
-    };
-    imagen2: {
+    } | null;
+    imagen2?: {
         url: string;
-    };
-    imagen3: {
+    } | null;
+    imagen3?: {
         url: string;
-    };
+    } | null;
     publishedAt: string;
 }
 
@@ -53,6 +53,10 @@ export default function NoticiasDetalle({ noticia, locale }: NoticiasDetalleProp
 }
 
 function Layout2({ noticia, locale }: NoticiasDetalleProps) {
+    const imagenPrincipalUrl = noticia.imagenPrincipal?.url || '/images/news-placeholder.png';
+    const imagen2Url = noticia.imagen2?.url || '/images/news-placeholder.png';
+    const imagen3Url = noticia.imagen3?.url || '/images/news-placeholder.png';
+
     return (
         <div className="w-full bg-white text-black">
             <div className="mb-8 space-y-2 flex justify-center">
@@ -73,8 +77,8 @@ function Layout2({ noticia, locale }: NoticiasDetalleProps) {
             <div className="block md:hidden px-4 space-y-4">
                 {/* Imagen principal */}
                 <div className="relative w-full h-52 overflow-hidden rounded">
-                    <Image
-                        src={noticia.imagenPrincipal.url}
+                    <SafeImage
+                        src={imagenPrincipalUrl}
                         alt={noticia.titulo}
                         fill
                         className="object-cover"
@@ -88,8 +92,8 @@ function Layout2({ noticia, locale }: NoticiasDetalleProps) {
 
                 {/* Imagen 3 (segunda imagen en mobile) */}
                 <div className="relative w-full h-52 overflow-hidden rounded">
-                    <Image
-                        src={noticia.imagen3.url}
+                    <SafeImage
+                        src={imagen3Url}
                         alt="Imagen 3"
                         fill
                         className="object-cover"
@@ -105,8 +109,8 @@ function Layout2({ noticia, locale }: NoticiasDetalleProps) {
                     </div>
 
                     <div className="relative h-52">
-                        <Image
-                            src={noticia.imagen2.url}
+                        <SafeImage
+                            src={imagen2Url}
                             alt="Imagen 2"
                             fill
                             className="object-cover rounded"
@@ -125,8 +129,8 @@ function Layout2({ noticia, locale }: NoticiasDetalleProps) {
             <div className="hidden md:block">
                 <div className="px-20">
                     <div className="flex justify-center relative h-60 md:h-130 overflow-hidden">
-                        <Image
-                            src={noticia.imagenPrincipal.url}
+                        <SafeImage
+                            src={imagenPrincipalUrl}
                             alt={noticia.titulo}
                             fill
                             className="object-contain group-hover:scale-100 transition-transform duration-500"
@@ -148,8 +152,8 @@ function Layout2({ noticia, locale }: NoticiasDetalleProps) {
                     </div>
 
                     <div className="relative h-64 md:h-80">
-                        <Image
-                            src={noticia.imagen2.url}
+                        <SafeImage
+                            src={imagen2Url}
                             alt="Imagen 2"
                             fill
                             className="object-cover"
@@ -158,8 +162,8 @@ function Layout2({ noticia, locale }: NoticiasDetalleProps) {
                 </div>
 
                 <div className="relative w-4/6 h-64 md:h-80 pt-8">
-                    <Image
-                        src={noticia.imagen3.url}
+                    <SafeImage
+                        src={imagen3Url}
                         alt="Imagen 3"
                         fill
                         className="object-cover"

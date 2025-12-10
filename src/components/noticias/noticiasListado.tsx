@@ -22,9 +22,9 @@ interface Noticia {
     titulo: string;
     pais: string;
     resumen: string;
-    imagenPrincipal: {
+    imagenPrincipal?: {
         url: string;
-    };
+    } | null;
     publishedAt: string;
 }
 

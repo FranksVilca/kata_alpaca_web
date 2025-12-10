@@ -1,5 +1,5 @@
 import Link from "next/link";
-import Image from "next/image";
+import SafeImage from "../common/SafeImage";
 import { Aboreto, Raleway } from "next/font/google";
 import type { Noticia } from "./noticiasListado";
 
@@ -19,6 +19,8 @@ interface NoticiaCardLeftProps {
 }
 
 export default function NoticiaCardRight({ noticia, locale }: NoticiaCardLeftProps) {
+    const imageUrl = noticia.imagenPrincipal?.url || '/images/news-placeholder.png';
+
     return (
         <article className="w-full h-full py-8 md:py-16">
             {/* Contenido */}
@@ -40,8 +42,8 @@ export default function NoticiaCardRight({ noticia, locale }: NoticiaCardLeftPro
                 <div className="flex flex-col md:flex-row md:items-end gap-4 md:gap-8 md:px-0">
                     {/* Imagen */}
                     <div className="relative w-full md:w-800 h-64 md:h-100 overflow-hidden">
-                        <Image
-                            src={noticia.imagenPrincipal.url}
+                        <SafeImage
+                            src={imageUrl}
                             alt={noticia.titulo}
                             className="object-cover group-hover:scale-110 transition-transform duration-500"
                             fill
