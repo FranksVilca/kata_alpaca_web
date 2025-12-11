@@ -39,7 +39,7 @@ const FormContactos: React.FC = () => {
     setIsLoading(true);
 
     try {
-      const res = await fetch("/api/contacto", {
+      const res = await fetch("/api/contacto-resend", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),

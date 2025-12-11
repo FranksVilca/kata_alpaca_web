@@ -17,7 +17,7 @@ export default function Home() {
       <Navbar />
       <ProductLeft
         id="sweter"
-        title="SWETER"
+        title="SWEATER"
         text={f("sweatersText")}
         firstImage="/productos/sweterModelo.webp"
         secondImage="/productos/sweterTela.webp"

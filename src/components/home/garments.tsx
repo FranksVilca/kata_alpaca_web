@@ -114,7 +114,7 @@ const Garments: React.FC = () => {
             />
             <div className="absolute inset-0 bg-black/50 flex items-center justify-center pb-4 sm:pb-8">
               <p className="text-white text-xs sm:text-base md:text-xl tracking-[0.2em] sm:tracking-[0.3em] font-light">
-                SWETER
+                SWEATER
               </p>
             </div>
           </div>
