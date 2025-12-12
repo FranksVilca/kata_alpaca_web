@@ -37,7 +37,7 @@ export default async function handler(
 
   try {
     const { data, error } = await resend.emails.send({
-      from: 'KATA ALPACA <onboarding@resend.dev>',
+      from: 'KATA ALPACA <contacto@kataalpaca.com>',
       to: ['contabilidad@kataalpaca.com'],
       replyTo: correo,
       subject: `📋 ${motivo === "reclamo" ? "RECLAMO" : "QUEJA"} - ${nombre} ${apellidoPaterno}`,
@@ -68,7 +68,7 @@ export default async function handler(
           <body>
             <div class="container">
               <div class="logo-section">
-                <img src="https://www.kataalpaca.com/en/img/logo/logo-kata-alpaca.png" alt="KATA ALPACA Logo">
+                <img src="https://instagram.faqp1-1.fna.fbcdn.net/v/t51.2885-19/61251219_326675671600068_4811332981861908480_n.jpg?stp=dst-jpg_s150x150_tt6&efg=eyJ2ZW5jb2RlX3RhZyI6InByb2ZpbGVfcGljLmRqYW5nby41NjguYzIifQ&_nc_ht=instagram.faqp1-1.fna.fbcdn.net&_nc_cat=100&_nc_oc=Q6cZ2QE_9ZZj3GNgu0ptab3qADWofh5MZpJALfwt6djhAAvbFB0Vsk-HT3_fREPrw6kxp38&_nc_ohc=DF8x4IEqy50Q7kNvwFzaibk&_nc_gid=z0gw7Cw0i9A5W39YyNyJWw&edm=APoiHPcBAAAA&ccb=7-5&oh=00_AfkNtyDeasFq8ixXcZNCuBsN9Bd7cR6Rh1lyGsxn6B3zeA&oe=69411C39&_nc_sid=22de04" alt="KATA ALPACA Logo">
               </div>
               
               <div class="header">
